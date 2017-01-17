@@ -1,5 +1,5 @@
 # Carkasjak's minimalistic and mega-strict filter for ENDGAME speed clearing.
-# Version 1.0
+# Version 1.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -123,6 +123,18 @@ Show # Don't miss the fishing rods!
 	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+	
+Show
+	Class Quest Items
+	BaseType "Shaper's Orb"
+	SetFontSize 45
+	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+Show
+	Class Quest Items
+	SetFontSize 45
+	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
 
 # -------------------------------------------------------------------
 # [1006] Rares - I only like small rares because I hate sorting them
