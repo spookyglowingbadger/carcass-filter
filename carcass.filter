@@ -300,54 +300,42 @@ Show # T16
 	Class Maps
 	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
 	SetFontSize 45
-	SetTextColor 100 0 122 255           # TEXTCOLOR:	 Cosmetic: T16 guardian maps
-	SetBorderColor 100 0 255 255         # BORDERCOLOR:	 Cosmetic: T16 guardian maps
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	SetBorderColor 192 128 254 255
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
 Show # T15
 	DropLevel >= 82
 	Class Maps
 	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	SetBorderColor 255 0 0 255
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 	
 Show # T14
 	DropLevel >= 81
 	Class Maps
 	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 200 255   # BACKGROUND:	 T11-T14 maps
+	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 	
 Show # T13
 	DropLevel >= 80
 	Class Maps
 	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 200 255   # BACKGROUND:	 T11-T14 maps
+	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T12
 	DropLevel >= 79
 	Class Maps
 	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 200 255   # BACKGROUND:	 T11-T14 maps
+	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T11
 	DropLevel >= 78
 	Class Maps
 	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 200 255   # BACKGROUND:	 T11-T14 maps
+	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 # -------------------------------------------------------------------
@@ -358,27 +346,33 @@ Show # T10
 	DropLevel >= 77
 	Class Maps
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
+	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T9
 	DropLevel >= 76
 	Class Maps
 	SetFontSize 45
-	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
+	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Hide # T8
 	DropLevel >= 75
 	Class Maps
+	SetFontSize 45
+	SetBorderColor 254 213 0 255
 
 Hide # T7
 	DropLevel >= 74
 	Class Maps
+	SetFontSize 45
+	SetBorderColor 254 213 0 255
 
 Hide # T6
 	DropLevel >= 73
 	Class Maps
+	SetFontSize 45
+	SetBorderColor 254 213 0 255
 
 # -------------------------------------------------------------------
 # [3005] White Maps - T1-T5
@@ -387,22 +381,27 @@ Hide # T6
 Hide # T5
 	DropLevel >= 72
 	Class Maps
+	SetFontSize 45
 
 Hide # T4
 	DropLevel >= 71
 	Class Maps
+	SetFontSize 45
 
 Hide # T3
 	DropLevel >= 70
 	Class Maps
+	SetFontSize 45
 
 Hide # T2
 	DropLevel = 69
 	Class Maps
+	SetFontSize 45
 
 Hide # T1
 	DropLevel < 69
 	Class Maps
+	SetFontSize 45
 
 # -------------------------------------------------------------------
 # [3006] Breachstones
