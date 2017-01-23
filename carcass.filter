@@ -76,8 +76,7 @@ Show # 6-Sockets
 	Sockets 6
 	Rarity <= Rare
 	SetFontSize 45
-	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 White border
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
 # -------------------------------------------------------------------
@@ -192,6 +191,7 @@ Show # Neversink T3 Currency
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
 	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 T3 Currency
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
 Show # Neversink T1 Currency
 	Class Currency
