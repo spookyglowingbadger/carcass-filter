@@ -536,7 +536,7 @@ Hide # Hide non-unique flasks that don't get caught by the 20 quality block
 # [7001] Divination Cards
 # -------------------------------------------------------------------
 
-Show # Top tier cards with drop sound
+Show # Top tier cards with T1 drop sound
 	Class "Divination"
 	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Hunter's Reward" "The Dragon's Heart" "Mawr Blaidd" "The Last One Standing" "The Offering" "The Ethereal" "The Queen" "Abandoned Wealth" "The Formless Sea" "The Brittle Emperor" "The Immortal" "The Artist" "The Thaumaturgist" "Wealth and Power" "The Demoness" "Pride Before the Fall" "The Enlightened" "Heterochromia" "The King's Heart" "Bowyer's Dream" "The Hunger" "The Celestial Justicar" "The Porcupine" "Spark and the Flame"
 	SetFontSize 45
@@ -548,6 +548,7 @@ Show # Top tier cards with drop sound
 Show # All remaining cards
 	Class "Divination"
 	SetFontSize 45
+	PlayAlertSound 2 300		     # DROPSOUND: Value Drop: Currency, fragments
 
 # -------------------------------------------------------------------
 # [8001] Junk - Hide and shrink equipment that is not covered by any previous blocks
