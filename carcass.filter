@@ -484,11 +484,11 @@ Show
 
 
 # -------------------------------------------------------------------
-# [4001] Uniques - I treat most of them all as equals because I'm too lazy to maintain tiers as the meta shifts
+# [4001] Uniques - I treat most of them as equals because I'm too lazy to maintain tiers as the meta shifts
 # -------------------------------------------------------------------
 
 Show # T1 - Only extremely good uniques that don't share bases with garbage.
-	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate"
+	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil"
 	Rarity Unique
 	SetFontSize 45
 	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
@@ -496,7 +496,16 @@ Show # T1 - Only extremely good uniques that don't share bases with garbage.
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
-Show # Every other unique
+#Show # T2 - I don't want to maintain a T2 list, but feel free to uncomment and manage your own.
+#	BaseType "Granite Flask" "Vaal Axe" "Vaal Sceptre" "Void Axe" "Fiend Dagger" "Imperial Staff" "Judgement Staff" "Midnight Blade" "Eternal Sword" "Imperial Skean" "Ebony Tower Shield" "Sacrificial Garb" "Ezomyte Tower Shield" "Vaal Regalia" "Titanium Spirit Shield" "Full Wyrmscale" "Varnished Coat" "Nightmare Bascinet" "Champion Kite Shield" "Ursine Pelt" "Penetrating Arrow Quiver" "Hubris Circlet" "Corrugated Buckler" "Deerskin Gloves" "Savant's Robe" "Two-Stone Ring" "Onyx Amulet" "Vanguard Belt" "Gold Ring"
+#	Rarity Unique
+#	SetFontSize 45
+#	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+#	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+#	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
+#	PlayAlertSound 6 300 		     # DROPSOUND: T1 Drop
+
+Show # Every remaining unique
 	Rarity Unique
 	SetFontSize 45
 	PlayAlertSound 3 300
