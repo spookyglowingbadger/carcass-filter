@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.3
+# Version 1.4
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -206,14 +206,21 @@ Show # Neversink T1 Currency
 # [2002] Essences - No tiers for Essences because I like picking up all of them for my Essence Tab
 # -------------------------------------------------------------------
 
-Show
-	BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption" "Screaming Essence of" "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
+Show # Good Essences
+	BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption" "Screaming Essence of"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
 	SetBackgroundColor 200 200 255 255    # BACKGROUND:	 Light blue/purple
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
+Hide # Leveling essences
+	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 200 200 255 255    # BACKGROUND:	 Light blue/purple
+
 #------------------------------------
 # [2003] Special Currencies - Mostly Neversink
 #------------------------------------
@@ -349,12 +356,11 @@ Show # T10
 	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
-Show # T9
+Hide # T9
 	DropLevel >= 76
 	Class Maps
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Hide # T8
 	DropLevel >= 75
@@ -515,6 +521,13 @@ Show # Every remaining unique
 # [5001] Gems
 # -------------------------------------------------------------------
 
+Show # 20qual gems 
+	Quality >= 20
+	Class Gem
+	SetBorderColor 30 150 180 255        # BORDERCOLOR:	 T1 Gems
+	SetFontSize 45
+	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
+	
 Show # Quality Gems
 	Quality >= 10
 	Class Gem
