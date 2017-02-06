@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.4
+# Version 1.5
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -96,10 +96,10 @@ Show # Skyforth
 	Rarity Normal
 	SetFontSize 45
 	
-Hide # Headhunter - Requires Zana 8 for Nemesis Map Mod
-	BaseType "Leather Belt"
-	Rarity Normal
-	SetFontSize 45
+#Show # Headhunter - Requires Zana 8 for Nemesis Map Mod
+#	BaseType "Leather Belt"
+#	Rarity Normal
+#	SetFontSize 45
 
 # -------------------------------------------------------------------
 # [1004] 84+ bases
@@ -169,6 +169,7 @@ Show # 84+ good bases to identify
 Hide # Pleb Currency
 	Class Currency
 	BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's" "Orb of Augmentation" "Orb of Transmutation" "Blacksmith's"
+	SetFontSize 45
 
 Show # Useful currency but no special highlight or alert
 	Class Currency
@@ -348,6 +349,12 @@ Show # T11
 # -------------------------------------------------------------------
 # [3004] Yellow Maps - T6-T10
 # -------------------------------------------------------------------	
+
+Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
+	Class Maps
+	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map"
+	SetFontSize 45
+	SetBorderColor 254 213 0 255
 	
 Show # T10
 	DropLevel >= 77
@@ -494,7 +501,7 @@ Show
 # -------------------------------------------------------------------
 
 Show # T1 - Only extremely good uniques that don't share bases with garbage.
-	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil"
+	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil" "Silver Flask" "Crusader Boots"
 	Rarity Unique
 	SetFontSize 45
 	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
