@@ -153,7 +153,7 @@ Show # Same thing applies to rare Jewels
 	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
 	
 Show # 84+ good bases to identify
-	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield"
+	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
 	ItemLevel >= 84
 	SetFontSize 45
@@ -352,7 +352,7 @@ Show # T11
 
 Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
 	Class Maps
-	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map"
+	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 	
