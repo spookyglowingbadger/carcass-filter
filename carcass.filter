@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.5
+# Version 1.6
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -350,11 +350,11 @@ Show # T11
 # [3004] Yellow Maps - T6-T10
 # -------------------------------------------------------------------	
 
-Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
-	Class Maps
-	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
+#Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
+#	Class Maps
+#	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
+#	SetFontSize 45
+#	SetBorderColor 254 213 0 255
 	
 Show # T10
 	DropLevel >= 77
