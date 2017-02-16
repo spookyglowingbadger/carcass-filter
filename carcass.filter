@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.6
+# Version 1.7
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -94,11 +94,13 @@ Show # Valuable Atlas Bases
 Show # Skyforth
 	BaseType "Sorcerer Boots"
 	Rarity Normal
+	SetBorderColor 0 210 0 210
 	SetFontSize 45
 	
 #Show # Headhunter - Requires Zana 8 for Nemesis Map Mod
 #	BaseType "Leather Belt"
 #	Rarity Normal
+#	SetBorderColor 0 210 0 210
 #	SetFontSize 45
 
 # -------------------------------------------------------------------
@@ -138,6 +140,14 @@ Show
 # -------------------------------------------------------------------
 # [1006] Rares - I only like small rares because I hate sorting them
 # -------------------------------------------------------------------
+
+Hide # I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
+	Class Rings
+	BaseType "Breach"
+	Rarity = Rare
+	SetFontSize 45
+	SetBorderColor 130 25 255 255        # BORDERCOLOR: Breach - accent
+	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
 
 Show # Rare Rings and Amulets are always worth picking up due to their small size and high potential value
 	Class Rings Amulets
@@ -212,7 +222,7 @@ Show # Good Essences
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 255 255    # BACKGROUND:	 Light blue/purple
+	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
 Hide # Leveling essences
@@ -247,6 +257,9 @@ Show # Splinter
 Show # Perandus Coins
 	Class Currency
 	BaseType "Perandus Coin"
+	SetTextColor 0 0 0 255               # Black text
+	SetBorderColor 0 0 0 255			 # Black border
+	SetBackgroundColor 232 207 151       # Gold/brown Background
 	SetFontSize 45
 
 Show # Atlas manipulation
@@ -567,7 +580,7 @@ Hide # Hide non-unique flasks that don't get caught by the 20 quality block
 
 Show # Top tier cards with T1 drop sound
 	Class "Divination"
-	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Hunter's Reward" "The Dragon's Heart" "Mawr Blaidd" "The Last One Standing" "The Offering" "The Ethereal" "The Queen" "Abandoned Wealth" "The Formless Sea" "The Brittle Emperor" "The Immortal" "The Artist" "The Thaumaturgist" "Wealth and Power" "The Demoness" "Pride Before the Fall" "The Enlightened" "Heterochromia" "The King's Heart" "Bowyer's Dream" "The Hunger" "The Celestial Justicar" "The Porcupine" "Spark and the Flame"
+	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Hunter's Reward" "The Dragon's Heart" "Mawr Blaidd" "The Last One Standing" "The Offering" "The Ethereal" "The Queen" "Abandoned Wealth" "The Formless Sea" "The Brittle Emperor" "The Immortal" "The Artist" "The Thaumaturgist" "Wealth and Power" "The Demoness" "Pride Before the Fall" "The Enlightened" "Heterochromia" "The King's Heart" "Bowyer's Dream" "The Hunger" "The Celestial Justicar" "The Porcupine" "Spark and the Flame" "The Valkyrie"
 	SetFontSize 45
 	SetTextColor 0 0 255 255             # TEXTCOLOR:	 Cosmetic: T1 Divination card
 	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Cosmetic: T1 and T2 Divination
