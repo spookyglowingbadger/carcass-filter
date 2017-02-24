@@ -492,14 +492,6 @@ Show
 	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
-Show
-	Class "Map Fragments"
-	SetFontSize 45
-	SetTextColor 180 0 0 255             # TEXTCOLOR:	 Map fragments
-	SetBorderColor 180 0 0 255           # BORDERCOLOR:	 Fragments: Random
-	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-	
 #Show # Legacy League reliquary key
 #	BaseType "Ancient Reliquary Key"
 #	SetFontSize 45
@@ -507,7 +499,14 @@ Show
 #	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
 #	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 #	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
+
+Show
+	Class "Map Fragments"
+	SetFontSize 45
+	SetTextColor 180 0 0 255             # TEXTCOLOR:	 Map fragments
+	SetBorderColor 180 0 0 255           # BORDERCOLOR:	 Fragments: Random
+	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 
 # -------------------------------------------------------------------
