@@ -33,8 +33,7 @@
 # [3003] Red Maps
 # [3004] Yellow Maps
 # [3005] White Maps
-# [3006] Breachstones
-# [3007] Map Fragments
+# [3006] Map Fragments
 #
 # [4001] Uniques
 #
@@ -136,6 +135,13 @@ Show
 	Class Quest Items
 	SetFontSize 45
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
+
+#Show
+#	Class Leaguestones
+#	BaseType "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
+#	SetFontSize 45
+#	SetBorderColor 128 254 128 
+#	PlayAlertSound 2 300
 
 # -------------------------------------------------------------------
 # [1006] Rares - I only like small rares because I hate sorting them
@@ -430,23 +436,9 @@ Hide # T1
 	SetFontSize 45
 
 # -------------------------------------------------------------------
-# [3006] Breachstones
+# [3006] Map Fragments
 # -------------------------------------------------------------------	
 	
-Show
-	BaseType "Breachstone"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-# -------------------------------------------------------------------
-# [3007] Map Fragments
-# -------------------------------------------------------------------	
-	
-# I have no idea what Class "Breachstones" are. "Map Fragment" fails to work here
-
 Show
 	BaseType "Breachstone"
 	SetFontSize 45
@@ -630,3 +622,4 @@ Show # SafetyLine!
 	SetTextColor 255 0 255 255           # TEXTCOLOR:	 SAFETY LINE
 	SetBorderColor 255 0 255 255         # BORDERCOLOR:	 SAFETY LINE
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
