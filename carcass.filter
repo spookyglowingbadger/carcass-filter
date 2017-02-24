@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.7
+# Version 1.8
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -97,7 +97,7 @@ Show # Skyforth
 	SetBorderColor 0 210 0 210
 	SetFontSize 45
 	
-#Show # Headhunter - Requires Zana 8 for Nemesis Map Mod
+#Show # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
 #	BaseType "Leather Belt"
 #	Rarity Normal
 #	SetBorderColor 0 210 0 210
@@ -183,7 +183,7 @@ Hide # Pleb Currency
 
 Show # Useful currency but no special highlight or alert
 	Class Currency
-	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb"
+	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Glassblower's Bauble"
 	SetFontSize 45
 
 Show # Neversink T2 Currency
@@ -197,7 +197,7 @@ Show # Neversink T2 Currency
 
 Show # Neversink T3 Currency
 	Class Currency
-	BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Glassblower's Bauble" "Cartographer's Sextant" "Silver Coin"
+	BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Cartographer's Sextant" "Silver Coin"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
@@ -507,6 +507,15 @@ Show
 	SetBorderColor 180 0 0 255           # BORDERCOLOR:	 Fragments: Random
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+	
+#Show # Legacy League reliquary key
+#	BaseType "Ancient Reliquary Key"
+#	SetFontSize 45
+#	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
+#	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
+#	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+#	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+	
 
 
 # -------------------------------------------------------------------
@@ -514,7 +523,7 @@ Show
 # -------------------------------------------------------------------
 
 Show # T1 - Only extremely good uniques that don't share bases with garbage.
-	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil" "Silver Flask" "Crusader Boots"
+	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil" "Silver Flask" "Crusader Boots" "Deicide Mask"
 	Rarity Unique
 	SetFontSize 45
 	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
@@ -587,6 +596,11 @@ Show # Top tier cards with T1 drop sound
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
+Hide # Annoying shitty cards
+	Class "Divination"
+	BaseType "Thunderous Skies" "Death" "The Flora's Gift" "The King's Blade" "The Carrion Crow" "The Inoculated"
+	SetFontSize 45
+	
 Show # All remaining cards
 	Class "Divination"
 	SetFontSize 45
