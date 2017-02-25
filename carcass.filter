@@ -138,7 +138,7 @@ Show
 
 #Show
 #	Class Leaguestones
-#	BaseType "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
+#	BaseType "Breach Leaguestone" "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
 #	SetFontSize 45
 #	SetBorderColor 128 254 128 
 #	PlayAlertSound 2 300
