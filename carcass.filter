@@ -168,7 +168,7 @@ Show # Same thing applies to rare Jewels
 	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
 	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
 	
-Show # 84+ good bases to identify
+Show # 84+ good bases to identify - Change the ItemLevel to 75 if you want to see a lot more of these.
 	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
 	ItemLevel >= 84
