@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 1.8
+# Version 2.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -34,6 +34,7 @@
 # [3004] Yellow Maps
 # [3005] White Maps
 # [3006] Map Fragments
+# [3007] Misc Map Items
 #
 # [4001] Uniques
 #
@@ -96,11 +97,11 @@ Show # Skyforth
 	SetBorderColor 0 210 0 210
 	SetFontSize 45
 	
-#Show # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
-#	BaseType "Leather Belt"
-#	Rarity Normal
-#	SetBorderColor 0 210 0 210
-#	SetFontSize 45
+Show # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
+	BaseType "Leather Belt"
+	Rarity Normal
+	SetBorderColor 0 210 0 210
+	SetFontSize 45
 
 # -------------------------------------------------------------------
 # [1004] 84+ bases
@@ -136,12 +137,12 @@ Show
 	SetFontSize 45
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
 
-#Show
-#	Class Leaguestones
+Show # Basetypes for leaguestones in comment in case you only want to show some of them. By default I'll show them all.
+	Class Leaguestone
 #	BaseType "Breach Leaguestone" "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
-#	SetFontSize 45
-#	SetBorderColor 128 254 128 
-#	PlayAlertSound 2 300
+	SetFontSize 45
+	SetBorderColor 128 254 128 
+	PlayAlertSound 2 300
 
 Show
 	BaseType "Talisman"
@@ -173,10 +174,10 @@ Show # Same thing applies to rare Jewels
 	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
 	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
 	
-Show # 84+ good bases to identify - Change the ItemLevel to 75 if you want to see a lot more of these.
+Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want to see the really high level ones
 	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
-	ItemLevel >= 84
+	ItemLevel >= 75
 	SetFontSize 45
 	
 # -------------------------------------------------------------------
@@ -445,14 +446,6 @@ Hide # T1
 # -------------------------------------------------------------------	
 	
 Show
-	BaseType "Breachstone"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-Show
 	Class "Map Fragments"
 	BaseType "Mortal Hope" "Mortal Ignorance"
 	SetFontSize 45
@@ -497,21 +490,44 @@ Show
 	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
-#Show # Legacy League reliquary key
-#	BaseType "Ancient Reliquary Key"
-#	SetFontSize 45
-#	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-#	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
-#	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-#	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
-Show
+Show # Safety line for Map Fragments class
 	Class "Map Fragments"
 	SetFontSize 45
 	SetTextColor 180 0 0 255             # TEXTCOLOR:	 Map fragments
 	SetBorderColor 180 0 0 255           # BORDERCOLOR:	 Fragments: Random
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+# -------------------------------------------------------------------
+# [3007] Misc Map Items
+# -------------------------------------------------------------------
+
+Show # Legacy League reliquary key
+	Class "Misc Map Items"
+	BaseType "Ancient Reliquary Key"
+	SetFontSize 45
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # Breachstones
+	Class "Misc Map Items"
+	BaseType "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+	
+Show # Safety line for Misc Map Items class
+	Class "Misc Map Items"
+	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
 
 # -------------------------------------------------------------------
