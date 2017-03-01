@@ -143,6 +143,11 @@ Show
 #	SetBorderColor 128 254 128 
 #	PlayAlertSound 2 300
 
+Show
+	BaseType "Talisman"
+	SetFontSize 45
+	SetBorderColor 50 230 100
+
 # -------------------------------------------------------------------
 # [1006] Rares - I only like small rares because I hate sorting them
 # -------------------------------------------------------------------
