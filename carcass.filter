@@ -180,6 +180,14 @@ Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want 
 	ItemLevel >= 75
 	SetFontSize 45
 	
+# Lists of other top tier rare BaseTypes you may want to add if the meta shifts:
+# Armour: "Astral Plate" "Glorious Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Spiked Gloves"
+# Armour/ES: "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" "Bone Helmet"
+# Armour/Evasion: "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Elegant Round Shield"
+# Evasion: "Zodiac Leather" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Imperial Buckler" "Gripped Gloves"
+# Evasion/ES: "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield"
+
+	
 # -------------------------------------------------------------------
 # Currency Section
 # -------------------------------------------------------------------
@@ -642,4 +650,3 @@ Show # SafetyLine!
 	SetTextColor 255 0 255 255           # TEXTCOLOR:	 SAFETY LINE
 	SetBorderColor 255 0 255 255         # BORDERCOLOR:	 SAFETY LINE
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
