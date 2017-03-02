@@ -71,14 +71,14 @@ Show # 6-Links
 	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
+
 Show # 6-Sockets
 	Sockets 6
 	Rarity <= Rare
 	SetFontSize 45
 	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 White border
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-	
+
 # -------------------------------------------------------------------
 # [1002] Atlas Bases - These are usually valuable at any rarity or itemlevel
 # -------------------------------------------------------------------
@@ -86,7 +86,7 @@ Show # 6-Sockets
 Show # Valuable Atlas Bases
 	BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
 	SetFontSize 45
-	
+
 # -------------------------------------------------------------------
 # [1003] Chance Bases
 # -------------------------------------------------------------------
@@ -96,7 +96,7 @@ Show # Skyforth
 	Rarity Normal
 	SetBorderColor 0 210 0 210
 	SetFontSize 45
-	
+
 Show # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
 	BaseType "Leather Belt"
 	Rarity Normal
@@ -124,7 +124,7 @@ Show # Don't miss the fishing rods!
 	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
+
 Show
 	Class Quest Items
 	BaseType "Shaper's Orb"
@@ -158,8 +158,8 @@ Hide # I'm sick of Breach Rings, so I'll hide them by default. They're almost ne
 	BaseType "Breach"
 	Rarity = Rare
 	SetFontSize 45
-	SetBorderColor 130 25 255 255        # BORDERCOLOR: Breach - accent
-	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
+	SetBorderColor 130 25 255 255        # BORDERCOLOR:	Breach - accent
+	SetBackgroundColor 65 20 80          # BACKGROUND:	Breach
 
 Show # Rare Rings and Amulets are always worth picking up due to their small size and high potential value
 	Class Rings Amulets
@@ -173,13 +173,13 @@ Show # Same thing applies to rare Jewels
 	SetTextColor 255 255 0 255           # TEXTCOLOR:	 Jewel: Rare
 	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
 	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
-	
+
 Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want to see the really high level ones
 	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
 	ItemLevel >= 75
 	SetFontSize 45
-	
+
 # Lists of other top tier rare BaseTypes you may want to add if the meta shifts:
 # Armour: "Astral Plate" "Glorious Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Spiked Gloves"
 # Armour/ES: "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" "Bone Helmet"
@@ -187,7 +187,6 @@ Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want 
 # Evasion: "Zodiac Leather" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Imperial Buckler" "Gripped Gloves"
 # Evasion/ES: "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield"
 
-	
 # -------------------------------------------------------------------
 # Currency Section
 # -------------------------------------------------------------------
@@ -223,7 +222,7 @@ Show # Neversink T3 Currency
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
 	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 T3 Currency
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-	
+
 Show # Neversink T1 Currency
 	Class Currency
 	BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
@@ -232,7 +231,7 @@ Show # Neversink T1 Currency
 	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
+
 # -------------------------------------------------------------------
 # [2002] Essences - No tiers for Essences because I like picking up all of them for my Essence Tab
 # -------------------------------------------------------------------
@@ -250,7 +249,7 @@ Hide # Leveling essences
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 255 255    # BACKGROUND:	 Light blue/purple
+	SetBackgroundColor 200 200 255 255   # BACKGROUND:	 Light blue/purple
 
 #------------------------------------
 # [2003] Special Currencies - Mostly Neversink
@@ -278,7 +277,7 @@ Show # Perandus Coins
 	Class Currency
 	BaseType "Perandus Coin"
 	SetTextColor 0 0 0 255               # Black text
-	SetBorderColor 0 0 0 255			 # Black border
+	SetBorderColor 0 0 0 255             # Black border
 	SetBackgroundColor 232 207 151       # Gold/brown Background
 	SetFontSize 45
 
@@ -299,7 +298,6 @@ Show # Prophecies
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
 	SetBackgroundColor 159 15 213        # BACKGROUND:	 Itemized Prophecy
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-	
 
 # -------------------------------------------------------------------
 # Map Section
@@ -332,7 +330,7 @@ Show # Labyrinth-only items
 	SetFontSize 45
 	SetTextColor 74 230 58               # TEXTCOLOR:	 Labyrinth, Quest, Shaper Orbs
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs	
-	
+
 # -------------------------------------------------------------------
 # [3003] Red Maps - T11-T16
 # -------------------------------------------------------------------
@@ -388,7 +386,7 @@ Show # T11
 #	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
 #	SetFontSize 45
 #	SetBorderColor 254 213 0 255
-	
+
 Show # T10
 	DropLevel >= 77
 	Class Maps
@@ -423,7 +421,7 @@ Hide # T6
 # -------------------------------------------------------------------
 # [3005] White Maps - T1-T5
 # -------------------------------------------------------------------
-	
+
 Hide # T5
 	DropLevel >= 72
 	Class Maps
@@ -452,7 +450,7 @@ Hide # T1
 # -------------------------------------------------------------------
 # [3006] Map Fragments
 # -------------------------------------------------------------------	
-	
+
 Show
 	Class "Map Fragments"
 	BaseType "Mortal Hope" "Mortal Ignorance"
@@ -528,7 +526,7 @@ Show # Breachstones
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
+
 Show # Safety line for Misc Map Items class
 	Class "Misc Map Items"
 	SetFontSize 45
@@ -558,14 +556,13 @@ Show # T1 - Only extremely good uniques that don't share bases with garbage.
 #	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 #	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
 #	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
-#	PlayAlertSound 6 300 		     # DROPSOUND: T1 Drop
+#	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
 Show # Every remaining unique
 	Rarity Unique
 	SetFontSize 45
 	PlayAlertSound 3 300
-	
-	
+
 # -------------------------------------------------------------------
 # [5001] Gems
 # -------------------------------------------------------------------
@@ -576,12 +573,12 @@ Show # 20qual gems
 	SetBorderColor 30 150 180 255        # BORDERCOLOR:	 T1 Gems
 	SetFontSize 45
 	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
-	
+
 Show # Quality Gems
 	Quality >= 10
 	Class Gem
 	SetFontSize 45
-	
+
 Show # Good Drop Only Gems
 	Class Gem
 	BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline"
@@ -620,11 +617,11 @@ Hide # Annoying shitty cards
 	Class "Divination"
 	BaseType "Thunderous Skies" "Death" "The Flora's Gift" "The King's Blade" "The Carrion Crow" "The Inoculated"
 	SetFontSize 45
-	
+
 Show # All remaining cards
 	Class "Divination"
 	SetFontSize 45
-	PlayAlertSound 2 300		     # DROPSOUND: Value Drop: Currency, fragments
+	PlayAlertSound 2 300                 # DROPSOUND: Value Drop: Currency, fragments
 
 # -------------------------------------------------------------------
 # [8001] Junk - Hide and shrink equipment that is not covered by any previous blocks
@@ -644,7 +641,7 @@ Hide # Jewels that are lower than rare
 # -------------------------------------------------------------------
 # [9999] Safety Line - Anything I may have forgotten to show will show up as pink with a T1 drop alert so I'll notice and hopefully correct the mistake in future updates.
 # -------------------------------------------------------------------	
-	
+
 Show # SafetyLine!
 	SetFontSize 45
 	SetTextColor 255 0 255 255           # TEXTCOLOR:	 SAFETY LINE
