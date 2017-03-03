@@ -141,7 +141,7 @@ Show # Basetypes for leaguestones in comment in case you only want to show some 
 	Class Leaguestone
 #	BaseType "Breach Leaguestone" "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
 	SetFontSize 45
-	SetBorderColor 128 254 128 
+	SetBorderColor 229 160 12            # BORDERCOLOR: 	Brownish gold. Legacy League theme
 	PlayAlertSound 2 300
 
 Show
