@@ -1,5 +1,5 @@
 # Carkasjak's Simple Speed Filter
-# Version 2.0
+# Version 2.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -249,7 +249,7 @@ Hide # Leveling essences
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 200 200 255 255   # BACKGROUND:	 Light blue/purple
+	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
 
 #------------------------------------
 # [2003] Special Currencies - Mostly Neversink
@@ -394,25 +394,25 @@ Show # T10
 	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
-Hide # T9
+Show # T9
 	DropLevel >= 76
 	Class Maps
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Hide # T8
+Show # T8
 	DropLevel >= 75
 	Class Maps
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Hide # T7
+Show # T7
 	DropLevel >= 74
 	Class Maps
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Hide # T6
+Show # T6
 	DropLevel >= 73
 	Class Maps
 	SetFontSize 45
@@ -422,27 +422,27 @@ Hide # T6
 # [3005] White Maps - T1-T5
 # -------------------------------------------------------------------
 
-Hide # T5
+Show # T5
 	DropLevel >= 72
 	Class Maps
 	SetFontSize 45
 
-Hide # T4
+Show # T4
 	DropLevel >= 71
 	Class Maps
 	SetFontSize 45
 
-Hide # T3
+Show # T3
 	DropLevel >= 70
 	Class Maps
 	SetFontSize 45
 
-Hide # T2
+Show # T2
 	DropLevel = 69
 	Class Maps
 	SetFontSize 45
 
-Hide # T1
+Show # T1
 	DropLevel < 69
 	Class Maps
 	SetFontSize 45
