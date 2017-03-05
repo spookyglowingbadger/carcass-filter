@@ -55,7 +55,6 @@
 
 
 
-
 # -------------------------------------------------------------------
 # Equipment Section
 # -------------------------------------------------------------------
@@ -126,19 +125,19 @@ Show # Don't miss the fishing rods!
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
 Show
-	Class Quest Items
+	Class "Quest Items"
 	BaseType "Shaper's Orb"
 	SetFontSize 45
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show
-	Class Quest Items
+	Class "Quest Items"
 	SetFontSize 45
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
 
 Show # Basetypes for leaguestones in comment in case you only want to show some of them. By default I'll show them all.
-	Class Leaguestone
+	Class "Leaguestone"
 #	BaseType "Breach Leaguestone" "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
 	SetFontSize 45
 	SetBorderColor 229 160 12            # BORDERCOLOR: 	Brownish gold. Legacy League theme
@@ -154,7 +153,7 @@ Show
 # -------------------------------------------------------------------
 
 Hide # I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
-	Class Rings
+	Class "Rings"
 	BaseType "Breach"
 	Rarity = Rare
 	SetFontSize 45
@@ -162,12 +161,12 @@ Hide # I'm sick of Breach Rings, so I'll hide them by default. They're almost ne
 	SetBackgroundColor 65 20 80          # BACKGROUND:	Breach
 
 Show # Rare Rings and Amulets are always worth picking up due to their small size and high potential value
-	Class Rings Amulets
+	Class "Rings" "Amulets"
 	Rarity = Rare
 	SetFontSize 45
 
 Show # Same thing applies to rare Jewels
-	Class Jewel
+	Class "Jewel"
 	Rarity = Rare
 	SetFontSize 45
 	SetTextColor 255 255 0 255           # TEXTCOLOR:	 Jewel: Rare
@@ -196,17 +195,17 @@ Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want 
 # -------------------------------------------------------------------
 
 Hide # Pleb Currency
-	Class Currency
+	Class "Currency"
 	BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's" "Orb of Augmentation" "Orb of Transmutation" "Blacksmith's"
 	SetFontSize 45
 
 Show # Useful currency but no special highlight or alert
-	Class Currency
+	Class "Currency"
 	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Glassblower's Bauble"
 	SetFontSize 45
 
 Show # Neversink T2 Currency
-	Class Currency
+	Class "Currency"
 	BaseType "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Master Cartographer" "Journeyman Cartographer" "Stacked Deck"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -215,7 +214,7 @@ Show # Neversink T2 Currency
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show # Neversink T3 Currency
-	Class Currency
+	Class "Currency"
 	BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Cartographer's Sextant" "Silver Coin"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -224,7 +223,7 @@ Show # Neversink T3 Currency
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show # Neversink T1 Currency
-	Class Currency
+	Class "Currency"
 	BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
 	SetFontSize 45
 	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
@@ -256,7 +255,7 @@ Hide # Leveling essences
 #------------------------------------
 
 Show # Blessing
-	Class Currency
+	Class "Currency"
 	BaseType "Blessing"
 	SetTextColor 130 25 255 255          # TEXTCOLOR:	 Breach Currency
 	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
@@ -265,7 +264,7 @@ Show # Blessing
 	PlayAlertSound 6 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show # Splinter
-	Class Currency
+	Class "Currency"
 	BaseType "Splinter"
 	SetFontSize 45
 	SetTextColor 255 235 235 255         # TEXTCOLOR:	 Breach Currency
@@ -274,7 +273,7 @@ Show # Splinter
 	PlayAlertSound 2 100
 
 Show # Perandus Coins
-	Class Currency
+	Class "Currency"
 	BaseType "Perandus Coin"
 	SetTextColor 0 0 0 255               # Black text
 	SetBorderColor 0 0 0 255             # Black border
@@ -282,7 +281,7 @@ Show # Perandus Coins
 	SetFontSize 45
 
 Show # Atlas manipulation
-	Class Currency
+	Class "Currency"
 	BaseType "Unshaping Orb" "Cartographer's Seal"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -291,7 +290,7 @@ Show # Atlas manipulation
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show # Prophecies
-	Class Currency
+	Class "Currency"
 	BaseType "Prophecy"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -308,7 +307,7 @@ Show # Prophecies
 # -------------------------------------------------------------------
 
 Show # Maps:Unique
-	Class Maps
+	Class "Maps"
 	Rarity Unique
 	SetFontSize 45
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
@@ -336,7 +335,7 @@ Show # Labyrinth-only items
 # -------------------------------------------------------------------
 	
 Show # T16
-	Class Maps
+	Class "Maps"
 	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
 	SetFontSize 45
 	SetBorderColor 192 128 254 255
@@ -344,35 +343,35 @@ Show # T16
 
 Show # T15
 	DropLevel >= 82
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 255 0 0 255
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 	
 Show # T14
 	DropLevel >= 81
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 	
 Show # T13
 	DropLevel >= 80
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T12
 	DropLevel >= 79
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T11
 	DropLevel >= 78
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 255 0 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
@@ -382,39 +381,39 @@ Show # T11
 # -------------------------------------------------------------------	
 
 #Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
-#	Class Maps
+#	Class "Maps"
 #	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
 #	SetFontSize 45
 #	SetBorderColor 254 213 0 255
 
 Show # T10
 	DropLevel >= 77
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
 Show # T9
 	DropLevel >= 76
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
 Show # T8
 	DropLevel >= 75
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
 Show # T7
 	DropLevel >= 74
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
 Show # T6
 	DropLevel >= 73
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
@@ -424,27 +423,27 @@ Show # T6
 
 Show # T5
 	DropLevel >= 72
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 
 Show # T4
 	DropLevel >= 71
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 
 Show # T3
 	DropLevel >= 70
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 
 Show # T2
 	DropLevel = 69
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 
 Show # T1
 	DropLevel < 69
-	Class Maps
+	Class "Maps"
 	SetFontSize 45
 
 # -------------------------------------------------------------------
@@ -569,36 +568,36 @@ Show # Every remaining unique
 
 Show # 20qual gems 
 	Quality >= 20
-	Class Gem
+	Class "Gem"
 	SetBorderColor 30 150 180 255        # BORDERCOLOR:	 T1 Gems
 	SetFontSize 45
 	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
 
 Show # Quality Gems
 	Quality >= 10
-	Class Gem
+	Class "Gem"
 	SetFontSize 45
 
 Show # Good Drop Only Gems
-	Class Gem
+	Class "Gem"
 	BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline"
 	SetFontSize 45
 
 Hide # Other gems
-	Class Gem
+	Class "Gem"
 
 # -------------------------------------------------------------------
 # [6001] Flasks
 # -------------------------------------------------------------------
 
 Show # 20 quality flasks
-	Class Flask
+	Class "Flask"
 	Quality = 20
 	SetFontSize 45
 
 Hide # Hide non-unique flasks that don't get caught by the 20 quality block
 	Rarity < Unique
-	Class Flask
+	Class "Flask"
 
 # -------------------------------------------------------------------
 # [7001] Divination Cards
@@ -633,7 +632,7 @@ Hide # Junk
 	SetFontSize 26
 
 Hide # Jewels that are lower than rare
-	Class Jewel
+	Class "Jewel"
 	Rarity < Rare
 	SetFontSize 26
 
