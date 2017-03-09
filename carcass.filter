@@ -1,12 +1,18 @@
 # Carkasjak's Simple Speed Filter
-# Version 2.1
+# Version 2.2
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
 # For leveling, use NeverSink's Regular filter instead:
 # https://github.com/NeverSinkDev/NeverSink-Filter
 
-
+# INSTRUCTIONS:
+# Before you start using this filter you should go to the maps section and pick which tiers you want shown.
+# Simply change the tiers you want to see to "Show" and the tiers you don't want to see to "Hide"
+# For example: If you have your atlas set up for Mesas and Strands, change all the T1-T9 map blocks to "Hide"
+# Do the same thing to some of the low currencies, like Transmutes and Augments.
+# Depending on how far along the league is, you may need to adjust this again later.
+# In the rares section you can decide if you want to show good ES base rares from ilvl 75 or 84, or not at all.
 
 # Tip: You can search the document for the index numbers to jump to the desired part of the filter. Most common text-editors for windows use the CTRL+F keyboard shortcut for this.
 
@@ -111,6 +117,7 @@ Show # 84+ Hubris for lab enchant
 	ItemLevel >= 84
 	Rarity < Rare
 	SetFontSize 45
+	SetBorderColor 255 255 255 255
 
 # -------------------------------------------------------------------
 # [1005] Special Exceptions
@@ -144,6 +151,7 @@ Show # Basetypes for leaguestones in comment in case you only want to show some 
 	PlayAlertSound 2 300
 
 Show
+	Class "Amulets"
 	BaseType "Talisman"
 	SetFontSize 45
 	SetBorderColor 50 230 100
@@ -173,7 +181,14 @@ Show # Same thing applies to rare Jewels
 	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
 	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
 
-Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want to see the really high level ones
+Show # 84+ good bases to identify
+	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
+	Rarity = Rare
+	ItemLevel >= 84
+	SetFontSize 45
+	SetBorderColor 255 255 255 255
+
+Show # 75+ good bases to identify (Change this to Hide if you only want to see 84+)
 	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
 	ItemLevel >= 75
@@ -191,17 +206,47 @@ Show # 75+ good bases to identify - Change the ItemLevel to 84 if you only want 
 # -------------------------------------------------------------------
 
 # -------------------------------------------------------------------
-# [2001] Normal Currencies - Mostly stolen from NeverSink, with minor edits
+# [2001] Normal Currencies - Loosely based on NeverSink
 # -------------------------------------------------------------------
 
-Hide # Pleb Currency
+Hide # Trash currency
 	Class "Currency"
-	BaseType "Portal Scroll" "Scroll of Wisdom" "Armourer's" "Orb of Augmentation" "Orb of Transmutation" "Blacksmith's"
+	BaseType "Transmutation Shard" "Alteration Shard" "Scroll Fragment"
+	SetFontSize 45
+
+Hide # Portal Scrolls
+	Class "Currency"
+	BaseType "Portal Scroll"
+	SetFontSize 45
+
+Hide # Scrolls of Wisdom
+	Class "Currency"
+	BaseType "Scroll of Wisdom"
+	SetFontSize 45
+
+Show # Transmutes
+	Class "Currency"
+	BaseType "Orb of Transmutation"
+	SetFontSize 45
+
+Hide # Augments
+	Class "Currency"
+	BaseType "Orb of Augmentation"
+	SetFontSize 45
+
+Hide # Armourer's
+	Class "Currency"
+	BaseType "Armourer's"
+	SetFontSize 45
+
+Hide # Blacksmith's
+	Class "Currency"
+	BaseType "Blacksmith's"
 	SetFontSize 45
 
 Show # Useful currency but no special highlight or alert
 	Class "Currency"
-	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Glassblower's Bauble"
+	BaseType "Alchemy Shard" "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Glassblower's Bauble"
 	SetFontSize 45
 
 Show # Neversink T2 Currency
@@ -232,18 +277,18 @@ Show # Neversink T1 Currency
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
 # -------------------------------------------------------------------
-# [2002] Essences - No tiers for Essences because I like picking up all of them for my Essence Tab
+# [2002] Essences
 # -------------------------------------------------------------------
 
 Show # Good Essences
 	BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption" "Screaming Essence of"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 White border
 	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
-Hide # Leveling essences
+Show # Leveling essences
 	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -380,12 +425,6 @@ Show # T11
 # [3004] Yellow Maps - T6-T10
 # -------------------------------------------------------------------	
 
-#Show # Favorite yellow maps (will be shown even if the applicable tier is hidden)
-#	Class "Maps"
-#	BaseType "Shaped Acid Lakes Map" "Tropical Island Map" "Atoll Map" "Promenade Map" "Shaped Beach Map" "Shaped Jungle Valley Map" "Shaped Arid Lake Map"
-#	SetFontSize 45
-#	SetBorderColor 254 213 0 255
-
 Show # T10
 	DropLevel >= 77
 	Class "Maps"
@@ -393,25 +432,25 @@ Show # T10
 	SetBorderColor 254 213 0 255
 	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
 
-Show # T9
+Hide # T9
 	DropLevel >= 76
 	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Show # T8
+Hide # T8
 	DropLevel >= 75
 	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Show # T7
+Hide # T7
 	DropLevel >= 74
 	Class "Maps"
 	SetFontSize 45
 	SetBorderColor 254 213 0 255
 
-Show # T6
+Hide # T6
 	DropLevel >= 73
 	Class "Maps"
 	SetFontSize 45
@@ -421,27 +460,27 @@ Show # T6
 # [3005] White Maps - T1-T5
 # -------------------------------------------------------------------
 
-Show # T5
+Hide # T5
 	DropLevel >= 72
 	Class "Maps"
 	SetFontSize 45
 
-Show # T4
+Hide # T4
 	DropLevel >= 71
 	Class "Maps"
 	SetFontSize 45
 
-Show # T3
+Hide # T3
 	DropLevel >= 70
 	Class "Maps"
 	SetFontSize 45
 
-Show # T2
+Hide # T2
 	DropLevel = 69
 	Class "Maps"
 	SetFontSize 45
 
-Show # T1
+Hide # T1
 	DropLevel < 69
 	Class "Maps"
 	SetFontSize 45
@@ -513,7 +552,7 @@ Show # Legacy League reliquary key
 	BaseType "Ancient Reliquary Key"
 	SetFontSize 45
 	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
+	SetBorderColor 229 160 12            # BORDERCOLOR:	 Brownish gold. Legacy League theme
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
@@ -536,28 +575,10 @@ Show # Safety line for Misc Map Items class
 
 
 # -------------------------------------------------------------------
-# [4001] Uniques - I treat most of them as equals because I'm too lazy to maintain tiers as the meta shifts
+# [4001] Uniques
 # -------------------------------------------------------------------
 
-Show # T1 - Only extremely good uniques that don't share bases with garbage.
-	BaseType "Sorcerer Boots" "Occultist's Vestment" "Glorious Plate" "Prophecy Wand" "Assassin's Garb" "Jewelled Foil" "Silver Flask" "Crusader Boots" "Deicide Mask"
-	Rarity Unique
-	SetFontSize 45
-	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
-	SetBorderColor 175 96 37 255         # BORDERCOLOR:	 Unique Item
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-#Show # T2 - I don't want to maintain a T2 list, but feel free to uncomment and manage your own.
-#	BaseType "Granite Flask" "Vaal Axe" "Vaal Sceptre" "Void Axe" "Fiend Dagger" "Imperial Staff" "Judgement Staff" "Midnight Blade" "Eternal Sword" "Imperial Skean" "Ebony Tower Shield" "Sacrificial Garb" "Ezomyte Tower Shield" "Vaal Regalia" "Titanium Spirit Shield" "Full Wyrmscale" "Varnished Coat" "Nightmare Bascinet" "Champion Kite Shield" "Ursine Pelt" "Penetrating Arrow Quiver" "Hubris Circlet" "Corrugated Buckler" "Deerskin Gloves" "Savant's Robe" "Two-Stone Ring" "Onyx Amulet" "Vanguard Belt" "Gold Ring"
-#	Rarity Unique
-#	SetFontSize 45
-#	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-#	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-#	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
-#	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-Show # Every remaining unique
+Show # Just show every unique because too lazy to maintain tiers.
 	Rarity Unique
 	SetFontSize 45
 	PlayAlertSound 3 300
@@ -603,21 +624,7 @@ Hide # Hide non-unique flasks that don't get caught by the 20 quality block
 # [7001] Divination Cards
 # -------------------------------------------------------------------
 
-Show # Top tier cards with T1 drop sound
-	Class "Divination"
-	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Hunter's Reward" "The Dragon's Heart" "Mawr Blaidd" "The Last One Standing" "The Offering" "The Ethereal" "The Queen" "Abandoned Wealth" "The Formless Sea" "The Brittle Emperor" "The Immortal" "The Artist" "The Thaumaturgist" "Wealth and Power" "The Demoness" "Pride Before the Fall" "The Enlightened" "Heterochromia" "The King's Heart" "Bowyer's Dream" "The Hunger" "The Celestial Justicar" "The Porcupine" "Spark and the Flame" "The Valkyrie"
-	SetFontSize 45
-	SetTextColor 0 0 255 255             # TEXTCOLOR:	 Cosmetic: T1 Divination card
-	SetBorderColor 0 0 255 255           # BORDERCOLOR:	 Cosmetic: T1 and T2 Divination
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-Hide # Annoying shitty cards
-	Class "Divination"
-	BaseType "Thunderous Skies" "Death" "The Flora's Gift" "The King's Blade" "The Carrion Crow" "The Inoculated"
-	SetFontSize 45
-
-Show # All remaining cards
+Show # Just show all cards because too lazy to maintain tiers.
 	Class "Divination"
 	SetFontSize 45
 	PlayAlertSound 2 300                 # DROPSOUND: Value Drop: Currency, fragments
