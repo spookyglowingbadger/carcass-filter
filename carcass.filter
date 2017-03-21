@@ -188,7 +188,7 @@ Show # 84+ good bases to identify
 	SetFontSize 45
 	SetBorderColor 255 255 255 255
 
-Show # 75+ good bases to identify (Change this to Hide if you only want to see 84+)
+Hide # 75+ good bases to identify (Change this to Hide if you only want to see 84+)
 	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
 	Rarity = Rare
 	ItemLevel >= 75
@@ -224,7 +224,7 @@ Hide # Scrolls of Wisdom
 	BaseType "Scroll of Wisdom"
 	SetFontSize 45
 
-Show # Transmutes
+Hide # Transmutes
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetFontSize 45
@@ -288,7 +288,7 @@ Show # Good Essences
 	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
 	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 	
-Show # Leveling essences
+Hide # Leveling essences
 	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
 	SetFontSize 45
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
@@ -601,7 +601,7 @@ Show # Quality Gems
 
 Show # Good Drop Only Gems
 	Class "Gem"
-	BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline"
+	BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline" "Item Quantity"
 	SetFontSize 45
 
 Hide # Other gems
