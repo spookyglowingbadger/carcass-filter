@@ -1,4 +1,4 @@
-Carkasjak's Simple Speed Filter - A loot filter designed for a faster and more efficient Path of Exile endgame.
+Carcass.filter - A loot filter designed for a faster and more efficient Path of Exile endgame.
 
 This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
 
