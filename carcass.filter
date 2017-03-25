@@ -1,5 +1,5 @@
-# Carkasjak's Simple Speed Filter
-# Version 2.2
+# Carcass.filter
+# Version 2.3
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -142,6 +142,13 @@ Show
 	Class "Quest Items"
 	SetFontSize 45
 	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
+
+Hide # Leaguestones that suck if they aren't magic
+	Class "Leaguestone"
+	BaseType "Torment Leaguestone" "Prophecy Leaguestone" "Anarchy Leaguestone" "Tempest Leaguestone"
+	Rarity = Normal
+	SetFontSize 45
+	SetBorderColor 229 160 12            # BORDERCOLOR: 	Brownish gold. Legacy League theme
 
 Show # Basetypes for leaguestones in comment in case you only want to show some of them. By default I'll show them all.
 	Class "Leaguestone"
