@@ -315,14 +315,22 @@ Show # Blessing
 	SetFontSize 45
 	PlayAlertSound 6 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
-Show # Splinter
+Show # Splinters to show. Should be adjusted manually based on market price of Breachstones.
 	Class "Currency"
-	BaseType "Splinter"
+	BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Uul-Netol"
 	SetFontSize 45
 	SetTextColor 255 235 235 255         # TEXTCOLOR:	 Breach Currency
 	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
 	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
 	PlayAlertSound 2 100
+	
+Hide # Splinters to hide.
+	Class "Currency"
+	BaseType "Splinter of Tul"
+	SetFontSize 45
+	SetTextColor 255 235 235 255         # TEXTCOLOR:	 Breach Currency
+	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
+	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
 
 Show # Perandus Coins
 	Class "Currency"
