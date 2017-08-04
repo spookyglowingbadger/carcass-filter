@@ -1,11 +1,10 @@
 # Carcass.filter
-# Version 2.3
+# Version 3.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
 # For leveling, use NeverSink's Regular filter instead:
 # https://github.com/NeverSinkDev/NeverSink-Filter
-
 # INSTRUCTIONS:
 # Before you start using this filter you should go to the maps section and pick which tiers you want shown.
 # Simply change the tiers you want to see to "Show" and the tiers you don't want to see to "Hide"
@@ -13,658 +12,863 @@
 # Do the same thing to some of the low currencies, like Transmutes and Augments.
 # Depending on how far along the league is, you may need to adjust this again later.
 # In the rares section you can decide if you want to show good ES base rares from ilvl 75 or 84, or not at all.
-
+# 
 # Tip: You can search the document for the index numbers to jump to the desired part of the filter. Most common text-editors for windows use the CTRL+F keyboard shortcut for this.
-
+# 
 # Table of Contents:
-#
+# 
 # [0000] Overrides
-#
-# Equipment Section
+# 
 # [1001] 6-links and 6-sockets
 # [1002] Atlas Bases
 # [1003] Chance Bases
 # [1004] 84+ bases
 # [1005] Special Exceptions
 # [1006] Rares
-#
-# Currency Section
-# [2001] Normal Currencies
-# [2002] Essences
-# [2003] Special Currencies
-#
-# Map Section
-# [3001] Unique Maps
-# [3002] Labyrinth
-# [3003] Red Maps
-# [3004] Yellow Maps
-# [3005] White Maps
+# 
+# [2001] Currency - Normal
+# [2002] Currency - Essences
+# [2003] Currency - Special
+# 
+# [3001] Maps - Unique
+# [3002] Maps - Labyrinth
+# [3003] Maps - Red
+# [3004] Maps - Yellow
+# [3005] Maps - White
 # [3006] Map Fragments
 # [3007] Misc Map Items
-#
+# 
 # [4001] Uniques
-#
+# 
 # [5001] Gems
-#
+# 
 # [6001] Flasks
-#
+# 
 # [7001] Divination Cards
-#
-# [8001] Junk - Hide and shrink equipment that is not covered by any previous blocks
-#
+# 
+# [8001] Junk
+# 
 # [9999] Safety Line
+# 
+# ----------------------------------------------------
 
+# Section: 0000: Overrides
 
-# -------------------------------------------------------------------
-# [0000] Overrides - Blocks in this section will override any other part of the filter.
-# -------------------------------------------------------------------
+# Section: 1001: 6-Links and 6-sockets
 
+# 6Links
+Show
+    LinkedSockets = 6
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 6 300
 
+# 6Sockets
+Show
+    Sockets = 6
+    Rarity <= Rare
+    SetBorderColor 255 255 255
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# Equipment Section
-# -------------------------------------------------------------------
+# Section: 1002: Atlas Bases
 
-# -------------------------------------------------------------------
-# [1001] 6-links and 6-sockets - Worth vendoring at least
-# -------------------------------------------------------------------
+# Valuable Atlas Bases
+Show
+    BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
+    SetFontSize 45
 
-Show # 6-Links
-	LinkedSockets 6
-	SetFontSize 45
-	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Section: 1003: Chance Bases
 
-Show # 6-Sockets
-	Sockets 6
-	Rarity <= Rare
-	SetFontSize 45
-	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 White border
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+# Skyforth
+Show
+    BaseType "Sorcerer Boots"
+    Rarity = Normal
+    SetBorderColor 0 210 0 210
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [1002] Atlas Bases - These are usually valuable at any rarity or itemlevel
-# -------------------------------------------------------------------
+# Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
+Hide
+    BaseType "Leather Belt"
+    Rarity = Normal
+    SetBorderColor 0 210 0 210
+    SetFontSize 45
 
-Show # Valuable Atlas Bases
-	BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
-	SetFontSize 45
+# Section: 1004: 84+ Bases
 
-# -------------------------------------------------------------------
-# [1003] Chance Bases
-# -------------------------------------------------------------------
+# Lab enchant helmets
+Show
+    BaseType "Hubris Circlet" "Eternal Burgonet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Lion Pelt"
+    Rarity < Rare
+    ItemLevel >= 84
+    SetBorderColor 255 255 255
+    SetFontSize 45
 
-Show # Skyforth
-	BaseType "Sorcerer Boots"
-	Rarity Normal
-	SetBorderColor 0 210 0 210
-	SetFontSize 45
+# Section: 1005: Special Exceptions
 
-Show # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
-	BaseType "Leather Belt"
-	Rarity Normal
-	SetBorderColor 0 210 0 210
-	SetFontSize 45
-
-# -------------------------------------------------------------------
-# [1004] 84+ bases
-# -------------------------------------------------------------------
-	
-Show # 84+ Hubris for lab enchant
-	BaseType "Hubris Circlet"
-	ItemLevel >= 84
-	Rarity < Rare
-	SetFontSize 45
-	SetBorderColor 255 255 255 255
-
-# -------------------------------------------------------------------
-# [1005] Special Exceptions
-# -------------------------------------------------------------------
-	
-Show # Don't miss the fishing rods!
-	Class "Fishing Rod"
-	SetFontSize 45
-	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Don't miss the fishing rods!
+Show
+    Class "Fishing Rod"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 6 300
 
 Show
-	Class "Quest Items"
-	BaseType "Shaper's Orb"
-	SetFontSize 45
-	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+    Class "Quest Items"
+    BaseType "Shaper's Orb"
+    SetBorderColor 74 230 58
+    SetFontSize 45
 
 Show
-	Class "Quest Items"
-	SetFontSize 45
-	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs
-
-Hide # Leaguestones that suck if they aren't magic
-	Class "Leaguestone"
-	BaseType "Torment Leaguestone" "Prophecy Leaguestone" "Anarchy Leaguestone" "Tempest Leaguestone"
-	Rarity = Normal
-	SetFontSize 45
-	SetBorderColor 229 160 12            # BORDERCOLOR: 	Brownish gold. Legacy League theme
-
-Show # Basetypes for leaguestones in comment in case you only want to show some of them. By default I'll show them all.
-	Class "Leaguestone"
-#	BaseType "Breach Leaguestone" "Essence Leaguestone" "Prophecy Leaguestone" "Perandus Leaguestone" "Talisman Leaguestone" "Warbands Leaguestone" "Tempest Leaguestone" "Torment Leaguestone" "Bloodlines Leaguestone" "Rampage Leaguestone" "Beyond Leaguestone" "Ambush Leaguestone" "Invasion Leaguestone" "Domination Leaguestone" "Nemesis Leaguestone" "Anarchy Leaguestone" "Onslaught Leaguestone"
-	SetFontSize 45
-	SetBorderColor 229 160 12            # BORDERCOLOR: 	Brownish gold. Legacy League theme
-	PlayAlertSound 2 300
-
-Show
-	Class "Amulets"
-	BaseType "Talisman"
-	SetFontSize 45
-	SetBorderColor 50 230 100
-
-# -------------------------------------------------------------------
-# [1006] Rares - I only like small rares because I hate sorting them
-# -------------------------------------------------------------------
-
-Hide # I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
-	Class "Rings"
-	BaseType "Breach"
-	Rarity = Rare
-	SetFontSize 45
-	SetBorderColor 130 25 255 255        # BORDERCOLOR:	Breach - accent
-	SetBackgroundColor 65 20 80          # BACKGROUND:	Breach
-
-Show # Rare Rings and Amulets are always worth picking up due to their small size and high potential value
-	Class "Rings" "Amulets"
-	Rarity = Rare
-	SetFontSize 45
-
-Show # Same thing applies to rare Jewels
-	Class "Jewel"
-	Rarity = Rare
-	SetFontSize 45
-	SetTextColor 255 255 0 255           # TEXTCOLOR:	 Jewel: Rare
-	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
-	SetBackgroundColor 75 75 0 255       # BACKGROUND:	 Jewel: Rare
-
-Show # 84+ good bases to identify
-	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
-	Rarity = Rare
-	ItemLevel >= 84
-	SetFontSize 45
-	SetBorderColor 255 255 255 255
-
-Hide # 75+ good bases to identify (Change this to Hide if you only want to see 84+)
-	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
-	Rarity = Rare
-	ItemLevel >= 75
-	SetFontSize 45
-
-# Lists of other top tier rare BaseTypes you may want to add if the meta shifts:
-# Armour: "Astral Plate" "Glorious Plate" "Titan Greaves" "Titan Gauntlets" "Eternal Burgonet" "Royal Burgonet" "Pinnacle Tower Shield" "Spiked Gloves"
-# Armour/ES: "Saintly Chainmail" "Crusader Boots" "Crusader Gloves" "Praetor Crown" "Archon Kite Shield" "Bone Helmet"
-# Armour/Evasion: "Triumphant Lamellar" "Dragonscale Boots" "Dragonscale Gauntlets" "Nightmare Bascinet" "Elegant Round Shield"
-# Evasion: "Zodiac Leather" "Assassin's Garb" "Slink Boots" "Slink Gloves" "Lion Pelt" "Imperial Buckler" "Gripped Gloves"
-# Evasion/ES: "Carnal Armour" "Murder Boots" "Murder Mitts" "Deicide Mask" "Supreme Spiked Shield"
-
-# -------------------------------------------------------------------
-# Currency Section
-# -------------------------------------------------------------------
-
-# -------------------------------------------------------------------
-# [2001] Normal Currencies - Loosely based on NeverSink
-# -------------------------------------------------------------------
-
-Hide # Trash currency
-	Class "Currency"
-	BaseType "Transmutation Shard" "Alteration Shard" "Scroll Fragment"
-	SetFontSize 45
-
-Hide # Portal Scrolls
-	Class "Currency"
-	BaseType "Portal Scroll"
-	SetFontSize 45
-
-Hide # Scrolls of Wisdom
-	Class "Currency"
-	BaseType "Scroll of Wisdom"
-	SetFontSize 45
-
-Hide # Transmutes
-	Class "Currency"
-	BaseType "Orb of Transmutation"
-	SetFontSize 45
-
-Hide # Augments
-	Class "Currency"
-	BaseType "Orb of Augmentation"
-	SetFontSize 45
-
-Hide # Armourer's
-	Class "Currency"
-	BaseType "Armourer's"
-	SetFontSize 45
-
-Hide # Blacksmith's
-	Class "Currency"
-	BaseType "Blacksmith's"
-	SetFontSize 45
-
-Show # Useful currency but no special highlight or alert
-	Class "Currency"
-	BaseType "Alchemy Shard" "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb" "Glassblower's Bauble"
-	SetFontSize 45
-
-Show # Neversink T2 Currency
-	Class "Currency"
-	BaseType "Regal Orb" "Orb of Regret" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Master Cartographer" "Journeyman Cartographer" "Stacked Deck"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 249 150 25 255    # BACKGROUND:	 T2 Currency
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-
-Show # Neversink T3 Currency
-	Class "Currency"
-	BaseType "Blessed Orb" "Orb of Fusing" "Orb of Scouring" "Orb of Alchemy" "Cartographer's Chisel" "Cartographer's Sextant" "Silver Coin"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
-	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 T3 Currency
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-
-Show # Neversink T1 Currency
-	Class "Currency"
-	BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
-	SetFontSize 45
-	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-
-# -------------------------------------------------------------------
-# [2002] Essences
-# -------------------------------------------------------------------
-
-Show # Good Essences
-	BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption" "Screaming Essence of"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 White border
-	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+    Class "Quest Items"
+    SetBorderColor 74 230 58
+    SetFontSize 45
 	
-Hide # Leveling essences
-	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 30 144 255        # BACKGROUND:	 Blue
+# Leaguestones that suck if they aren't magic
+Hide
+    Class "Leaguestone"
+    BaseType "Torment Leaguestone" "Prophecy Leaguestone" "Anarchy Leaguestone" "Tempest Leaguestone"
+    Rarity = Normal
+    SetBorderColor 229 160 12
+    SetFontSize 45
 
-#------------------------------------
-# [2003] Special Currencies - Mostly Neversink
-#------------------------------------
-
-Show # Blessing
-	Class "Currency"
-	BaseType "Blessing"
-	SetTextColor 130 25 255 255          # TEXTCOLOR:	 Breach Currency
-	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	SetFontSize 45
-	PlayAlertSound 6 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-
-Show # Splinters to show. Should be adjusted manually based on market price of Breachstones.
-	Class "Currency"
-	BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Uul-Netol"
-	SetFontSize 45
-	SetTextColor 255 235 235 255         # TEXTCOLOR:	 Breach Currency
-	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
-	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
-	PlayAlertSound 2 100
-	
-Hide # Splinters to hide.
-	Class "Currency"
-	BaseType "Splinter of Tul"
-	SetFontSize 45
-	SetTextColor 255 235 235 255         # TEXTCOLOR:	 Breach Currency
-	SetBorderColor 130 25 255 255        # BORDERCOLOR:	 Breach - accent
-	SetBackgroundColor 65 20 80          # BACKGROUND:	 Breach
-
-Show # Perandus Coins
-	Class "Currency"
-	BaseType "Perandus Coin"
-	SetTextColor 0 0 0 255               # Black text
-	SetBorderColor 0 0 0 255             # Black border
-	SetBackgroundColor 232 207 151       # Gold/brown Background
-	SetFontSize 45
-
-Show # Atlas manipulation
-	Class "Currency"
-	BaseType "Unshaping Orb" "Cartographer's Seal"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 249 150 50 255    # BACKGROUND:	 T2 Currency
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-
-Show # Prophecies
-	Class "Currency"
-	BaseType "Prophecy"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 159 15 213        # BACKGROUND:	 Itemized Prophecy
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
-
-# -------------------------------------------------------------------
-# Map Section
-# -------------------------------------------------------------------
-
-# -------------------------------------------------------------------
-# [3001] Unique Maps
-# -------------------------------------------------------------------
-
-Show # Maps:Unique
-	Class "Maps"
-	Rarity Unique
-	SetFontSize 45
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
-
-# -------------------------------------------------------------------
-# [3002] Labyrinth
-# -------------------------------------------------------------------	
-	
+# Leaguestones
 Show
-	BaseType "Offering to the Goddess"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
-	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+    Class "Leaguestone"
+    SetBorderColor 229 160 12
+    SetFontSize 45
 
-Show # Labyrinth-only items
-	Class "Labyrinth"
-	SetFontSize 45
-	SetTextColor 74 230 58               # TEXTCOLOR:	 Labyrinth, Quest, Shaper Orbs
-	SetBorderColor 74 230 58             # BORDERCOLOR:	 Labyrinth, Quest, Shaper Orbs	
+# Talismans
+Show
+    Class "Amulets"
+    BaseType "Talisman"
+    SetBorderColor 50 230 100
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [3003] Red Maps - T11-T16
-# -------------------------------------------------------------------
-	
-Show # T16
-	Class "Maps"
-	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
-	SetFontSize 45
-	SetBorderColor 192 128 254 255
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Pantheon Souls
+Show
+    Class "Pantheon Soul"
+    SetTextColor 255 255 255
+    SetBackgroundColor 189 186 109
+    SetBorderColor 210 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 1 79
 
-Show # T15
-	DropLevel >= 82
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 255 0 0 255
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
-	
-Show # T14
-	DropLevel >= 81
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 255 0 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
-	
-Show # T13
-	DropLevel >= 80
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 255 0 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+# Section: 1006: Rares
 
-Show # T12
-	DropLevel >= 79
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 255 0 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+# I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
+Hide
+    Class "Rings"
+    BaseType "Breach"
+    Rarity = Rare
+    SetBackgroundColor 65 20 80
+    SetBorderColor 130 25 255
+    SetFontSize 45
 
-Show # T11
-	DropLevel >= 78
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 255 0 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+# Rare Rings and Amulets are always worth picking up due to their small size and high potential value
+Show
+    Class "Rings" "Amulets"
+    Rarity = Rare
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [3004] Yellow Maps - T6-T10
-# -------------------------------------------------------------------	
+# Same thing applies to rare Jewels
+Show
+    Class "Jewel"
+    Rarity = Rare
+    SetTextColor 255 255 0
+    SetBackgroundColor 75 75 0
+    SetBorderColor 255 255 0
+    SetFontSize 45
 
-Show # T10
-	DropLevel >= 77
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
-	PlayAlertSound 4 300                 # DROPSOUND:	 T1 maps
+# 84+ good bases to identify
+Show
+    BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
+    Rarity = Rare
+    ItemLevel >= 84
+    SetBorderColor 255 255 255
+    SetFontSize 45
 
-Hide # T9
-	DropLevel >= 76
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
+# 75+ good bases to identify (Change this to Hide if you only want to see 84+)
+Hide
+    BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
+    Rarity = Rare
+    ItemLevel >= 75
+    SetFontSize 45
 
-Hide # T8
-	DropLevel >= 75
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
+# Section: 2001: Currency - Normal
 
-Hide # T7
-	DropLevel >= 74
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
+# Scroll Fragment
+Hide
+    Class "Currency"
+    BaseType "Scroll Fragment"
+    SetFontSize 45
 
-Hide # T6
-	DropLevel >= 73
-	Class "Maps"
-	SetFontSize 45
-	SetBorderColor 254 213 0 255
+# Transmutation Shard
+Hide
+    Class "Currency"
+    BaseType "Transmutation Shard"
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [3005] White Maps - T1-T5
-# -------------------------------------------------------------------
+# Alteration Shard
+Hide
+    Class "Currency"
+    BaseType "Alteration Shard"
+    SetFontSize 45
 
-Hide # T5
-	DropLevel >= 72
-	Class "Maps"
-	SetFontSize 45
+# Portal Scrolls
+Hide
+    Class "Currency"
+    BaseType "Portal Scroll"
+    SetBorderColor 0 100 150
+    SetFontSize 45
 
-Hide # T4
-	DropLevel >= 71
-	Class "Maps"
-	SetFontSize 45
+# Scrolls of Wisdom
+Hide
+    Class "Currency"
+    BaseType "Scroll of Wisdom"
+    SetBorderColor 254 128 128
+    SetFontSize 45
 
-Hide # T3
-	DropLevel >= 70
-	Class "Maps"
-	SetFontSize 45
+# Transmutes
+Show
+    Class "Currency"
+    BaseType "Orb of Transmutation"
+    SetTextColor 255 255 255
+    SetBackgroundColor 54 100 146
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
-Hide # T2
-	DropLevel = 69
-	Class "Maps"
-	SetFontSize 45
+# Augments
+Show
+    Class "Currency"
+    BaseType "Orb of Augmentation"
+    SetTextColor 255 255 255
+    SetBackgroundColor 146 146 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
-Hide # T1
-	DropLevel < 69
-	Class "Maps"
-	SetFontSize 45
+# Orb of Alteration
+Show
+    Class "Currency"
+    BaseType "Orb of Alteration"
+    SetTextColor 255 255 255
+    SetBackgroundColor 30 144 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [3006] Map Fragments
-# -------------------------------------------------------------------	
+# Armourer's
+Show
+    Class "Currency"
+    BaseType "Armourer's"
+    SetTextColor 255 255 255
+    SetBackgroundColor 87 87 87
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Blacksmith's
+Show
+    Class "Currency"
+    BaseType "Blacksmith's"
+    SetTextColor 255 255 255
+    SetBackgroundColor 127 127 127
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Alchemy Shard
+Show
+    Class "Currency"
+    BaseType "Alchemy Shard"
+    SetFontSize 45
+
+# Jeweller's Orb
+Show
+    Class "Currency"
+    BaseType "Jeweller's Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 124 178 202
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Orb of Chance
+Show
+    Class "Currency"
+    BaseType "Orb of Chance"
+    SetTextColor 255 255 255
+    SetBackgroundColor 98 128 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Glassblower's Bauble
+Show
+    Class "Currency"
+    BaseType "Glassblower's Bauble"
+    SetTextColor 255 255 255
+    SetBackgroundColor 160 128 200
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Chromatic Orb
+Show
+    Class "Currency"
+    BaseType "Chromatic Orb"
+    SetTextColor 255 255 255
+    SetBackgroundColor 0 200 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Vaal Orb
+Show
+    Class "Currency"
+    BaseType "Vaal Orb"
+    SetTextColor 255 255 255
+    SetBackgroundColor 210 0 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Regal Orb
+Show
+    Class "Currency"
+    BaseType "Regal Orb"
+    SetTextColor 255 255 255
+    SetBackgroundColor 155 154 57
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Orb of Regret
+Show
+    Class "Currency"
+    BaseType "Orb of Regret"
+    SetTextColor 0 0 0
+    SetBackgroundColor 235 235 235
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Orb of Scouring
+Show
+    Class "Currency"
+    BaseType "Orb of Scouring"
+    SetTextColor 0 0 0
+    SetBackgroundColor 245 245 245
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Chaos Orb
+Show
+    Class "Currency"
+    BaseType "Chaos Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 249 150 25
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Gemcutter's Prism
+Show
+    Class "Currency"
+    BaseType "Gemcutter's Prism"
+    SetTextColor 0 0 0
+    SetBackgroundColor 27 162 155
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Stacked Deck
+Show
+    Class "Currency"
+    BaseType "Stacked Deck"
+    SetTextColor 0 0 0
+    SetBackgroundColor 249 150 25
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Apprentice Cartographer's Sextant
+Show
+    Class "Currency"
+    BaseType "Apprentice Cartographer's Sextant"
+    SetTextColor 255 255 255
+    SetBackgroundColor 124 81 50
+    SetBorderColor 200 200 200
+    SetFontSize 45
+
+# Journeyman Cartographer's Sextant
+Show
+    Class "Currency"
+    BaseType "Journeyman Cartographer's Sextant"
+    SetTextColor 255 255 255
+    SetBackgroundColor 124 81 50
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# Master Cartographer's Sextant
+Show
+    Class "Currency"
+    BaseType "Master Cartographer's Sextant"
+    SetTextColor 255 255 255
+    SetBackgroundColor 124 81 50
+    SetBorderColor 255 0 0
+    SetFontSize 45
+
+# Cartographer's Chisel
+Show
+    Class "Currency"
+    BaseType "Cartographer's Chisel"
+    SetTextColor 255 255 255
+    SetBackgroundColor 144 101 70
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Silver Coin
+Show
+    Class "Currency"
+    BaseType "Silver Coin"
+    SetTextColor 255 255 255
+    SetBackgroundColor 88 0 179
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Orb of Alchemy
+Show
+    Class "Currency"
+    BaseType "Orb of Alchemy"
+    SetTextColor 0 0 0
+    SetBackgroundColor 254 213 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Orb of Fusing
+Show
+    Class "Currency"
+    BaseType "Orb of Fusing"
+    SetTextColor 0 0 0
+    SetBackgroundColor 184 218 242
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Blessed Orb
+Show
+    Class "Currency"
+    BaseType "Blessed Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 213 159 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Harbinger League Shards
+Show
+    Class "Currency"
+    BaseType "Annulment Shard" "Binding Shard" "Horizon Shard" "Harbinger's Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Mirror Shard" "Exalted Shard" "Regal Shard"
+    SetTextColor 0 0 0
+    SetBackgroundColor 88 124 244
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Harbinger League Orbs
+Show
+    Class "Currency"
+    BaseType "Orb of Annulment" "Orb of Binding" "Orb of Horizons" "Harbinger's Orb" "Engineer's Orb" "Ancient Orb"
+    SetTextColor 0 0 0
+    SetBackgroundColor 88 124 244
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Neversink T1 Currency
+Show
+    Class "Currency"
+    BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 6 300
+
+# Section: 2002: Currency - Essences
+
+# Good Essences
+Show
+    BaseType "Shrieking Essence of" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium" "Deafening Essence of" "Remnant of Corruption" "Screaming Essence of"
+    SetTextColor 0 0 0
+    SetBackgroundColor 30 144 255
+    SetBorderColor 255 255 255
+    SetFontSize 45
+
+# Leveling essences
+Show
+    BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
+    SetTextColor 0 0 0
+    SetBackgroundColor 30 144 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Section: 2003: Currency - Special
+
+# Blessing
+Show
+    Class "Currency"
+    BaseType "Blessing"
+    SetTextColor 130 25 255
+    SetBackgroundColor 255 255 255
+    SetBorderColor 130 25 255
+    SetFontSize 45
+
+# Splinters to show. Should be adjusted manually based on market price of Breachstones.	
+Show
+    Class "Currency"
+    BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Uul-Netol"
+    SetTextColor 255 235 235
+    SetBackgroundColor 65 20 80
+    SetBorderColor 130 25 255
+    SetFontSize 45
+
+# Splinters to hide.	
+Hide
+    Class "Currency"
+    BaseType "Splinter of Tul"
+    SetTextColor 255 235 235
+    SetBackgroundColor 65 20 80
+    SetBorderColor 130 25 255
+    SetFontSize 45
+
+# Perandus Coins
+Show
+    Class "Currency"
+    BaseType "Perandus Coin"
+    SetTextColor 0 0 0
+    SetBackgroundColor 232 207 151
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Atlas manipulation
+Show
+    Class "Currency"
+    BaseType "Unshaping Orb" "Cartographer's Seal"
+    SetTextColor 0 0 0
+    SetBackgroundColor 249 150 50
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Prophecies
+Show
+    Class "Currency"
+    BaseType "Prophecy"
+    SetTextColor 0 0 0
+    SetBackgroundColor 159 15 213
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Section: 3001: Maps - Unique
+
+# Unique Maps
+Show
+    Class "Maps"
+    Rarity = Unique
+    SetFontSize 45
+
+# Section: 3002: Maps - Labyrinth
+
+# Lab offerings
+Show
+    BaseType "Offering to the Goddess"
+    SetTextColor 0 0 0
+    SetBackgroundColor 180 0 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Labyrinth - only items
+Show
+    Class "Labyrinth"
+    SetTextColor 74 230 58
+    SetBorderColor 74 230 58
+    SetFontSize 45
+
+# Section: 3003: Maps - Red
+
+# T16
+Show
+    Class "Maps"
+    BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
+    SetBorderColor 192 128 254
+    SetFontSize 45
+    PlayAlertSoundPositional 8 100
+
+# T15
+Show
+    DropLevel >= 82
+    Class "Maps"
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 4 100
+
+# T14
+Show
+    DropLevel >= 81
+    Class "Maps"
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 4 100
+
+# T13
+Show
+    DropLevel >= 80
+    Class "Maps"
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 4 100
+
+# T12
+Show
+    DropLevel >= 79
+    Class "Maps"
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 4 100
+
+# T11
+Show
+    DropLevel >= 78
+    Class "Maps"
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 4 100
+
+# Section: 3004: Maps - Yellow
+
+# T10
+Show
+    DropLevel >= 77
+    Class "Maps"
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# T9
+Hide
+    DropLevel >= 76
+    Class "Maps"
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# T8
+Hide
+    DropLevel >= 75
+    Class "Maps"
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# T7
+Hide
+    DropLevel >= 74
+    Class "Maps"
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# T6
+Hide
+    DropLevel >= 73
+    Class "Maps"
+    SetBorderColor 254 213 0
+    SetFontSize 45
+
+# Section: 3005: Maps - White
+
+# T5
+Hide
+    DropLevel >= 72
+    Class "Maps"
+    SetFontSize 45
+
+# T4
+Hide
+    DropLevel >= 71
+    Class "Maps"
+    SetFontSize 45
+
+# T3
+Hide
+    DropLevel >= 70
+    Class "Maps"
+    SetFontSize 45
+
+# T2
+Hide
+    DropLevel = 69
+    Class "Maps"
+    SetFontSize 45
+
+# T1
+Hide
+    DropLevel < 69
+    Class "Maps"
+    SetFontSize 45
+
+# Section: 3006: Map Fragments
 
 Show
-	Class "Map Fragments"
-	BaseType "Mortal Hope" "Mortal Ignorance"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+    Class "Map Fragments"
+    BaseType "Mortal Hope" "Mortal Ignorance"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Shaper Fragments and Breachstone
+Show
+    Class "Map Fragments"
+    BaseType "Fragment of the Phoenix" "Fragment of the Minotaur" "Fragment of the Chimera" "Fragment of the Hydra" "Breachstone"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
 Show
-	Class "Map Fragments"
-	BaseType "Fragment of the Phoenix" "Fragment of the Minotaur" "Fragment of the Chimera" "Fragment of the Hydra" "Breachstone"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+    Class "Map Fragments"
+    BaseType "Mortal"
+    SetTextColor 0 0 0
+    SetBackgroundColor 180 0 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
+
+# Prophecy League Fragments
+Show
+    Class "Map Fragments"
+    BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
+    SetTextColor 0 0 0
+    SetBackgroundColor 180 0 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
 Show
-	Class "Map Fragments"
-	BaseType "Mortal"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+    Class "Map Fragments"
+    BaseType "Sacrifice at Midnight"
+    SetTextColor 0 0 0
+    SetBackgroundColor 180 0 0
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
+# Divine Vessel
 Show
-	Class "Map Fragments"
-	BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+    Class "Map Fragments"
+    BaseType "Divine Vessel"
+    SetTextColor 255 255 255
+    SetBackgroundColor 189 186 109
+    SetBorderColor 210 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional 1 79
 
+# Safety line for Map Fragments class
 Show
-	Class "Map Fragments"
-	BaseType "Sacrifice at Midnight"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 180 0 0 255       # BACKGROUND:	 Fragments - valuable
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+    Class "Map Fragments"
+    SetTextColor 180 0 0
+    SetBackgroundColor 0 0 0
+    SetBorderColor 180 0 0
+    SetFontSize 45
 
+# Section: 3007: Misc Map Items
 
-Show # Safety line for Map Fragments class
-	Class "Map Fragments"
-	SetFontSize 45
-	SetTextColor 180 0 0 255             # TEXTCOLOR:	 Map fragments
-	SetBorderColor 180 0 0 255           # BORDERCOLOR:	 Fragments: Random
-	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+# Legacy League reliquary key
+Show
+    Class "Misc Map Items"
+    BaseType "Ancient Reliquary Key"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 229 160 12
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [3007] Misc Map Items
-# -------------------------------------------------------------------
+# Breachstones
+Show
+    Class "Misc Map Items"
+    BaseType "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
-Show # Legacy League reliquary key
-	Class "Misc Map Items"
-	BaseType "Ancient Reliquary Key"
-	SetFontSize 45
-	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T1 items: currency, 6L, fishing rod
-	SetBorderColor 229 160 12            # BORDERCOLOR:	 Brownish gold. Legacy League theme
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Safety line for Misc Map Items class
+Show
+    Class "Misc Map Items"
+    SetTextColor 0 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 0 0 0
+    SetFontSize 45
 
-Show # Breachstones
-	Class "Misc Map Items"
-	BaseType "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Section: 4001: Uniques
 
-Show # Safety line for Misc Map Items class
-	Class "Misc Map Items"
-	SetFontSize 45
-	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
-	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
-	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+# Pieces
+Show
+    Class "Piece"
+    SetFontSize 45
+    PlayAlertSoundPositional 3 100
 
+# Just show every unique because too lazy to maintain tiers.
+Show
+    Rarity = Unique
+    SetFontSize 45
+    PlayAlertSoundPositional 3 100
 
-# -------------------------------------------------------------------
-# [4001] Uniques
-# -------------------------------------------------------------------
+# Section: 5001: Gems
 
-Show # Just show every unique because too lazy to maintain tiers.
-	Rarity Unique
-	SetFontSize 45
-	PlayAlertSound 3 300
+# 20qual gems
+Show
+    Quality >= 20
+    Class "Gem"
+    SetBorderColor 30 150 180
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [5001] Gems
-# -------------------------------------------------------------------
+# Quality Gems
+Show
+    Quality >= 10
+    Class "Gem"
+    SetFontSize 45
 
-Show # 20qual gems 
-	Quality >= 20
-	Class "Gem"
-	SetBorderColor 30 150 180 255        # BORDERCOLOR:	 T1 Gems
-	SetFontSize 45
-	PlayAlertSound 3 300                 # DROPSOUND:	 Random uniques, 20qual gems
+# Good Drop Only Gems
+Show
+    Class "Gem"
+    BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline" "Item Quantity"
+    SetFontSize 45
 
-Show # Quality Gems
-	Quality >= 10
-	Class "Gem"
-	SetFontSize 45
+# Hide other gems
+Hide
+    Class "Gem"
 
-Show # Good Drop Only Gems
-	Class "Gem"
-	BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline" "Item Quantity"
-	SetFontSize 45
+# Section: 6001: Flasks
 
-Hide # Other gems
-	Class "Gem"
+# 20 quality flasks
+Show
+    Quality = 20
+    Class "Flask"
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [6001] Flasks
-# -------------------------------------------------------------------
+# Hide flasks that aren't 20 quality or unique
+Hide
+    Class "Flask"
+    Rarity < Unique
 
-Show # 20 quality flasks
-	Class "Flask"
-	Quality = 20
-	SetFontSize 45
+# Section: 7001: Divination Cards
 
-Hide # Hide non-unique flasks that don't get caught by the 20 quality block
-	Rarity < Unique
-	Class "Flask"
+# Just show all cards because too lazy to maintain tiers.
+Show
+    Class "Divination"
+    SetFontSize 45
 
-# -------------------------------------------------------------------
-# [7001] Divination Cards
-# -------------------------------------------------------------------
+# Section: 8001: Junk
 
-Show # Just show all cards because too lazy to maintain tiers.
-	Class "Divination"
-	SetFontSize 45
-	PlayAlertSound 2 300                 # DROPSOUND: Value Drop: Currency, fragments
+# Junk
+Hide
+    Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets"
+    Rarity < Unique
+    SetFontSize 26
 
-# -------------------------------------------------------------------
-# [8001] Junk - Hide and shrink equipment that is not covered by any previous blocks
-# -------------------------------------------------------------------
-	
-Hide # Junk
-	Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets"	
-	Rarity < Unique
-	SetFontSize 26
+# Jewels that are lower than rare
+Hide
+    Class "Jewel"
+    Rarity < Rare
+    SetFontSize 26
 
-Hide # Jewels that are lower than rare
-	Class "Jewel"
-	Rarity < Rare
-	SetFontSize 26
+# Section: 9999: Safety Line
 
+# SafetyLine! This catches new items that are not explicitly hidden or shown by previous blocks.
+Show
+    SetTextColor 255 0 255
+    SetBorderColor 255 0 255
+    SetFontSize 45
+    PlayAlertSoundPositional 5 100
 
-# -------------------------------------------------------------------
-# [9999] Safety Line - Anything I may have forgotten to show will show up as pink with a T1 drop alert so I'll notice and hopefully correct the mistake in future updates.
-# -------------------------------------------------------------------	
-
-Show # SafetyLine!
-	SetFontSize 45
-	SetTextColor 255 0 255 255           # TEXTCOLOR:	 SAFETY LINE
-	SetBorderColor 255 0 255 255         # BORDERCOLOR:	 SAFETY LINE
-	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
