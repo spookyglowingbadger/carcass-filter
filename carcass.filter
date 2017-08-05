@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.0
+# Version 3.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -9,9 +9,8 @@
 # Before you start using this filter you should go to the maps section and pick which tiers you want shown.
 # Simply change the tiers you want to see to "Show" and the tiers you don't want to see to "Hide"
 # For example: If you have your atlas set up for Mesas and Strands, change all the T1-T9 map blocks to "Hide"
-# Do the same thing to some of the low currencies, like Transmutes and Augments.
-# Depending on how far along the league is, you may need to adjust this again later.
-# In the rares section you can decide if you want to show good ES base rares from ilvl 75 or 84, or not at all.
+# Do the same thing for currencies. Later in the league you'll want to hide many of the low value currencies.
+# Very few rares are shown, so add your own if you like.
 # 
 # Tip: You can search the document for the index numbers to jump to the desired part of the filter. Most common text-editors for windows use the CTRL+F keyboard shortcut for this.
 # 
@@ -60,7 +59,7 @@
 Show
     LinkedSockets = 6
     SetTextColor 255 0 0
-    SetBackgroundColor 255 255 255
+    SetBackgroundColor 255 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
     PlayAlertSoundPositional 6 300
@@ -69,7 +68,7 @@ Show
 Show
     Sockets = 6
     Rarity <= Rare
-    SetBorderColor 255 255 255
+    SetBorderColor 175 96 37 255
     SetFontSize 45
 
 # Section: 1002: Atlas Bases
@@ -155,7 +154,7 @@ Show
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 1 79
+    PlayAlertSoundPositional 6 300
 
 # Section: 1006: Rares
 
@@ -206,32 +205,27 @@ Hide
     BaseType "Scroll Fragment"
     SetFontSize 45
 
-# Transmutation Shard
-Hide
-    Class "Currency"
-    BaseType "Transmutation Shard"
-    SetFontSize 45
-
-# Alteration Shard
-Hide
-    Class "Currency"
-    BaseType "Alteration Shard"
-    SetFontSize 45
-
 # Portal Scrolls
-Hide
+Show
     Class "Currency"
     BaseType "Portal Scroll"
     SetBorderColor 0 100 150
     SetFontSize 45
 
 # Scrolls of Wisdom
-Hide
+Show
     Class "Currency"
     BaseType "Scroll of Wisdom"
     SetBorderColor 254 128 128
     SetFontSize 45
 
+# Transmutation Shard
+Show
+    Class "Currency"
+    BaseType "Transmutation Shard"
+    SetFontSize 45
+	SetBorderColor 54 100 146
+	
 # Transmutes
 Show
     Class "Currency"
@@ -250,6 +244,13 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
+# Alteration Shard
+Show
+    Class "Currency"
+    BaseType "Alteration Shard"
+    SetFontSize 45 
+	SetBorderColor 30 144 255
+	
 # Orb of Alteration
 Show
     Class "Currency"
@@ -275,12 +276,6 @@ Show
     SetTextColor 255 255 255
     SetBackgroundColor 127 127 127
     SetBorderColor 0 0 0
-    SetFontSize 45
-
-# Alchemy Shard
-Show
-    Class "Currency"
-    BaseType "Alchemy Shard"
     SetFontSize 45
 
 # Jeweller's Orb
@@ -328,6 +323,13 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
+# Regal Shard
+Show
+    Class "Currency"
+    BaseType "Regal Shard"
+    SetFontSize 45
+	SetBorderColor 155 154 57
+	
 # Regal Orb
 Show
     Class "Currency"
@@ -355,6 +357,13 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
+# Chaos Shard
+Show
+    Class "Currency"
+    BaseType "Chaos Shard"
+    SetFontSize 45	
+	SetBorderColor 249 150 25
+	
 # Chaos Orb
 Show
     Class "Currency"
@@ -427,6 +436,13 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
+# Alchemy Shard
+Show
+    Class "Currency"
+    BaseType "Alchemy Shard"
+    SetFontSize 45
+	SetBorderColor 254 213 0
+
 # Orb of Alchemy
 Show
     Class "Currency"
@@ -457,10 +473,10 @@ Show
 # Harbinger League Shards
 Show
     Class "Currency"
-    BaseType "Annulment Shard" "Binding Shard" "Horizon Shard" "Harbinger's Shard" "Engineer's Shard" "Ancient Shard" "Chaos Shard" "Mirror Shard" "Exalted Shard" "Regal Shard"
+    BaseType "Annulment Shard" "Binding Shard" "Horizon Shard" "Harbinger's Shard" "Engineer's Shard" "Ancient Shard"
     SetTextColor 0 0 0
     SetBackgroundColor 88 124 244
-    SetBorderColor 0 0 0
+    SetBorderColor 254 128 222
     SetFontSize 45
 
 # Harbinger League Orbs
@@ -472,15 +488,32 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
-# Neversink T1 Currency
+# Exalted Shard
 Show
     Class "Currency"
-    BaseType "Mirror of Kalandra" "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
+    BaseType "Exalted Shard"
+    SetFontSize 45
+	SetBorderColor 255 255 255
+
+# T1 Currency
+Show
+    Class "Currency"
+    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
     SetTextColor 255 0 0
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
     PlayAlertSoundPositional 6 300
+
+# MIRROR OF KALANDRA gachiGASM
+Show
+    Class "Currency"
+    BaseType "Mirror of Kalandra" "Mirror Shard"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSoundPositional ShMirror 300
 
 # Section: 2002: Currency - Essences
 
@@ -641,28 +674,28 @@ Show
     SetFontSize 45
 
 # T9
-Hide
+Show
     DropLevel >= 76
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T8
-Hide
+Show
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T7
-Hide
+Show
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T6
-Hide
+Show
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -671,31 +704,31 @@ Hide
 # Section: 3005: Maps - White
 
 # T5
-Hide
+Show
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
 
 # T4
-Hide
+Show
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 
 # T3
-Hide
+Show
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 
 # T2
-Hide
+Show
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 
 # T1
-Hide
+Show
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
@@ -752,7 +785,7 @@ Show
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 1 79
+    PlayAlertSoundPositional 6 300
 
 # Safety line for Map Fragments class
 Show
