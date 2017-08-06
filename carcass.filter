@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.1
+# Version 3.2
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -62,7 +62,7 @@ Show
     SetBackgroundColor 255 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 6 300
+    PlayAlertSound 6 300
 
 # 6Sockets
 Show
@@ -113,7 +113,7 @@ Show
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 6 300
+    PlayAlertSound 6 300
 
 Show
     Class "Quest Items"
@@ -154,7 +154,7 @@ Show
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 6 300
+    PlayAlertSound 6 300
 
 # Section: 1006: Rares
 
@@ -206,14 +206,14 @@ Hide
     SetFontSize 45
 
 # Portal Scrolls
-Show
+Hide
     Class "Currency"
     BaseType "Portal Scroll"
     SetBorderColor 0 100 150
     SetFontSize 45
 
 # Scrolls of Wisdom
-Show
+Hide
     Class "Currency"
     BaseType "Scroll of Wisdom"
     SetBorderColor 254 128 128
@@ -322,6 +322,7 @@ Show
     SetBackgroundColor 210 0 0
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Regal Shard
 Show
@@ -338,6 +339,7 @@ Show
     SetBackgroundColor 155 154 57
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Orb of Regret
 Show
@@ -347,6 +349,7 @@ Show
     SetBackgroundColor 235 235 235
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Orb of Scouring
 Show
@@ -356,7 +359,8 @@ Show
     SetBackgroundColor 245 245 245
     SetBorderColor 0 0 0
     SetFontSize 45
-
+	PlayAlertSound 2 300
+	
 # Chaos Shard
 Show
     Class "Currency"
@@ -372,6 +376,7 @@ Show
     SetBackgroundColor 249 150 25
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Gemcutter's Prism
 Show
@@ -381,6 +386,7 @@ Show
     SetBackgroundColor 27 162 155
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Stacked Deck
 Show
@@ -390,6 +396,7 @@ Show
     SetBackgroundColor 249 150 25
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Apprentice Cartographer's Sextant
 Show
@@ -399,6 +406,7 @@ Show
     SetBackgroundColor 124 81 50
     SetBorderColor 200 200 200
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Journeyman Cartographer's Sextant
 Show
@@ -408,6 +416,7 @@ Show
     SetBackgroundColor 124 81 50
     SetBorderColor 254 213 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Master Cartographer's Sextant
 Show
@@ -417,6 +426,7 @@ Show
     SetBackgroundColor 124 81 50
     SetBorderColor 255 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Cartographer's Chisel
 Show
@@ -487,6 +497,7 @@ Show
     SetBackgroundColor 88 124 244
     SetBorderColor 0 0 0
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Exalted Shard
 Show
@@ -503,7 +514,7 @@ Show
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 6 300
+    PlayAlertSound 6 300
 
 # MIRROR OF KALANDRA gachiGASM
 Show
@@ -513,7 +524,7 @@ Show
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional ShMirror 300
+    PlayAlertSound ShMirror 300
 
 # Section: 2002: Currency - Essences
 
@@ -544,19 +555,19 @@ Show
     SetBorderColor 130 25 255
     SetFontSize 45
 
+# Splinters to hide. (Disabled at start of Harbinger)
+#Hide
+#    Class "Currency"
+#    BaseType "Splinter of Tul"
+#    SetTextColor 255 235 235
+#    SetBackgroundColor 65 20 80
+#    SetBorderColor 130 25 255
+#    SetFontSize 45
+	
 # Splinters to show. Should be adjusted manually based on market price of Breachstones.	
 Show
     Class "Currency"
-    BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Uul-Netol"
-    SetTextColor 255 235 235
-    SetBackgroundColor 65 20 80
-    SetBorderColor 130 25 255
-    SetFontSize 45
-
-# Splinters to hide.	
-Hide
-    Class "Currency"
-    BaseType "Splinter of Tul"
+    BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Uul-Netol" "Splinter of Tul"
     SetTextColor 255 235 235
     SetBackgroundColor 65 20 80
     SetBorderColor 130 25 255
@@ -622,7 +633,7 @@ Show
     BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
     SetBorderColor 192 128 254
     SetFontSize 45
-    PlayAlertSoundPositional 8 100
+    PlayAlertSound 8 100
 
 # T15
 Show
@@ -630,7 +641,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 4 100
+    PlayAlertSound 4 100
 
 # T14
 Show
@@ -638,7 +649,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 4 100
+    PlayAlertSound 4 100
 
 # T13
 Show
@@ -646,7 +657,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 4 100
+    PlayAlertSound 4 100
 
 # T12
 Show
@@ -654,7 +665,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 4 100
+    PlayAlertSound 4 100
 
 # T11
 Show
@@ -662,7 +673,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 4 100
+    PlayAlertSound 4 100
 
 # Section: 3004: Maps - Yellow
 
@@ -785,7 +796,7 @@ Show
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSoundPositional 6 300
+    PlayAlertSound 6 300
 
 # Safety line for Map Fragments class
 Show
@@ -829,13 +840,13 @@ Show
 Show
     Class "Piece"
     SetFontSize 45
-    PlayAlertSoundPositional 3 100
+    PlayAlertSound 3 100
 
 # Just show every unique because too lazy to maintain tiers.
 Show
     Rarity = Unique
     SetFontSize 45
-    PlayAlertSoundPositional 3 100
+    PlayAlertSound 3 100
 
 # Section: 5001: Gems
 
@@ -903,5 +914,5 @@ Show
     SetTextColor 255 0 255
     SetBorderColor 255 0 255
     SetFontSize 45
-    PlayAlertSoundPositional 5 100
+    PlayAlertSound 5 100
 
