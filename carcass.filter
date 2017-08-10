@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.2
+# Version 3.3
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -70,28 +70,36 @@ Show
     Rarity <= Rare
     SetBorderColor 175 96 37 255
     SetFontSize 45
+	PlayAlertSound 2 300
 
 # Section: 1002: Atlas Bases
 
 # Valuable Atlas Bases
 Show
-    BaseType "Steel Ring" "Opal Ring" "Crystal Belt"
+    BaseType "Steel Ring" "Opal Ring" "Crystal Belt" "Marble Amulet"
     SetFontSize 45
 
 # Section: 1003: Chance Bases
 
 # Skyforth
-Show
+Hide
     BaseType "Sorcerer Boots"
     Rarity = Normal
-    SetBorderColor 0 210 0 210
+    SetBorderColor 98 128 0
     SetFontSize 45
 
 # Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
 Hide
     BaseType "Leather Belt"
     Rarity = Normal
-    SetBorderColor 0 210 0 210
+    SetBorderColor 98 128 0
+    SetFontSize 45
+	
+# Kaom's Heart - Life meta in 3.0
+Show
+    BaseType "Glorious Plate"
+    Rarity = Normal
+    SetBorderColor 98 128 0
     SetFontSize 45
 
 # Section: 1004: 84+ Bases
@@ -220,7 +228,7 @@ Hide
     SetFontSize 45
 
 # Transmutation Shard
-Show
+Hide
     Class "Currency"
     BaseType "Transmutation Shard"
     SetFontSize 45
@@ -245,7 +253,7 @@ Show
     SetFontSize 45
 
 # Alteration Shard
-Show
+Hide
     Class "Currency"
     BaseType "Alteration Shard"
     SetFontSize 45 
@@ -524,7 +532,7 @@ Show
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSound ShMirror 300
+    PlayAlertSound 6 300
 
 # Section: 2002: Currency - Essences
 
@@ -721,25 +729,25 @@ Show
     SetFontSize 45
 
 # T4
-Show
+Hide
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 
 # T3
-Show
+Hide
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 
 # T2
-Show
+Hide
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 
 # T1
-Show
+Hide
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
@@ -892,6 +900,7 @@ Hide
 Show
     Class "Divination"
     SetFontSize 45
+	PlayAlertSound 2 100
 
 # Section: 8001: Junk
 
