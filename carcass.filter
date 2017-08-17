@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.3
+# Version 3.4
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -235,7 +235,7 @@ Hide
 	SetBorderColor 54 100 146
 	
 # Transmutes
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -244,7 +244,7 @@ Show
     SetFontSize 45
 
 # Augments
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
@@ -269,7 +269,7 @@ Show
     SetFontSize 45
 
 # Armourer's
-Show
+Hide
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
@@ -278,7 +278,7 @@ Show
     SetFontSize 45
 
 # Blacksmith's
-Show
+Hide
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -693,28 +693,28 @@ Show
     SetFontSize 45
 
 # T9
-Show
+Hide
     DropLevel >= 76
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T8
-Show
+Hide
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T7
-Show
+Hide
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T6
-Show
+Hide
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -723,7 +723,7 @@ Show
 # Section: 3005: Maps - White
 
 # T5
-Show
+Hide
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
