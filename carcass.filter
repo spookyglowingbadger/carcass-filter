@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.4
+# Version 3.5
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -8,7 +8,6 @@
 # INSTRUCTIONS:
 # Before you start using this filter you should go to the maps section and pick which tiers you want shown.
 # Simply change the tiers you want to see to "Show" and the tiers you don't want to see to "Hide"
-# For example: If you have your atlas set up for Mesas and Strands, change all the T1-T9 map blocks to "Hide"
 # Do the same thing for currencies. Later in the league you'll want to hide many of the low value currencies.
 # Very few rares are shown, so add your own if you like.
 # 
@@ -19,7 +18,7 @@
 # [0000] Overrides
 # 
 # [1001] 6-links and 6-sockets
-# [1002] Atlas Bases
+# [1002] Valuable Bases
 # [1003] Chance Bases
 # [1004] 84+ bases
 # [1005] Special Exceptions
@@ -72,13 +71,26 @@ Show
     SetFontSize 45
 	PlayAlertSound 2 300
 
-# Section: 1002: Atlas Bases
+# Section: 1002: Valuable Bases
 
 # Valuable Atlas Bases
 Show
     BaseType "Steel Ring" "Opal Ring" "Crystal Belt" "Marble Amulet"
     SetFontSize 45
+	
+# Abyss Bases
+Show
+	BaseType "Stygian Vise"
+	SetFontSize 45
+	SetBorderColor 0 73 0
 
+# Abyss Bases
+Hide
+	Class "Abyss Jewel"
+	Rarity = Magic
+	SetFontSize 45
+	SetBorderColor 0 73 0
+	
 # Section: 1003: Chance Bases
 
 # Skyforth
@@ -166,6 +178,21 @@ Show
 
 # Section: 1006: Rares
 
+# Elder Rares
+Show
+	Rarity = Rare 
+	ElderItem True 
+	SetFontSize 45
+	SetBorderColor 0 220 220 255
+	
+# Shaper Rares
+Show
+	Rarity = Rare
+	ShaperItem True
+	SetFontSize 45
+	SetBorderColor 135 0 220 255 
+
+
 # I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
 Hide
     Class "Rings"
@@ -175,13 +202,22 @@ Hide
     SetBorderColor 130 25 255
     SetFontSize 45
 
-# Rare Rings and Amulets are always worth picking up due to their small size and high potential value
+# Rare Rings and Amulets
 Show
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
 
-# Same thing applies to rare Jewels
+# Rare Abyss Jewels
+Show
+    Class "Abyss Jewel"
+    Rarity = Rare
+    SetTextColor 255 255 0
+    SetBackgroundColor 75 75 0
+    SetBorderColor 0 73 0
+    SetFontSize 45
+	
+# Rare Jewels
 Show
     Class "Jewel"
     Rarity = Rare
@@ -235,7 +271,7 @@ Hide
 	SetBorderColor 54 100 146
 	
 # Transmutes
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -244,7 +280,7 @@ Hide
     SetFontSize 45
 
 # Augments
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
@@ -269,7 +305,7 @@ Show
     SetFontSize 45
 
 # Armourer's
-Hide
+Show
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
@@ -278,7 +314,7 @@ Hide
     SetFontSize 45
 
 # Blacksmith's
-Hide
+Show
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -563,15 +599,6 @@ Show
     SetBorderColor 130 25 255
     SetFontSize 45
 
-# Splinters to hide. (Disabled at start of Harbinger)
-#Hide
-#    Class "Currency"
-#    BaseType "Splinter of Tul"
-#    SetTextColor 255 235 235
-#    SetBackgroundColor 65 20 80
-#    SetBorderColor 130 25 255
-#    SetFontSize 45
-	
 # Splinters to show. Should be adjusted manually based on market price of Breachstones.	
 Show
     Class "Currency"
@@ -693,28 +720,28 @@ Show
     SetFontSize 45
 
 # T9
-Hide
+Show
     DropLevel >= 76
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T8
-Hide
+Show
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T7
-Hide
+Show
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T6
-Hide
+Show
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -723,31 +750,31 @@ Hide
 # Section: 3005: Maps - White
 
 # T5
-Hide
+Show
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
 
 # T4
-Hide
+Show
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 
 # T3
-Hide
+Show
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 
 # T2
-Hide
+Show
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 
 # T1
-Hide
+Show
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
@@ -924,4 +951,3 @@ Show
     SetBorderColor 255 0 255
     SetFontSize 45
     PlayAlertSound 5 100
-
