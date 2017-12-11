@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.5
+# Version 3.6
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -78,19 +78,6 @@ Show
     BaseType "Steel Ring" "Opal Ring" "Crystal Belt" "Marble Amulet"
     SetFontSize 45
 	
-# Abyss Bases
-Show
-	BaseType "Stygian Vise"
-	SetFontSize 45
-	SetBorderColor 0 73 0
-
-# Abyss Bases
-Hide
-	Class "Abyss Jewel"
-	Rarity = Magic
-	SetFontSize 45
-	SetBorderColor 0 73 0
-	
 # Section: 1003: Chance Bases
 
 # Skyforth
@@ -108,7 +95,7 @@ Hide
     SetFontSize 45
 	
 # Kaom's Heart - Life meta in 3.0
-Show
+Hide
     BaseType "Glorious Plate"
     Rarity = Normal
     SetBorderColor 98 128 0
@@ -192,6 +179,12 @@ Show
 	SetFontSize 45
 	SetBorderColor 135 0 220 255 
 
+# Abyss Belts
+Hide
+	BaseType "Stygian Vise"
+	Rarity = Rare
+	SetFontSize 45
+	SetBorderColor 0 73 0
 
 # I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
 Hide
@@ -206,15 +199,6 @@ Hide
 Show
     Class "Rings" "Amulets"
     Rarity = Rare
-    SetFontSize 45
-
-# Rare Abyss Jewels
-Show
-    Class "Abyss Jewel"
-    Rarity = Rare
-    SetTextColor 255 255 0
-    SetBackgroundColor 75 75 0
-    SetBorderColor 0 73 0
     SetFontSize 45
 	
 # Rare Jewels
@@ -232,13 +216,6 @@ Show
     Rarity = Rare
     ItemLevel >= 84
     SetBorderColor 255 255 255
-    SetFontSize 45
-
-# 75+ good bases to identify (Change this to Hide if you only want to see 84+)
-Hide
-    BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
-    Rarity = Rare
-    ItemLevel >= 75
     SetFontSize 45
 
 # Section: 2001: Currency - Normal
