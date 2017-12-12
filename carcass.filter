@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.6
+# Version 3.7
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -30,11 +30,12 @@
 # 
 # [3001] Maps - Unique
 # [3002] Maps - Labyrinth
-# [3003] Maps - Red
-# [3004] Maps - Yellow
-# [3005] Maps - White
-# [3006] Map Fragments
-# [3007] Misc Map Items
+# [3003] Maps - Shaped
+# [3004] Maps - Red
+# [3005] Maps - Yellow
+# [3006] Maps - White
+# [3007] Map Fragments
+# [3008] Misc Map Items
 # 
 # [4001] Uniques
 # 
@@ -637,7 +638,97 @@ Show
     SetBorderColor 74 230 58
     SetFontSize 45
 
-# Section: 3003: Maps - Red
+
+# Section 3003: Maps - Shaped
+
+# Shaped T10->T15
+Show
+    DropLevel >= 77
+    Class "Maps"
+	ShapedMap True
+    SetBorderColor 255 0 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T9->T14
+Show
+    DropLevel >= 76
+    Class "Maps"
+	ShapedMap True
+    SetBorderColor 255 0 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T8->T13
+Show
+    DropLevel >= 75
+    Class "Maps"
+	ShapedMap True
+    SetBorderColor 255 0 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T7->12
+Show
+    DropLevel >= 74
+    Class "Maps"
+	ShapedMap True
+    SetBorderColor 255 0 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T6->T11
+Show
+    DropLevel >= 73
+    Class "Maps"
+	ShapedMap True
+    SetBorderColor 255 0 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T5->T10
+Show
+    DropLevel >= 72
+    Class "Maps"
+	ShapedMap True
+	SetBorderColor 254 213 0
+    SetFontSize 45
+	PlayAlertSound 4 100
+
+# Shaped T4->T9
+Show
+    DropLevel >= 71
+    Class "Maps"
+	ShapedMap True
+	SetBorderColor 254 213 0
+    SetFontSize 45
+
+# Shaped T3->T8
+Show
+    DropLevel >= 70
+    Class "Maps"
+	ShapedMap True
+	SetBorderColor 254 213 0
+    SetFontSize 45
+
+# Shaped T2->T7
+Show
+    DropLevel = 69
+    Class "Maps"
+	ShapedMap True
+	SetBorderColor 254 213 0
+    SetFontSize 45
+
+# Shaped T1->T6
+Show
+    DropLevel < 69
+    Class "Maps"
+	ShapedMap True
+	SetBorderColor 254 213 0
+    SetFontSize 45	
+
+
+# Section: 3004: Maps - Red
 
 # T16
 Show
@@ -687,7 +778,7 @@ Show
     SetFontSize 45
     PlayAlertSound 4 100
 
-# Section: 3004: Maps - Yellow
+# Section: 3005: Maps - Yellow
 
 # T10
 Show
@@ -724,7 +815,7 @@ Show
     SetBorderColor 254 213 0
     SetFontSize 45
 
-# Section: 3005: Maps - White
+# Section: 3006: Maps - White
 
 # T5
 Show
@@ -756,7 +847,7 @@ Show
     Class "Maps"
     SetFontSize 45
 
-# Section: 3006: Map Fragments
+# Section: 3007: Map Fragments
 
 Show
     Class "Map Fragments"
@@ -818,7 +909,7 @@ Show
     SetBorderColor 180 0 0
     SetFontSize 45
 
-# Section: 3007: Misc Map Items
+# Section: 3008: Misc Map Items
 
 # Legacy League reliquary key
 Show
