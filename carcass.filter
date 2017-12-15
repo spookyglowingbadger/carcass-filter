@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.7
+# Version 3.8
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -70,7 +70,7 @@ Show
     Rarity <= Rare
     SetBorderColor 175 96 37 255
     SetFontSize 45
-	PlayAlertSound 2 300
+	PlayAlertSound 10 200
 
 # Section: 1002: Valuable Bases
 
@@ -98,6 +98,13 @@ Hide
 # Kaom's Heart - Life meta in 3.0
 Hide
     BaseType "Glorious Plate"
+    Rarity = Normal
+    SetBorderColor 98 128 0
+    SetFontSize 45
+	
+# Bisco's Collar
+Show
+    BaseType "Gold Amulet"
     Rarity = Normal
     SetBorderColor 98 128 0
     SetFontSize 45
@@ -514,7 +521,7 @@ Show
 # Harbinger League Orbs
 Show
     Class "Currency"
-    BaseType "Orb of Annulment" "Orb of Binding" "Orb of Horizons" "Harbinger's Orb" "Engineer's Orb" "Ancient Orb"
+    BaseType "Orb of Binding" "Orb of Horizons" "Harbinger's Orb" "Engineer's Orb" "Ancient Orb"
     SetTextColor 0 0 0
     SetBackgroundColor 88 124 244
     SetBorderColor 0 0 0
@@ -531,7 +538,7 @@ Show
 # T1 Currency
 Show
     Class "Currency"
-    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather"
+    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Orb of Annulment"
     SetTextColor 255 0 0
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
@@ -620,6 +627,7 @@ Show
     Class "Maps"
     Rarity = Unique
     SetFontSize 45
+	PlayAlertSound 3 100
 
 # Section: 3002: Maps - Labyrinth
 
@@ -995,7 +1003,7 @@ Hide
 Show
     Class "Divination"
     SetFontSize 45
-	PlayAlertSound 2 100
+	PlayAlertSound 9 200
 
 # Section: 8001: Junk
 
