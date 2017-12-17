@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.8
+# Version 3.9
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -112,7 +112,7 @@ Show
 # Section: 1004: 84+ Bases
 
 # Lab enchant helmets
-Show
+Hide
     BaseType "Hubris Circlet" "Eternal Burgonet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Lion Pelt"
     Rarity < Rare
     ItemLevel >= 84
