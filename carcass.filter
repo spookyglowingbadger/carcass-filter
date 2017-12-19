@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.9
+# Version 3.10
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -51,9 +51,9 @@
 # 
 # ----------------------------------------------------
 
-# Section: 0000: Overrides
+# Section: [0000]: Overrides
 
-# Section: 1001: 6-Links and 6-sockets
+# Section: [1001]: 6-Links and 6-sockets
 
 # 6Links
 Show
@@ -72,14 +72,14 @@ Show
     SetFontSize 45
 	PlayAlertSound 10 200
 
-# Section: 1002: Valuable Bases
+# Section: [1002]: Valuable Bases
 
 # Valuable Atlas Bases
 Show
     BaseType "Steel Ring" "Opal Ring" "Crystal Belt" "Marble Amulet"
     SetFontSize 45
 	
-# Section: 1003: Chance Bases
+# Section: [1003]: Chance Bases
 
 # Skyforth
 Hide
@@ -109,7 +109,7 @@ Show
     SetBorderColor 98 128 0
     SetFontSize 45
 
-# Section: 1004: 84+ Bases
+# Section: [1004]: 84+ Bases
 
 # Lab enchant helmets
 Hide
@@ -119,7 +119,7 @@ Hide
     SetBorderColor 255 255 255
     SetFontSize 45
 
-# Section: 1005: Special Exceptions
+# Section: [1005]: Special Exceptions
 
 # Don't miss the fishing rods!
 Show
@@ -171,7 +171,7 @@ Show
     SetFontSize 45
     PlayAlertSound 6 300
 
-# Section: 1006: Rares
+# Section: [1006]: Rares
 
 # Elder Rares
 Show
@@ -218,15 +218,22 @@ Show
     SetBorderColor 255 255 0
     SetFontSize 45
 
-# 84+ good bases to identify
-Show
-    BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield" "Two-Toned Boots" "Fingerless Silk Gloves"
+# 84+ ES bases to identify
+Hide
+    BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield"
     Rarity = Rare
     ItemLevel >= 84
-    SetBorderColor 255 255 255
+    SetFontSize 45
+	
+# 75+ good bases to identify
+Show
+    BaseType "Gripped Gloves" "Two-Toned Boots" "Fingerless Silk Gloves"
+    Rarity = Rare
+    ItemLevel >= 75
     SetFontSize 45
 
-# Section: 2001: Currency - Normal
+
+# Section: [2001]: Currency - Normal
 
 # Scroll Fragment
 Hide
@@ -256,7 +263,7 @@ Hide
 	SetBorderColor 54 100 146
 	
 # Transmutes
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -290,7 +297,7 @@ Show
     SetFontSize 45
 
 # Armourer's
-Show
+Hide
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
@@ -298,8 +305,8 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
+Hide
 # Blacksmith's
-Show
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -555,7 +562,7 @@ Show
     SetFontSize 45
     PlayAlertSound 6 300
 
-# Section: 2002: Currency - Essences
+# Section: [2002]: Currency - Essences
 
 # Good Essences
 Show
@@ -573,7 +580,7 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
-# Section: 2003: Currency - Special
+# Section: [2003]: Currency - Special
 
 # Blessing
 Show
@@ -620,7 +627,7 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
-# Section: 3001: Maps - Unique
+# Section: [3001]: Maps - Unique
 
 # Unique Maps
 Show
@@ -629,7 +636,7 @@ Show
     SetFontSize 45
 	PlayAlertSound 3 100
 
-# Section: 3002: Maps - Labyrinth
+# Section: [3002]: Maps - Labyrinth
 
 # Lab offerings
 Show
@@ -647,7 +654,7 @@ Show
     SetFontSize 45
 
 
-# Section 3003: Maps - Shaped
+# Section [3003]: Maps - Shaped
 
 # Shaped T10->T15
 Show
@@ -736,7 +743,7 @@ Show
     SetFontSize 45	
 
 
-# Section: 3004: Maps - Red
+# Section: [3004]: Maps - Red
 
 # T16
 Show
@@ -786,7 +793,7 @@ Show
     SetFontSize 45
     PlayAlertSound 4 100
 
-# Section: 3005: Maps - Yellow
+# Section: [3005]: Maps - Yellow
 
 # T10
 Show
@@ -823,7 +830,7 @@ Show
     SetBorderColor 254 213 0
     SetFontSize 45
 
-# Section: 3006: Maps - White
+# Section: [3006]: Maps - White
 
 # T5
 Show
@@ -855,7 +862,7 @@ Show
     Class "Maps"
     SetFontSize 45
 
-# Section: 3007: Map Fragments
+# Section: [3007]: Map Fragments
 
 Show
     Class "Map Fragments"
@@ -917,7 +924,7 @@ Show
     SetBorderColor 180 0 0
     SetFontSize 45
 
-# Section: 3008: Misc Map Items
+# Section: [3008]: Misc Map Items
 
 # Legacy League reliquary key
 Show
@@ -945,7 +952,7 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 
-# Section: 4001: Uniques
+# Section: [4001]: Uniques
 
 # Pieces
 Show
@@ -959,7 +966,7 @@ Show
     SetFontSize 45
     PlayAlertSound 3 100
 
-# Section: 5001: Gems
+# Section: [5001]: Gems
 
 # 20qual gems
 Show
@@ -984,7 +991,7 @@ Show
 Hide
     Class "Gem"
 
-# Section: 6001: Flasks
+# Section: [6001]: Flasks
 
 # 20 quality flasks
 Show
@@ -997,7 +1004,7 @@ Hide
     Class "Flask"
     Rarity < Unique
 
-# Section: 7001: Divination Cards
+# Section: [7001]: Divination Cards
 
 # Just show all cards because too lazy to maintain tiers.
 Show
@@ -1005,7 +1012,7 @@ Show
     SetFontSize 45
 	PlayAlertSound 9 200
 
-# Section: 8001: Junk
+# Section: [8001]: Junk
 
 # Junk
 Hide
@@ -1019,7 +1026,7 @@ Hide
     Rarity < Rare
     SetFontSize 26
 
-# Section: 9999: Safety Line
+# Section: [9999]: Safety Line
 
 # SafetyLine! This catches new items that are not explicitly hidden or shown by previous blocks.
 Show
