@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.10
+# Version 3.11
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -272,7 +272,7 @@ Hide
     SetFontSize 45
 
 # Augments
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
@@ -305,8 +305,8 @@ Hide
     SetBorderColor 0 0 0
     SetFontSize 45
 
-# Blacksmith's
 Hide
+# Blacksmith's
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -591,6 +591,15 @@ Show
     SetBorderColor 130 25 255
     SetFontSize 45
 
+# Splinters to hide
+Hide
+    Class "Currency"
+    BaseType "Splinter of Tul" "Splinter of Esh"
+    SetTextColor 255 235 235
+    SetBackgroundColor 65 20 80
+    SetBorderColor 130 25 255
+    SetFontSize 45
+	
 # Splinters to show. Should be adjusted manually based on market price of Breachstones.	
 Show
     Class "Currency"
@@ -717,9 +726,10 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
     SetFontSize 45
+	PlayAlertSound 4 100
 
 # Shaped T3->T8
-Show
+Hide
     DropLevel >= 70
     Class "Maps"
 	ShapedMap True
@@ -727,7 +737,7 @@ Show
     SetFontSize 45
 
 # Shaped T2->T7
-Show
+Hide
     DropLevel = 69
     Class "Maps"
 	ShapedMap True
@@ -735,7 +745,7 @@ Show
     SetFontSize 45
 
 # Shaped T1->T6
-Show
+Hide
     DropLevel < 69
     Class "Maps"
 	ShapedMap True
@@ -810,21 +820,21 @@ Show
     SetFontSize 45
 
 # T8
-Show
+Hide
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T7
-Show
+Hide
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T6
-Show
+Hide
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -833,31 +843,31 @@ Show
 # Section: [3006]: Maps - White
 
 # T5
-Show
+Hide
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
 
 # T4
-Show
+Hide
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 
 # T3
-Show
+Hide
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 
 # T2
-Show
+Hide
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 
 # T1
-Show
+Hide
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
@@ -914,7 +924,7 @@ Show
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSound 6 300
+    PlayAlertSound 12 200
 
 # Safety line for Map Fragments class
 Show
@@ -1007,6 +1017,17 @@ Hide
 # Section: [7001]: Divination Cards
 
 # Just show all cards because too lazy to maintain tiers.
+
+# Doctor Cards
+Show
+	Class "Divination"
+	BaseType "The Doctor"
+	SetFontSize 45
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+
 Show
     Class "Divination"
     SetFontSize 45
