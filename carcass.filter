@@ -305,8 +305,8 @@ Hide
     SetBorderColor 0 0 0
     SetFontSize 45
 
-Hide
 # Blacksmith's
+Hide
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
