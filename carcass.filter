@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.11
+# Version 3.13
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -103,7 +103,7 @@ Hide
     SetFontSize 45
 	
 # Bisco's Collar
-Show
+Hide
     BaseType "Gold Amulet"
     Rarity = Normal
     SetBorderColor 98 128 0
@@ -173,18 +173,34 @@ Show
 
 # Section: [1006]: Rares
 
-# Elder Rares
+# Small Elder Rares
 Show
+	Class "Rings" "Amulets" "Belts"
 	Rarity = Rare 
-	ElderItem True 
+	ElderItem True
 	SetFontSize 45
 	SetBorderColor 0 220 220 255
+
+# Bulky Elder Rares
+Hide
+	Rarity = Rare 
+	ElderItem True
+	SetFontSize 26
+	SetBorderColor 0 220 220 255
 	
-# Shaper Rares
+# Small Shaper Rares
 Show
+	Class "Rings" "Amulets" "Belts"
 	Rarity = Rare
 	ShaperItem True
 	SetFontSize 45
+	SetBorderColor 135 0 220 255
+
+# Bulky Shaper Rares
+Hide
+	Rarity = Rare
+	ShaperItem True
+	SetFontSize 26
 	SetBorderColor 135 0 220 255 
 
 # Abyss Belts
@@ -204,13 +220,13 @@ Hide
     SetFontSize 45
 
 # Rare Rings and Amulets
-Show
+Hide
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
 	
 # Rare Jewels
-Show
+Hide
     Class "Jewel"
     Rarity = Rare
     SetTextColor 255 255 0
@@ -227,7 +243,7 @@ Hide
 	
 # 75+ good bases to identify
 Show
-    BaseType "Gripped Gloves" "Two-Toned Boots" "Fingerless Silk Gloves"
+    BaseType "Gripped Gloves" "Two-Toned Boots"
     Rarity = Rare
     ItemLevel >= 75
     SetFontSize 45
@@ -811,6 +827,7 @@ Show
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
+	PlayAlertSound 4 100
 
 # T9
 Show
@@ -818,6 +835,7 @@ Show
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
+	PlayAlertSound 4 100
 
 # T8
 Hide
@@ -1018,10 +1036,10 @@ Hide
 
 # Just show all cards because too lazy to maintain tiers.
 
-# Doctor Cards
+# Farmable T1 cards
 Show
 	Class "Divination"
-	BaseType "The Doctor"
+	BaseType "The Doctor" "The Hoarder" "Abandoned Wealth"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
