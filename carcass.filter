@@ -173,7 +173,7 @@ Show
 
 # Section: [1006]: Rares
 
-# Small Elder Rares
+# Good Elder Rares
 Show
 	Class "Rings" "Amulets" "Belts"
 	Rarity = Rare 
@@ -188,9 +188,9 @@ Hide
 	SetFontSize 26
 	SetBorderColor 0 220 220 255
 	
-# Small Shaper Rares
+# Good Shaper Rares
 Show
-	Class "Rings" "Amulets" "Belts"
+	Class "Rings" "Amulets" "Belts" "Sceptre" "Daggers"
 	Rarity = Rare
 	ShaperItem True
 	SetFontSize 45
@@ -224,6 +224,16 @@ Hide
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
+
+# Rare Jewels ilvl 84+
+Show
+    Class "Jewel"
+    Rarity = Rare
+	ItemLevel >= 84
+    SetTextColor 255 255 0
+    SetBackgroundColor 75 75 0
+    SetBorderColor 255 255 0
+    SetFontSize 45
 	
 # Rare Jewels
 Hide
@@ -233,6 +243,7 @@ Hide
     SetBackgroundColor 75 75 0
     SetBorderColor 255 255 0
     SetFontSize 45
+
 
 # 84+ ES bases to identify
 Hide
@@ -279,7 +290,7 @@ Hide
 	SetBorderColor 54 100 146
 	
 # Transmutes
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -745,7 +756,7 @@ Show
 	PlayAlertSound 4 100
 
 # Shaped T3->T8
-Hide
+Show
     DropLevel >= 70
     Class "Maps"
 	ShapedMap True
@@ -753,7 +764,7 @@ Hide
     SetFontSize 45
 
 # Shaped T2->T7
-Hide
+Show
     DropLevel = 69
     Class "Maps"
 	ShapedMap True
@@ -761,7 +772,7 @@ Hide
     SetFontSize 45
 
 # Shaped T1->T6
-Hide
+Show
     DropLevel < 69
     Class "Maps"
 	ShapedMap True
@@ -935,14 +946,14 @@ Show
     SetFontSize 45
 
 # Divine Vessel
-Show
+Hide
     Class "Map Fragments"
     BaseType "Divine Vessel"
     SetTextColor 255 255 255
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-    PlayAlertSound 12 200
+#    PlayAlertSound 12 200
 
 # Safety line for Map Fragments class
 Show
@@ -1012,7 +1023,7 @@ Show
 # Good Drop Only Gems
 Show
     Class "Gem"
-    BaseType "Empower" "Enlighten" "Added Chaos Damage" "Vaal Breach" "Portal" "Vaal Haste" "Vaal Discipline" "Item Quantity"
+    BaseType "Enlighten" "Vaal Breach" "Vaal Grace" "Portal" "Vaal Haste" "Item Quantity"
     SetFontSize 45
 
 # Hide other gems
