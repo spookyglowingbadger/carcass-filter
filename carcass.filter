@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.13
+# Version 3.14
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -76,7 +76,7 @@ Show
 
 # Valuable Atlas Bases
 Show
-    BaseType "Steel Ring" "Opal Ring" "Crystal Belt" "Marble Amulet"
+    BaseType "Steel Ring" "Opal Ring"
     SetFontSize 45
 	
 # Section: [1003]: Chance Bases
@@ -88,8 +88,8 @@ Hide
     SetBorderColor 98 128 0
     SetFontSize 45
 
-# Headhunter - Requires Zana 8 for Nemesis Map Mod or an active Legacy Nemesis Leaguestone
-Hide
+# Headhunter - Requires a map with an active Nemesis mod from Zana
+Show
     BaseType "Leather Belt"
     Rarity = Normal
     SetBorderColor 98 128 0
@@ -204,13 +204,13 @@ Hide
 	SetBorderColor 135 0 220 255 
 
 # Abyss Belts
-Hide
+Show
 	BaseType "Stygian Vise"
 	Rarity = Rare
 	SetFontSize 45
 	SetBorderColor 0 73 0
 
-# I'm sick of Breach Rings, so I'll hide them by default. They're almost never worth selling.
+# Breach Rings
 Hide
     Class "Rings"
     BaseType "Breach"
@@ -220,30 +220,19 @@ Hide
     SetFontSize 45
 
 # Rare Rings and Amulets
-Hide
+Show
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
 
-# Rare Jewels ilvl 84+
+# Rare Jewels
 Show
     Class "Jewel"
     Rarity = Rare
-	ItemLevel >= 84
     SetTextColor 255 255 0
     SetBackgroundColor 75 75 0
     SetBorderColor 255 255 0
     SetFontSize 45
-	
-# Rare Jewels
-Hide
-    Class "Jewel"
-    Rarity = Rare
-    SetTextColor 255 255 0
-    SetBackgroundColor 75 75 0
-    SetBorderColor 255 255 0
-    SetFontSize 45
-
 
 # 84+ ES bases to identify
 Hide
@@ -299,7 +288,7 @@ Show
     SetFontSize 45
 
 # Augments
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
@@ -333,7 +322,7 @@ Hide
     SetFontSize 45
 
 # Blacksmith's
-Hide
+Show
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -561,6 +550,34 @@ Show
     SetBorderColor 0 0 0
     SetFontSize 45
 	PlayAlertSound 2 300
+	
+# Bestiary Orbs
+Show
+    Class "Currency"
+    BaseType "Bestiary Orb" "Imprinted Bestiary Orb"
+    SetTextColor 255 255 255
+    SetBackgroundColor 255 127 39
+    SetFontSize 45
+	PlayAlertSound 2 300
+	
+# Strong Steel Net
+Show
+    Class "Currency"
+    BaseType "Strong Steel Net"
+    SetTextColor 255 255 255
+    SetBackgroundColor 185 122 87
+    SetBorderColor 255 127 39
+    SetFontSize 45
+
+# Thaumaturgical net
+Show
+    Class "Currency"
+    BaseType "Thaumaturgical Net"
+    SetTextColor 255 255 255
+    SetBackgroundColor 185 122 87
+    SetBorderColor 255 255 255
+    SetFontSize 45
+	PlayAlertSound 2 300
 
 # Exalted Shard
 Show
@@ -579,7 +596,7 @@ Show
     SetFontSize 45
     PlayAlertSound 6 300
 
-# MIRROR OF KALANDRA gachiGASM
+# MIRROR OF KALANDRA
 Show
     Class "Currency"
     BaseType "Mirror of Kalandra" "Mirror Shard"
@@ -849,21 +866,21 @@ Show
 	PlayAlertSound 4 100
 
 # T8
-Hide
+Show
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T7
-Hide
+Show
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
 
 # T6
-Hide
+Show
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -872,31 +889,31 @@ Hide
 # Section: [3006]: Maps - White
 
 # T5
-Hide
+Show
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
 
 # T4
-Hide
+Show
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 
 # T3
-Hide
+Show
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 
 # T2
-Hide
+Show
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 
 # T1
-Hide
+Show
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
@@ -946,14 +963,13 @@ Show
     SetFontSize 45
 
 # Divine Vessel
-Hide
+Show
     Class "Map Fragments"
     BaseType "Divine Vessel"
     SetTextColor 255 255 255
     SetBackgroundColor 189 186 109
     SetBorderColor 210 0 0
     SetFontSize 45
-#    PlayAlertSound 12 200
 
 # Safety line for Map Fragments class
 Show
@@ -999,7 +1015,7 @@ Show
     SetFontSize 45
     PlayAlertSound 3 100
 
-# Just show every unique because too lazy to maintain tiers.
+# All uniques
 Show
     Rarity = Unique
     SetFontSize 45
@@ -1032,20 +1048,26 @@ Hide
 
 # Section: [6001]: Flasks
 
-# 20 quality flasks
+# 20 quality good life flasks
+Show
+	Quality = 20
+	Class "Flask"
+	BaseType "Hallowed Life Flask" "Divine Life Flask" "Eternal Life Flask"
+	SetFontSize 45
+
+# 20 quality utility flasks
 Show
     Quality = 20
-    Class "Flask"
+    Class "Utility Flask" "Critical Utility Flask"
     SetFontSize 45
 
-# Hide flasks that aren't 20 quality or unique
+# Hide remaining non-unique flasks
 Hide
     Class "Flask"
     Rarity < Unique
 
 # Section: [7001]: Divination Cards
 
-# Just show all cards because too lazy to maintain tiers.
 
 # Farmable T1 cards
 Show
@@ -1057,6 +1079,7 @@ Show
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
 
+# All remaining cards
 Show
     Class "Divination"
     SetFontSize 45
