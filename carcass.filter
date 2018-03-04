@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.14
+# Version 3.15
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -313,7 +313,7 @@ Show
     SetFontSize 45
 
 # Armourer's
-Hide
+Show
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
@@ -560,24 +560,41 @@ Show
     SetFontSize 45
 	PlayAlertSound 2 300
 	
+# Leveling nets
+Hide
+	Class "Currency"
+	BaseType "Simple Rope Net" "Reinforced Rope Net" "Strong Rope Net" "Simple Iron Net" "Reinforced Iron Net"
+	SetTextColor 155 210 135 255
+	SetBorderColor 0 0 0
+	SetBackgroundColor 0 0 0 255
+	SetFontSize 45
+
+# Early grind nets (Blood Aqueduct/Harbour Bridge/Low Maps)
+Hide
+    Class "Currency"
+    BaseType "Strong Iron Net" "Simple Steel Net" "Reinforced Steel Net"
+    SetTextColor 155 210 135 255
+	SetBorderColor 0 0 0
+	SetBackgroundColor 0 0 0 255
+    SetFontSize 45
+
 # Strong Steel Net
 Show
     Class "Currency"
     BaseType "Strong Steel Net"
-    SetTextColor 255 255 255
-    SetBackgroundColor 185 122 87
-    SetBorderColor 255 127 39
+    SetTextColor 155 210 135 255
+	SetBorderColor 0 0 0
+	SetBackgroundColor 0 0 0 255
     SetFontSize 45
 
 # Thaumaturgical net
 Show
     Class "Currency"
     BaseType "Thaumaturgical Net"
-    SetTextColor 255 255 255
-    SetBackgroundColor 185 122 87
-    SetBorderColor 255 255 255
+    SetTextColor 155 210 135 255
+	SetBorderColor 0 255 36 255
+	SetBackgroundColor 0 0 0 255
     SetFontSize 45
-	PlayAlertSound 2 300
 
 # Exalted Shard
 Show
@@ -635,8 +652,8 @@ Show
     SetBorderColor 130 25 255
     SetFontSize 45
 
-# Splinters to hide
-Hide
+# Cheap splinters (Show or Hide depending on league prices)
+Show
     Class "Currency"
     BaseType "Splinter of Tul" "Splinter of Esh"
     SetTextColor 255 235 235
