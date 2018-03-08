@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.15
+# Version 3.16
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -20,7 +20,7 @@
 # [1001] 6-links and 6-sockets
 # [1002] Valuable Bases
 # [1003] Chance Bases
-# [1004] 84+ bases
+# [1004] Crafting Bases
 # [1005] Special Exceptions
 # [1006] Rares
 # 
@@ -78,7 +78,8 @@ Show
 Show
     BaseType "Steel Ring" "Opal Ring"
     SetFontSize 45
-	
+
+
 # Section: [1003]: Chance Bases
 
 # Skyforth
@@ -109,7 +110,7 @@ Hide
     SetBorderColor 98 128 0
     SetFontSize 45
 
-# Section: [1004]: 84+ Bases
+# Section: [1004]: Crafting Bases
 
 # Lab enchant helmets
 Hide
@@ -117,6 +118,21 @@ Hide
     Rarity < Rare
     ItemLevel >= 84
     SetBorderColor 255 255 255
+    SetFontSize 45
+
+# 84+ Magic Abyss Jewels
+Show
+    Class "Abyss Jewel"
+    Rarity < Rare
+	ItemLevel >= 84
+	SetBorderColor 0 73 0
+    SetFontSize 45
+	
+# Lower Level Magic Abyss Jewels
+Hide
+    Class "Abyss Jewel"
+    Rarity < Rare
+	SetBorderColor 0 73 0
     SetFontSize 45
 
 # Section: [1005]: Special Exceptions
@@ -192,6 +208,15 @@ Hide
 Show
 	Class "Rings" "Amulets" "Belts" "Sceptre" "Daggers"
 	Rarity = Rare
+	ShaperItem True
+	SetFontSize 45
+	SetBorderColor 135 0 220 255
+
+# Shaper Additional Arrow Quivers
+Show
+	Class "Quivers"
+	Rarity = Rare
+	ItemLevel >= 80
 	ShaperItem True
 	SetFontSize 45
 	SetBorderColor 135 0 220 255
@@ -579,7 +604,7 @@ Hide
     SetFontSize 45
 
 # Strong Steel Net
-Show
+Hide
     Class "Currency"
     BaseType "Strong Steel Net"
     SetTextColor 155 210 135 255
@@ -587,10 +612,10 @@ Show
 	SetBackgroundColor 0 0 0 255
     SetFontSize 45
 
-# Thaumaturgical net
+# Thaumaturgical & Necromancy nets
 Show
     Class "Currency"
-    BaseType "Thaumaturgical Net"
+    BaseType "Thaumaturgical Net" "Necromancy Net"
     SetTextColor 155 210 135 255
 	SetBorderColor 0 255 36 255
 	SetBackgroundColor 0 0 0 255
