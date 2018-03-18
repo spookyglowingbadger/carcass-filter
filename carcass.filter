@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.16
+# Version 3.17
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -90,7 +90,7 @@ Hide
     SetFontSize 45
 
 # Headhunter - Requires a map with an active Nemesis mod from Zana
-Show
+Hide
     BaseType "Leather Belt"
     Rarity = Normal
     SetBorderColor 98 128 0
@@ -191,7 +191,7 @@ Show
 
 # Good Elder Rares
 Show
-	Class "Rings" "Amulets" "Belts"
+	Class "Rings" "Amulets" "Belts" "Helmets" "Gloves"
 	Rarity = Rare 
 	ElderItem True
 	SetFontSize 45
@@ -206,7 +206,7 @@ Hide
 	
 # Good Shaper Rares
 Show
-	Class "Rings" "Amulets" "Belts" "Sceptre" "Daggers"
+	Class "Rings" "Amulets" "Belts" "Sceptre" "Daggers" "Helmets" "Gloves"
 	Rarity = Rare
 	ShaperItem True
 	SetFontSize 45
@@ -245,7 +245,7 @@ Hide
     SetFontSize 45
 
 # Rare Rings and Amulets
-Show
+Hide
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
@@ -281,6 +281,7 @@ Hide
     Class "Currency"
     BaseType "Scroll Fragment"
     SetFontSize 45
+	DisableDropSound
 
 # Portal Scrolls
 Hide
@@ -288,6 +289,7 @@ Hide
     BaseType "Portal Scroll"
     SetBorderColor 0 100 150
     SetFontSize 45
+	DisableDropSound
 
 # Scrolls of Wisdom
 Hide
@@ -295,6 +297,7 @@ Hide
     BaseType "Scroll of Wisdom"
     SetBorderColor 254 128 128
     SetFontSize 45
+	DisableDropSound
 
 # Transmutation Shard
 Hide
@@ -302,6 +305,7 @@ Hide
     BaseType "Transmutation Shard"
     SetFontSize 45
 	SetBorderColor 54 100 146
+	DisableDropSound
 	
 # Transmutes
 Show
@@ -311,6 +315,7 @@ Show
     SetBackgroundColor 54 100 146
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Augments
 Show
@@ -320,6 +325,7 @@ Show
     SetBackgroundColor 146 146 255
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Alteration Shard
 Hide
@@ -327,6 +333,7 @@ Hide
     BaseType "Alteration Shard"
     SetFontSize 45 
 	SetBorderColor 30 144 255
+	DisableDropSound
 	
 # Orb of Alteration
 Show
@@ -336,24 +343,27 @@ Show
     SetBackgroundColor 30 144 255
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Armourer's
-Show
+Hide
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
     SetBackgroundColor 87 87 87
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Blacksmith's
-Show
+Hide
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
     SetBackgroundColor 127 127 127
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Jeweller's Orb
 Show
@@ -363,6 +373,7 @@ Show
     SetBackgroundColor 124 178 202
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Orb of Chance
 Show
@@ -372,6 +383,7 @@ Show
     SetBackgroundColor 98 128 0
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Glassblower's Bauble
 Show
@@ -381,6 +393,7 @@ Show
     SetBackgroundColor 160 128 200
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Chromatic Orb
 Show
@@ -390,6 +403,7 @@ Show
     SetBackgroundColor 0 200 0
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Vaal Orb
 Show
@@ -407,6 +421,7 @@ Show
     BaseType "Regal Shard"
     SetFontSize 45
 	SetBorderColor 155 154 57
+	DisableDropSound
 	
 # Regal Orb
 Show
@@ -513,6 +528,7 @@ Show
     SetBackgroundColor 144 101 70
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Silver Coin
 Show
@@ -522,6 +538,7 @@ Show
     SetBackgroundColor 88 0 179
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Alchemy Shard
 Show
@@ -529,6 +546,7 @@ Show
     BaseType "Alchemy Shard"
     SetFontSize 45
 	SetBorderColor 254 213 0
+	DisableDropSound
 
 # Orb of Alchemy
 Show
@@ -547,6 +565,7 @@ Show
     SetBackgroundColor 184 218 242
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Blessed Orb
 Show
@@ -556,6 +575,7 @@ Show
     SetBackgroundColor 213 159 0
     SetBorderColor 0 0 0
     SetFontSize 45
+	DisableDropSound
 
 # Harbinger League Shards
 Show
@@ -581,6 +601,7 @@ Show
     Class "Currency"
     BaseType "Bestiary Orb" "Imprinted Bestiary Orb"
     SetTextColor 255 255 255
+	SetBorderColor 0 255 36 255
     SetBackgroundColor 255 127 39
     SetFontSize 45
 	PlayAlertSound 2 300
@@ -593,6 +614,7 @@ Hide
 	SetBorderColor 0 0 0
 	SetBackgroundColor 0 0 0 255
 	SetFontSize 45
+	DisableDropSound
 
 # Early grind nets (Blood Aqueduct/Harbour Bridge/Low Maps)
 Hide
@@ -602,6 +624,7 @@ Hide
 	SetBorderColor 0 0 0
 	SetBackgroundColor 0 0 0 255
     SetFontSize 45
+	DisableDropSound
 
 # Strong Steel Net
 Hide
@@ -611,6 +634,7 @@ Hide
 	SetBorderColor 0 0 0
 	SetBackgroundColor 0 0 0 255
     SetFontSize 45
+	DisableDropSound
 
 # Thaumaturgical & Necromancy nets
 Show
@@ -678,7 +702,7 @@ Show
     SetFontSize 45
 
 # Cheap splinters (Show or Hide depending on league prices)
-Show
+Hide
     Class "Currency"
     BaseType "Splinter of Tul" "Splinter of Esh"
     SetTextColor 255 235 235
@@ -758,7 +782,7 @@ Show
 	ShapedMap True
     SetBorderColor 255 0 0
     SetFontSize 45
-	PlayAlertSound 4 100
+	PlayAlertSound 4 200
 
 # Shaped T9->T14
 Show
@@ -847,7 +871,7 @@ Show
     BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
     SetBorderColor 192 128 254
     SetFontSize 45
-    PlayAlertSound 8 100
+    PlayAlertSound 8 300
 
 # T15
 Show
@@ -855,7 +879,7 @@ Show
     Class "Maps"
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSound 4 100
+    PlayAlertSound 4 200
 
 # T14
 Show
@@ -908,57 +932,65 @@ Show
 	PlayAlertSound 4 100
 
 # T8
-Show
+Hide
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
+	DisableDropSound
 
 # T7
-Show
+Hide
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
+	DisableDropSound
 
 # T6
-Show
+Hide
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
     SetFontSize 45
+	DisableDropSound
 
 # Section: [3006]: Maps - White
 
 # T5
-Show
+Hide
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
+	DisableDropSound
 
 # T4
-Show
+Hide
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
+	DisableDropSound
 
 # T3
-Show
+Hide
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
+	DisableDropSound
 
 # T2
-Show
+Hide
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
+	DisableDropSound
 
 # T1
-Show
+Hide
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
+	DisableDropSound
 
 # Section: [3007]: Map Fragments
 
@@ -1107,6 +1139,7 @@ Show
 Hide
     Class "Flask"
     Rarity < Unique
+	DisableDropSound
 
 # Section: [7001]: Divination Cards
 
@@ -1134,12 +1167,14 @@ Hide
     Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets"
     Rarity < Unique
     SetFontSize 26
+	DisableDropSound
 
 # Jewels that are lower than rare
 Hide
     Class "Jewel"
     Rarity < Rare
     SetFontSize 26
+	DisableDropSound
 
 # Section: [9999]: Safety Line
 
