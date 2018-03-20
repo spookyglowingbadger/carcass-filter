@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.17
+# Version 3.18
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -308,7 +308,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -318,7 +318,7 @@ Show
 	DisableDropSound
 
 # Augments
-Show
+Hide
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
