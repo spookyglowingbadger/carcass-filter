@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.18
+# Version 3.19
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -88,6 +88,7 @@ Hide
     Rarity = Normal
     SetBorderColor 98 128 0
     SetFontSize 45
+	Corrupted False
 
 # Headhunter - Requires a map with an active Nemesis mod from Zana
 Hide
@@ -95,6 +96,7 @@ Hide
     Rarity = Normal
     SetBorderColor 98 128 0
     SetFontSize 45
+	Corrupted False
 	
 # Kaom's Heart - Life meta in 3.0
 Hide
@@ -102,6 +104,7 @@ Hide
     Rarity = Normal
     SetBorderColor 98 128 0
     SetFontSize 45
+	Corrupted False
 	
 # Bisco's Collar
 Hide
@@ -109,6 +112,7 @@ Hide
     Rarity = Normal
     SetBorderColor 98 128 0
     SetFontSize 45
+	Corrupted False
 
 # Section: [1004]: Crafting Bases
 
