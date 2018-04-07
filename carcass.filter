@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.19
+# Version 3.20
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -869,6 +869,14 @@ Show
 
 # Section: [3004]: Maps - Red
 
+# Elder map
+Show
+    Class "Maps"
+	ElderMap True
+    SetBorderColor 192 128 254
+    SetFontSize 45
+    PlayAlertSound 8 300
+
 # T16
 Show
     Class "Maps"
@@ -936,7 +944,7 @@ Show
 	PlayAlertSound 4 100
 
 # T8
-Hide
+Show
     DropLevel >= 75
     Class "Maps"
     SetBorderColor 254 213 0
@@ -944,7 +952,7 @@ Hide
 	DisableDropSound
 
 # T7
-Hide
+Show
     DropLevel >= 74
     Class "Maps"
     SetBorderColor 254 213 0
@@ -952,7 +960,7 @@ Hide
 	DisableDropSound
 
 # T6
-Hide
+Show
     DropLevel >= 73
     Class "Maps"
     SetBorderColor 254 213 0
@@ -962,35 +970,35 @@ Hide
 # Section: [3006]: Maps - White
 
 # T5
-Hide
+Show
     DropLevel >= 72
     Class "Maps"
     SetFontSize 45
 	DisableDropSound
 
 # T4
-Hide
+Show
     DropLevel >= 71
     Class "Maps"
     SetFontSize 45
 	DisableDropSound
 
 # T3
-Hide
+Show
     DropLevel >= 70
     Class "Maps"
     SetFontSize 45
 	DisableDropSound
 
 # T2
-Hide
+Show
     DropLevel = 69
     Class "Maps"
     SetFontSize 45
 	DisableDropSound
 
 # T1
-Hide
+Show
     DropLevel < 69
     Class "Maps"
     SetFontSize 45
