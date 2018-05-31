@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.20
+# Version 3.21
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -139,6 +139,12 @@ Hide
 	SetBorderColor 0 73 0
     SetFontSize 45
 
+# Incursion Blue Mods
+Show
+	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Tacati" "of Citaqualotl" "of Matatl" "of Puhuarte" "of Guatelitzi"
+	SetBorderColor 240 52 47
+	SetFontSize 45
+
 # Section: [1005]: Special Exceptions
 
 # Don't miss the fishing rods!
@@ -191,6 +197,13 @@ Show
     SetFontSize 45
     PlayAlertSound 6 300
 
+# Incursion items
+Show
+	Class "Incursion Item"
+	SetFontSize 45
+	SetBorderColor 240 52 47
+	
+
 # Section: [1006]: Rares
 
 # Good Elder Rares
@@ -210,11 +223,20 @@ Hide
 	
 # Good Shaper Rares
 Show
-	Class "Rings" "Amulets" "Belts" "Sceptre" "Daggers" "Helmets" "Gloves"
+	Class "Rings" "Amulets" "Belts" "Helmets" "Gloves"
 	Rarity = Rare
 	ShaperItem True
 	SetFontSize 45
 	SetBorderColor 135 0 220 255
+
+# Stat stick sceptre
+Show
+	Class "Sceptre"
+	Rarity = Rare
+	ItemLevel >= 75
+	ShaperItem True
+	SetFontSize 45
+	SetBorderColor 135 0 220 255	
 
 # Shaper Additional Arrow Quivers
 Show
@@ -249,7 +271,7 @@ Hide
     SetFontSize 45
 
 # Rare Rings and Amulets
-Hide
+Show
     Class "Rings" "Amulets"
     Rarity = Rare
     SetFontSize 45
@@ -288,7 +310,7 @@ Hide
 	DisableDropSound
 
 # Portal Scrolls
-Hide
+Show
     Class "Currency"
     BaseType "Portal Scroll"
     SetBorderColor 0 100 150
@@ -312,7 +334,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Transmutation"
     SetTextColor 255 255 255
@@ -322,7 +344,7 @@ Hide
 	DisableDropSound
 
 # Augments
-Hide
+Show
     Class "Currency"
     BaseType "Orb of Augmentation"
     SetTextColor 255 255 255
@@ -350,7 +372,7 @@ Show
 	DisableDropSound
 
 # Armourer's
-Hide
+Show
     Class "Currency"
     BaseType "Armourer's"
     SetTextColor 255 255 255
@@ -360,7 +382,7 @@ Hide
 	DisableDropSound
 
 # Blacksmith's
-Hide
+Show
     Class "Currency"
     BaseType "Blacksmith's"
     SetTextColor 255 255 255
@@ -581,6 +603,33 @@ Show
     SetFontSize 45
 	DisableDropSound
 
+# Exalted Shard
+Show
+    Class "Currency"
+    BaseType "Exalted Shard"
+    SetFontSize 45
+	SetBorderColor 255 255 255
+
+# T1 Currency
+Show
+    Class "Currency"
+    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Orb of Annulment"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSound 6 300
+
+# MIRROR OF KALANDRA
+Show
+    Class "Currency"
+    BaseType "Mirror of Kalandra" "Mirror Shard"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSound 6 300
+
 # Harbinger League Shards
 Show
     Class "Currency"
@@ -647,35 +696,15 @@ Show
     SetTextColor 155 210 135 255
 	SetBorderColor 0 255 36 255
 	SetBackgroundColor 0 0 0 255
-    SetFontSize 45
-
-# Exalted Shard
+    SetFontSize 45	
+	
+# Incursion vials
 Show
-    Class "Currency"
-    BaseType "Exalted Shard"
-    SetFontSize 45
-	SetBorderColor 255 255 255
-
-# T1 Currency
-Show
-    Class "Currency"
-    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Orb of Annulment"
-    SetTextColor 255 0 0
-    SetBackgroundColor 255 255 255
-    SetBorderColor 255 0 0
-    SetFontSize 45
-    PlayAlertSound 6 300
-
-# MIRROR OF KALANDRA
-Show
-    Class "Currency"
-    BaseType "Mirror of Kalandra" "Mirror Shard"
-    SetTextColor 255 0 0
-    SetBackgroundColor 255 255 255
-    SetBorderColor 255 0 0
-    SetFontSize 45
-    PlayAlertSound 6 300
-
+	Class "Currency"
+	BaseType "Vial of"
+	SetTextColor 240 52 47
+	SetFontSize 45
+	
 # Section: [2002]: Currency - Essences
 
 # Good Essences
@@ -706,7 +735,7 @@ Show
     SetFontSize 45
 
 # Cheap splinters (Show or Hide depending on league prices)
-Hide
+Show
     Class "Currency"
     BaseType "Splinter of Tul" "Splinter of Esh"
     SetTextColor 255 235 235
@@ -866,6 +895,15 @@ Show
 	SetBorderColor 254 213 0
     SetFontSize 45	
 
+# Specific non-shaped maps to farm
+Show
+	Class "Maps"
+	BaseType "Burial Chambers Map"
+	SetBorderColor 192 128 254
+    SetFontSize 45
+    PlayAlertSound 4 100
+	
+	
 
 # Section: [3004]: Maps - Red
 
@@ -1109,18 +1147,25 @@ Show
 
 # Section: [5001]: Gems
 
+# Level 20 gems
+Show
+	Class "Gem"
+	GemLevel >= 20
+	SetBorderColor 30 150 180
+    SetFontSize 45
+
 # 20qual gems
 Show
-    Quality >= 20
     Class "Gem"
-    SetBorderColor 30 150 180
+    Quality >= 20
+	SetBorderColor 30 150 180
     SetFontSize 45
 
 # Quality Gems
 Show
-    Quality >= 10
     Class "Gem"
-    SetFontSize 45
+    Quality >= 10
+	SetFontSize 45
 
 # Good Drop Only Gems
 Show
