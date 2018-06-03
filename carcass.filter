@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.21
+# Version 3.22
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -141,7 +141,7 @@ Hide
 
 # Incursion Blue Mods
 Show
-	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Tacati" "of Citaqualotl" "of Matatl" "of Puhuarte" "of Guatelitzi"
+	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Puhuarte" "of Tacati" "of Matatl" "of Puhuarte" "of Guatelitzi" "of Citaqualotl"
 	SetBorderColor 240 52 47
 	SetFontSize 45
 
@@ -200,8 +200,10 @@ Show
 # Incursion items
 Show
 	Class "Incursion Item"
-	SetFontSize 45
+	SetTextColor 74 230 58
 	SetBorderColor 240 52 47
+	SetFontSize 45
+	PlayAlertSound 2 300
 	
 
 # Section: [1006]: Rares
@@ -702,7 +704,7 @@ Show
 Show
 	Class "Currency"
 	BaseType "Vial of"
-	SetTextColor 240 52 47
+	SetBackgroundColor 240 52 47
 	SetFontSize 45
 	
 # Section: [2002]: Currency - Essences
