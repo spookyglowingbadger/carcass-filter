@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 3.22
+# Version 3.24
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -62,7 +62,7 @@ Show
     SetBackgroundColor 255 255 255 255
     SetBorderColor 255 0 0
     SetFontSize 45
-    PlayAlertSound 6 300
+    PlayAlertSound 12 300
 
 # 6Sockets
 Show
@@ -612,10 +612,20 @@ Show
     SetFontSize 45
 	SetBorderColor 255 255 255
 
+# T1.5 Currency
+Show
+    Class "Currency"
+    BaseType "Divine Orb" "Orb of Annulment"
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    SetBorderColor 255 0 0
+    SetFontSize 45
+    PlayAlertSound 12 300
+
 # T1 Currency
 Show
     Class "Currency"
-    BaseType "Eternal Orb" "Divine Orb" "Exalted Orb" "Albino Rhoa Feather" "Orb of Annulment"
+    BaseType "Eternal Orb" "Exalted Orb" "Albino Rhoa Feather"
     SetTextColor 255 0 0
     SetBackgroundColor 255 255 255
     SetBorderColor 255 0 0
@@ -1206,12 +1216,18 @@ Hide
 # Farmable T1 cards
 Show
 	Class "Divination"
-	BaseType "The Doctor" "The Hoarder" "Abandoned Wealth"
+	BaseType "The Doctor" "The Fiend" "The Hoarder" "Abandoned Wealth" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
+
+# Trash cards
+Hide
+	Class "Divination"
+	BaseType "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power"
+	SetFontSize 45
 
 # All remaining cards
 Show
