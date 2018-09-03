@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.1
+# Version 4.2
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -63,6 +63,8 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 12 300
+	MinimapIcon 0 White Triangle
+	PlayEffect White
 
 # 6Sockets
 Show
@@ -71,6 +73,7 @@ Show
 	SetBorderColor 175 96 37 255
 	SetFontSize 45
 	PlayAlertSound 10 200
+	MinimapIcon 0 Yellow Triangle
 
 # Section: [1002]: Valuable Bases
 
@@ -155,18 +158,21 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Circle
+	PlayEffect White
 
 Show
 	Class "Quest Items"
 	BaseType "Shaper's Orb"
 	SetBorderColor 74 230 58
 	SetFontSize 45
+	PlayEffect Green
 
 Show
 	Class "Quest Items"
 	SetBorderColor 74 230 58
 	SetFontSize 45
+	PlayEffect Green
 	
 # Leaguestones that suck if they aren't magic
 Hide
@@ -204,7 +210,7 @@ Show
 	SetBorderColor 240 52 47
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 	
 
 # Section: [1006]: Rares
@@ -337,7 +343,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetTextColor 255 255 255
@@ -347,7 +353,7 @@ Hide
 	DisableDropSound
 
 # Augments
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetTextColor 255 255 255
@@ -405,7 +411,7 @@ Show
 	DisableDropSound
 
 # Orb of Chance
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Chance"
 	SetTextColor 255 255 255
@@ -443,7 +449,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Regal Shard
 Show
@@ -462,7 +468,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Orb of Regret
 Show
@@ -473,7 +479,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Orb of Scouring
 Show
@@ -484,7 +490,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 	
 # Chaos Shard
 Show
@@ -502,7 +508,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle 
+	MinimapIcon 0 Yellow Circle 
 
 # Gemcutter's Prism
 Show
@@ -513,7 +519,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Stacked Deck
 Show
@@ -524,7 +530,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Apprentice Cartographer's Sextant
 Show
@@ -535,7 +541,7 @@ Show
 	SetBorderColor 200 200 200
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Journeyman Cartographer's Sextant
 Show
@@ -546,7 +552,8 @@ Show
 	SetBorderColor 254 213 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
+	PlayEffect Yellow
 
 # Master Cartographer's Sextant
 Show
@@ -557,7 +564,8 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
+	PlayEffect Red
 
 # Cartographer's Chisel
 Show
@@ -632,6 +640,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 12 300
+	PlayEffect White
 
 # T1 Currency
 Show
@@ -642,7 +651,9 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Circle
+	PlayEffect White
+	
 
 # MIRROR OF KALANDRA
 Show
@@ -653,7 +664,8 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Circle
+	PlayEffect White
 
 # Harbinger League Shards
 Show
@@ -673,7 +685,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 	
 # Bestiary Orbs
 Show
@@ -684,7 +696,7 @@ Show
 	SetBackgroundColor 255 127 39
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 	
 # Leveling nets
 Hide
@@ -732,6 +744,18 @@ Show
 	SetBackgroundColor 240 52 47
 	SetFontSize 45
 
+# High Value Delve Fossils
+Show
+	Class "Currency"
+	BaseType "Fractured Fossil" "Faceted Fossil" "Hollow Fossil" "Shuddering Fossil" "Sanctified Fossil" "Gilded Fossil"
+	SetTextColor 255 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 255 0 0
+	SetFontSize 45
+	PlayAlertSound 6 300
+	MinimapIcon 0 White Circle
+	PlayEffect White
+
 # Delve Fossils
 Show
 	Class "Currency"
@@ -741,7 +765,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 # Delve Resonator
 Show
@@ -752,7 +776,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	PlayAlertSound 2 300
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 0 Yellow Circle
 
 	
 # Section: [2002]: Currency - Essences
@@ -837,6 +861,7 @@ Show
 	Rarity = Unique
 	SetFontSize 45
 	PlayAlertSound 3 100
+	MinimapIcon 0 Brown Star
 
 # Section: [3002]: Maps - Labyrinth
 
@@ -866,6 +891,8 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 200
+	MinimapIcon 0 Red Diamond
+	PlayEffect Red
 
 # Shaped T9->T14
 Show
@@ -875,6 +902,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # Shaped T8->T13
 Show
@@ -884,6 +912,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # Shaped T7->12
 Show
@@ -893,6 +922,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # Shaped T6->T11
 Show
@@ -902,6 +932,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # Shaped T5->T10
 Show
@@ -911,6 +942,7 @@ Show
 	SetBorderColor 254 213 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Yellow Diamond
 
 # Shaped T4->T9
 Show
@@ -920,6 +952,7 @@ Show
 	SetBorderColor 254 213 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Yellow Diamond
 
 # Shaped T3->T8
 Show
@@ -928,6 +961,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	MinimapIcon 0 Yellow Diamond
 
 # Shaped T2->T7
 Show
@@ -936,6 +970,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	MinimapIcon 0 Yellow Diamond
 
 # Shaped T1->T6
 Show
@@ -944,6 +979,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45	
+	MinimapIcon 0 Yellow Diamond
 
 # Specific non-shaped maps to farm
 Show
@@ -952,6 +988,7 @@ Show
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Brown Diamond
 	
 	
 
@@ -964,6 +1001,8 @@ Show
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	PlayAlertSound 8 300
+	MinimapIcon 0 Brown Diamond
+	PlayEffect Blue
 
 # T16
 Show
@@ -972,6 +1011,8 @@ Show
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	PlayAlertSound 8 300
+	MinimapIcon 0 Brown Diamond
+	PlayEffect Blue
 
 # T15
 Show
@@ -980,6 +1021,8 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 200
+	MinimapIcon 0 Red Diamond
+	PlayEffect Red
 
 # T14
 Show
@@ -988,6 +1031,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # T13
 Show
@@ -996,6 +1040,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # T12
 Show
@@ -1004,6 +1049,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # T11
 Show
@@ -1012,6 +1058,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Red Diamond
 
 # Section: [3005]: Maps - Yellow
 
@@ -1022,6 +1069,7 @@ Show
 	SetBorderColor 254 213 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Yellow Diamond
 
 # T9
 Show
@@ -1030,6 +1078,7 @@ Show
 	SetBorderColor 254 213 0
 	SetFontSize 45
 	PlayAlertSound 4 100
+	MinimapIcon 0 Yellow Diamond
 
 # T8
 Show
@@ -1040,7 +1089,7 @@ Show
 	DisableDropSound
 
 # T7
-Hide
+Show
 	DropLevel >= 74
 	Class "Maps"
 	SetBorderColor 254 213 0
@@ -1048,7 +1097,7 @@ Hide
 	DisableDropSound
 
 # T6
-Hide
+Show
 	DropLevel >= 73
 	Class "Maps"
 	SetBorderColor 254 213 0
@@ -1058,35 +1107,35 @@ Hide
 # Section: [3006]: Maps - White
 
 # T5
-Hide
+Show
 	DropLevel >= 72
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T4
-Hide
+Show
 	DropLevel >= 71
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T3
-Hide
+Show
 	DropLevel >= 70
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T2
-Hide
+Show
 	DropLevel = 69
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T1
-Hide
+Show
 	DropLevel < 69
 	Class "Maps"
 	SetFontSize 45
@@ -1101,6 +1150,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 0 0 0
 	SetFontSize 45
+	MinimapIcon 0 Red Diamond
 
 # Shaper Fragments and Breachstone
 Show
@@ -1110,6 +1160,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 0 0 0
 	SetFontSize 45
+	MinimapIcon 0 Red Diamond
 
 Show
 	Class "Map Fragments"
@@ -1164,7 +1215,8 @@ Show
 	SetBorderColor 229 160 12
 	SetFontSize 45
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Circle
+	PlayEffect White
 
 # Delve League reliquary key
 Show
@@ -1175,7 +1227,8 @@ Show
 	SetBorderColor 229 160 12
 	SetFontSize 45
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Circle
+	PlayEffect White
 
 # Breachstones
 Show
@@ -1201,12 +1254,14 @@ Show
 	Class "Piece"
 	SetFontSize 45
 	PlayAlertSound 3 100
+	MinimapIcon 0 Brown Star
 
 # All uniques
 Show
 	Rarity = Unique
 	SetFontSize 45
 	PlayAlertSound 3 100
+	MinimapIcon 0 Brown Star
 
 # Section: [5001]: Gems
 
@@ -1273,7 +1328,8 @@ Show
 	SetBorderColor 0 0 255 255
 	SetBackgroundColor 255 255 255 255
 	PlayAlertSound 6 300
-	MinimapIcon 0 Blue Circle
+	MinimapIcon 0 White Square
+	PlayEffect White
 
 # Trash cards
 Hide
@@ -1286,6 +1342,7 @@ Show
 	Class "Divination"
 	SetFontSize 45
 	PlayAlertSound 9 200
+	MinimapIcon 0 Blue Square
 
 # Section: [8001]: Junk
 
