@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.2
+# Version 4.3
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -132,6 +132,15 @@ Show
 	Class "Abyss Jewel"
 	Rarity < Rare
 	ItemLevel >= 84
+	SetBorderColor 0 73 0
+	SetFontSize 45
+
+# 74+ Magic Abyss Jewels
+Show
+	Class "Abyss Jewel"
+	BaseType "Searching Eye"
+	Rarity < Rare
+	ItemLevel >= 74
 	SetBorderColor 0 73 0
 	SetFontSize 45
 	
@@ -318,11 +327,29 @@ Hide
 	SetFontSize 45
 	DisableDropSound
 
+# Portal Scroll Stacks
+Show
+	Class "Currency"
+	BaseType "Portal Scroll"
+	StackSize >= 20
+	SetBorderColor 254 128 128
+	SetFontSize 45
+	DisableDropSound
+
 # Portal Scrolls
 Hide
 	Class "Currency"
 	BaseType "Portal Scroll"
 	SetBorderColor 0 100 150
+	SetFontSize 45
+	DisableDropSound
+
+# Scroll of Wisdom Stacks
+Show
+	Class "Currency"
+	BaseType "Scroll of Wisdom"
+	StackSize >= 20
+	SetBorderColor 254 128 128
 	SetFontSize 45
 	DisableDropSound
 
@@ -333,6 +360,7 @@ Hide
 	SetBorderColor 254 128 128
 	SetFontSize 45
 	DisableDropSound
+
 
 # Transmutation Shard
 Hide
@@ -747,7 +775,7 @@ Show
 # High Value Delve Fossils
 Show
 	Class "Currency"
-	BaseType "Fractured Fossil" "Faceted Fossil" "Hollow Fossil" "Shuddering Fossil" "Sanctified Fossil" "Gilded Fossil"
+	BaseType "Fractured Fossil" "Faceted Fossil" "Hollow Fossil" "Shuddering Fossil" "Sanctified Fossil" "Gilded Fossil" "Tangled Fossil" "Bloodstained Fossil" "Glyphic Fossil"
 	SetTextColor 255 0 0
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
@@ -767,6 +795,18 @@ Show
 	PlayAlertSound 2 300
 	MinimapIcon 0 Yellow Circle
 
+# High Value Delve Resonators
+Show
+	Class "Currency"
+	BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
+	SetTextColor 255 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 255 0 0
+	SetFontSize 45
+	PlayAlertSound 6 300
+	MinimapIcon 0 White Circle
+	PlayEffect White
+	
 # Delve Resonator
 Show
 	Class "Currency"
