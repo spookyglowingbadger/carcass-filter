@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.3
+# Version 4.4
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -315,6 +315,16 @@ Show
 	BaseType "Gripped Gloves" "Two-Toned Boots"
 	Rarity = Rare
 	ItemLevel >= 75
+	SetFontSize 45
+
+# Potentially Enchanted Rares
+Show
+	Class "Helmets"
+	Identified True
+	Corrupted False
+	ItemLevel >= 61
+	Rarity = Rare
+	SetBorderColor 0 150 200
 	SetFontSize 45
 
 
@@ -668,6 +678,7 @@ Show
 	SetBorderColor 255 0 0
 	SetFontSize 45
 	PlayAlertSound 12 300
+	MinimapIcon 0 White Circle
 	PlayEffect White
 
 # T1 Currency
@@ -1001,6 +1012,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	PlayAlertSound 4 100
 	MinimapIcon 0 Yellow Diamond
 
 # Shaped T2->T7
@@ -1126,7 +1138,8 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	DisableDropSound
+	PlayAlertSound 4 100
+	MinimapIcon 0 Yellow Diamond
 
 # T7
 Show
@@ -1134,7 +1147,7 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	DisableDropSound
+	MinimapIcon 0 Yellow Diamond
 
 # T6
 Show
@@ -1142,7 +1155,7 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	DisableDropSound
+	MinimapIcon 0 Yellow Diamond
 
 # Section: [3006]: Maps - White
 
