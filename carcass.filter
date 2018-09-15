@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.5
+# Version 4.7
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -127,20 +127,11 @@ Hide
 	SetBorderColor 255 255 255
 	SetFontSize 45
 
-# 84+ Magic Abyss Jewels
+# 82+ Magic Abyss Jewels (best life mod)
 Show
 	Class "Abyss Jewel"
 	Rarity < Rare
-	ItemLevel >= 84
-	SetBorderColor 0 73 0
-	SetFontSize 45
-
-# 74+ Magic Abyss Jewels
-Show
-	Class "Abyss Jewel"
-	BaseType "Searching Eye"
-	Rarity < Rare
-	ItemLevel >= 74
+	ItemLevel >= 82
 	SetBorderColor 0 73 0
 	SetFontSize 45
 	
@@ -318,7 +309,7 @@ Show
 	SetFontSize 45
 
 # Potentially Enchanted Rares
-Show
+Hide
 	Class "Helmets"
 	Identified True
 	Corrupted False
@@ -381,7 +372,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetTextColor 255 255 255
@@ -391,7 +382,7 @@ Show
 	DisableDropSound
 
 # Augments
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetTextColor 255 255 255
@@ -449,7 +440,7 @@ Show
 	DisableDropSound
 
 # Orb of Chance
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Chance"
 	SetTextColor 255 255 255
@@ -786,7 +777,7 @@ Show
 # High Value Delve Fossils
 Show
 	Class "Currency"
-	BaseType "Fractured Fossil" "Faceted Fossil" "Hollow Fossil" "Shuddering Fossil" "Sanctified Fossil" "Gilded Fossil" "Tangled Fossil" "Bloodstained Fossil" "Glyphic Fossil"
+	BaseType "Fractured Fossil" "Faceted Fossil" "Hollow Fossil" "Shuddering Fossil" "Sanctified Fossil" "Gilded Fossil" "Tangled Fossil" "Bloodstained Fossil" "Glyphic Fossil" "Lucent Fossil"
 	SetTextColor 255 0 0
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
@@ -841,7 +832,7 @@ Show
 	SetFontSize 45
 
 # Leveling essences
-Show
+Hide
 	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
 	SetTextColor 0 0 0
 	SetBackgroundColor 30 144 255
@@ -1318,12 +1309,24 @@ Show
 
 # Section: [5001]: Gems
 
-# Level 20 gems
+# Level 20+ gems
 Show
 	Class "Gem"
 	GemLevel >= 20
 	SetBorderColor 30 150 180
 	SetFontSize 45
+
+# Level 3 or 4 E-gems
+Show
+	Class "Gem"
+	GemLevel >= 3
+	BaseType "Enlighten" "Empower" "Enhance"
+	SetBorderColor 30 150 180
+	SetBackgroundColor 255 255 255
+	SetFontSize 45
+	PlayAlertSound 6 300
+	MinimapIcon 0 White Circle
+	PlayEffect White
 
 # 20qual gems
 Show
