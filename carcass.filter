@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.7
+# Version 4.8
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -792,7 +792,7 @@ Show
 	BaseType "Fossil"
 	SetTextColor 0 0 0
 	SetBackgroundColor 249 150 25
-	SetBorderColor 0 0 0
+	SetBorderColor 0 150 200
 	SetFontSize 45
 	PlayAlertSound 2 300
 	MinimapIcon 0 Yellow Circle
@@ -815,10 +815,8 @@ Show
 	BaseType "Resonator"
 	SetTextColor 0 0 0
 	SetBackgroundColor 249 150 25
-	SetBorderColor 0 0 0
+	SetBorderColor 0 150 200
 	SetFontSize 45
-	PlayAlertSound 2 300
-	MinimapIcon 0 Yellow Circle
 
 	
 # Section: [2002]: Currency - Essences
@@ -1027,7 +1025,7 @@ Show
 # Specific non-shaped maps to farm
 Show
 	Class "Maps"
-	BaseType "Burial Chambers Map"
+	BaseType "Burial Chambers Map" "Haunted Mansion Map" "Beach Map"
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	PlayAlertSound 4 100
@@ -1133,7 +1131,7 @@ Show
 	MinimapIcon 0 Yellow Diamond
 
 # T7
-Show
+Hide
 	DropLevel >= 74
 	Class "Maps"
 	SetBorderColor 254 213 0
@@ -1141,7 +1139,7 @@ Show
 	MinimapIcon 0 Yellow Diamond
 
 # T6
-Show
+Hide
 	DropLevel >= 73
 	Class "Maps"
 	SetBorderColor 254 213 0
@@ -1151,35 +1149,35 @@ Show
 # Section: [3006]: Maps - White
 
 # T5
-Show
+Hide
 	DropLevel >= 72
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T4
-Show
+Hide
 	DropLevel >= 71
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T3
-Show
+Hide
 	DropLevel >= 70
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T2
-Show
+Hide
 	DropLevel = 69
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T1
-Show
+Hide
 	DropLevel < 69
 	Class "Maps"
 	SetFontSize 45
@@ -1378,7 +1376,7 @@ Hide
 # T1 cards
 Show
 	Class "Divination"
-	BaseType "The Doctor" "The Fiend" "The Hoarder" "Abandoned Wealth" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Master" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
+	BaseType "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Master" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
@@ -1390,7 +1388,7 @@ Show
 # Trash cards
 Hide
 	Class "Divination"
-	BaseType "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
+	BaseType "Her Mask" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
 	SetFontSize 45
 
 # All remaining cards
