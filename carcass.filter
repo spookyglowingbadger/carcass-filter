@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.8
+# Version 4.9
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -1136,7 +1136,6 @@ Hide
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	MinimapIcon 0 Yellow Diamond
 
 # T6
 Hide
@@ -1144,7 +1143,6 @@ Hide
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	MinimapIcon 0 Yellow Diamond
 
 # Section: [3006]: Maps - White
 
