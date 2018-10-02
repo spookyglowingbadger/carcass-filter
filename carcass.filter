@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.11
+# Version 4.12
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -1345,7 +1345,7 @@ Show
 # Quality Gems
 Show
 	Class "Gem"
-	Quality >= 10
+	Quality >= 15
 	SetFontSize 45
 
 # Good Drop Only Gems
