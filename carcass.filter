@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.12
+# Version 4.13
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -1039,12 +1039,12 @@ Show
 Show
 	Class "Maps"
 	BaseType "Burial Chambers Map" "Haunted Mansion Map" "Beach Map" "Grotto Map"
+	ElderMap False
+	ShapedMap False
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	PlayAlertSound 4 100
 	MinimapIcon 0 Brown Diamond
-	
-	
 
 # Section: [3004]: Maps - Red
 
