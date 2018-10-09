@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.13
+# Version 4.14
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -411,7 +411,7 @@ Hide
 	DisableDropSound
 	
 # Orb of Alteration
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Alteration"
 	SetTextColor 255 255 255
@@ -441,7 +441,7 @@ Hide
 	DisableDropSound
 
 # Jeweller's Orb
-Show
+Hide
 	Class "Currency"
 	BaseType "Jeweller's Orb"
 	SetTextColor 0 0 0
@@ -471,7 +471,7 @@ Show
 	DisableDropSound
 
 # Chromatic Orb
-Show
+Hide
 	Class "Currency"
 	BaseType "Chromatic Orb"
 	SetTextColor 255 255 255
@@ -1106,24 +1106,24 @@ Show
 	MinimapIcon 0 Red Diamond
 
 # T11
-Show
+Hide
 	DropLevel >= 78
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
-	MinimapIcon 0 Red Diamond
+#	PlayAlertSound 4 100
+#	MinimapIcon 0 Red Diamond
 
 # Section: [3005]: Maps - Yellow
 
 # T10
-Show
+Hide
 	DropLevel >= 77
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	PlayAlertSound 4 100
-	MinimapIcon 0 Yellow Diamond
+#	PlayAlertSound 4 100
+#	MinimapIcon 0 Yellow Diamond
 
 # T9
 Hide
@@ -1397,7 +1397,7 @@ Show
 # Trash cards
 Hide
 	Class "Divination"
-	BaseType "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
+	BaseType "Her Mask" "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
 	SetFontSize 45
 
 # All remaining cards
