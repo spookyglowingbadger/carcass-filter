@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 4.15
+# Version 5.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -62,7 +62,7 @@ Show
 	SetBackgroundColor 255 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 12 300
+	CustomAlertSound "Carcass_12divine.mp3"
 	MinimapIcon 0 White Triangle
 	PlayEffect White
 
@@ -72,7 +72,7 @@ Show
 	Rarity <= Rare
 	SetBorderColor 175 96 37 255
 	SetFontSize 45
-	PlayAlertSound 10 200
+	CustomAlertSound "Carcass_10sockets.mp3"
 	MinimapIcon 0 Yellow Triangle
 
 # Section: [1002]: Valuable Bases
@@ -157,7 +157,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -209,7 +209,7 @@ Show
 	SetTextColor 74 230 58
 	SetBorderColor 240 52 47
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	
 
@@ -488,7 +488,7 @@ Show
 	SetBackgroundColor 210 0 0
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Regal Shard
@@ -507,7 +507,7 @@ Show
 	SetBackgroundColor 155 154 57
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Orb of Regret
@@ -518,7 +518,7 @@ Show
 	SetBackgroundColor 235 235 235
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Orb of Scouring
@@ -529,7 +529,7 @@ Show
 	SetBackgroundColor 245 245 245
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	
 # Chaos Shard
@@ -547,7 +547,7 @@ Show
 	SetBackgroundColor 249 150 25
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle 
 
 # Gemcutter's Prism
@@ -558,7 +558,7 @@ Show
 	SetBackgroundColor 27 162 155
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Stacked Deck
@@ -569,7 +569,7 @@ Show
 	SetBackgroundColor 249 150 25
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Apprentice Cartographer's Sextant
@@ -580,7 +580,7 @@ Show
 	SetBackgroundColor 124 81 50
 	SetBorderColor 200 200 200
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # Journeyman Cartographer's Sextant
@@ -591,7 +591,7 @@ Show
 	SetBackgroundColor 124 81 50
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Yellow
 
@@ -603,7 +603,7 @@ Show
 	SetBackgroundColor 124 81 50
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Red
 
@@ -679,7 +679,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 12 300
+	CustomAlertSound "Carcass_12divine.mp3" 300
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -691,7 +691,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 	
@@ -704,7 +704,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -725,7 +725,7 @@ Show
 	SetBackgroundColor 88 124 244
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	
 # Bestiary Orbs
@@ -736,7 +736,7 @@ Show
 	SetBorderColor 0 255 36 255
 	SetBackgroundColor 255 127 39
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	
 # Leveling nets
@@ -793,7 +793,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -805,7 +805,7 @@ Show
 	SetBackgroundColor 249 150 25
 	SetBorderColor 0 150 200
 	SetFontSize 45
-	PlayAlertSound 2 300
+	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
 # High Value Delve Resonators
@@ -816,7 +816,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 	
@@ -913,7 +913,7 @@ Show
 	Class "Maps"
 	Rarity = Unique
 	SetFontSize 45
-	PlayAlertSound 3 100
+	CustomAlertSound "Carcass_3uniques.mp3"
 	MinimapIcon 0 Brown Star
 
 # Section: [3002]: Maps - Labyrinth
@@ -943,7 +943,7 @@ Show
 	ShapedMap True
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 200
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 	PlayEffect Red
 
@@ -954,7 +954,7 @@ Show
 	ShapedMap True
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # Shaped T8->T13
@@ -964,7 +964,7 @@ Show
 	ShapedMap True
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # Shaped T7->12
@@ -974,7 +974,7 @@ Show
 	ShapedMap True
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # Shaped T6->T11
@@ -984,7 +984,7 @@ Show
 	ShapedMap True
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # Shaped T5->T10
@@ -994,7 +994,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
 
 # Shaped T4->T9
@@ -1004,7 +1004,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
 
 # Shaped T3->T8
@@ -1014,7 +1014,7 @@ Show
 	ShapedMap True
 	SetBorderColor 254 213 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
 
 # Shaped T2->T7
@@ -1043,7 +1043,7 @@ Show
 	ShapedMap False
 	SetBorderColor 192 128 254
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Brown Diamond
 
 # Section: [3004]: Maps - Red
@@ -1054,7 +1054,7 @@ Show
 	ElderMap True
 	SetBorderColor 192 128 254
 	SetFontSize 45
-	PlayAlertSound 8 300
+	CustomAlertSound "Carcass_8highmaps.mp3"
 	MinimapIcon 0 Brown Diamond
 	PlayEffect Blue
 
@@ -1064,7 +1064,7 @@ Show
 	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
 	SetBorderColor 192 128 254
 	SetFontSize 45
-	PlayAlertSound 8 300
+	CustomAlertSound "Carcass_8highmaps.mp3"
 	MinimapIcon 0 Brown Diamond
 	PlayEffect Blue
 
@@ -1074,7 +1074,7 @@ Show
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 200
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 	PlayEffect Red
 
@@ -1084,7 +1084,7 @@ Show
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # T13
@@ -1093,7 +1093,7 @@ Show
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # T12
@@ -1102,7 +1102,7 @@ Show
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	PlayAlertSound 4 100
+	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
 
 # T11
@@ -1111,7 +1111,7 @@ Hide
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-#	PlayAlertSound 4 100
+#	CustomAlertSound "Carcass_4maps.mp3"
 #	MinimapIcon 0 Red Diamond
 
 # Section: [3005]: Maps - Yellow
@@ -1122,7 +1122,7 @@ Hide
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-#	PlayAlertSound 4 100
+#	CustomAlertSound "Carcass_4maps.mp3"
 #	MinimapIcon 0 Yellow Diamond
 
 # T9
@@ -1265,7 +1265,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 229 160 12
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -1277,7 +1277,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 229 160 12
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -1304,14 +1304,14 @@ Show
 Show
 	Class "Piece"
 	SetFontSize 45
-	PlayAlertSound 3 100
+	CustomAlertSound "Carcass_3uniques.mp3"
 	MinimapIcon 0 Brown Star
 
 # All uniques
 Show
 	Rarity = Unique
 	SetFontSize 45
-	PlayAlertSound 3 100
+	CustomAlertSound "Carcass_3uniques.mp3"
 	MinimapIcon 0 Brown Star
 
 # Section: [5001]: Gems
@@ -1331,7 +1331,7 @@ Show
 	SetBorderColor 30 150 180
 	SetBackgroundColor 255 255 255
 	SetFontSize 45
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -1351,7 +1351,7 @@ Show
 # Good Drop Only Gems
 Show
 	Class "Gem"
-	BaseType "Enlighten" "Vaal Breach" "Vaal Grace" "Portal" "Vaal Haste" "Item Quantity"
+	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity"
 	SetFontSize 45
 
 # Hide other gems
@@ -1390,7 +1390,7 @@ Show
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
 	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Square
 	PlayEffect White
 
@@ -1404,7 +1404,7 @@ Hide
 Show
 	Class "Divination"
 	SetFontSize 45
-	PlayAlertSound 9 200
+	CustomAlertSound "Carcass_9divcards.mp3"
 	MinimapIcon 0 Blue Square
 
 # Section: [8001]: Junk
