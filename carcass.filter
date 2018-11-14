@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 5.1
+# Version 5.2
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -1038,7 +1038,7 @@ Show
 # Specific non-shaped maps to farm
 Show
 	Class "Maps"
-	BaseType "Burial Chambers Map" "Haunted Mansion Map" "Beach Map" "Grotto Map"
+	BaseType "Burial Chambers Map" "Haunted Mansion Map" "Beach Map"
 	ElderMap False
 	ShapedMap False
 	SetBorderColor 192 128 254
@@ -1106,7 +1106,7 @@ Show
 	MinimapIcon 0 Red Diamond
 
 # T11
-Hide
+Show
 	DropLevel >= 78
 	Class "Maps"
 	SetBorderColor 255 0 0
@@ -1117,7 +1117,7 @@ Hide
 # Section: [3005]: Maps - Yellow
 
 # T10
-Hide
+Show
 	DropLevel >= 77
 	Class "Maps"
 	SetBorderColor 254 213 0
@@ -1126,7 +1126,7 @@ Hide
 #	MinimapIcon 0 Yellow Diamond
 
 # T9
-Hide
+Show
 	DropLevel >= 76
 	Class "Maps"
 	SetBorderColor 254 213 0
