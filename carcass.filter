@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 5.2
+# Version 5.3
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -263,6 +263,14 @@ Hide
 	SetFontSize 26
 	SetBorderColor 135 0 220 255 
 
+# Veiled rares
+Show
+	Identified True
+	HasExplicitMod "Veil"
+	Rarity = Rare 
+	SetFontSize 45
+	SetBorderColor 255 0 255
+	
 # Abyss Belts
 Show
 	BaseType "Stygian Vise"
@@ -383,7 +391,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetTextColor 255 255 255
@@ -393,7 +401,7 @@ Hide
 	DisableDropSound
 
 # Augments
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetTextColor 255 255 255
@@ -411,7 +419,7 @@ Hide
 	DisableDropSound
 	
 # Orb of Alteration
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Alteration"
 	SetTextColor 255 255 255
@@ -421,7 +429,7 @@ Hide
 	DisableDropSound
 
 # Armourer's
-Hide
+Show
 	Class "Currency"
 	BaseType "Armourer's"
 	SetTextColor 255 255 255
@@ -431,7 +439,7 @@ Hide
 	DisableDropSound
 
 # Blacksmith's
-Hide
+Show
 	Class "Currency"
 	BaseType "Blacksmith's"
 	SetTextColor 255 255 255
@@ -441,7 +449,7 @@ Hide
 	DisableDropSound
 
 # Jeweller's Orb
-Hide
+Show
 	Class "Currency"
 	BaseType "Jeweller's Orb"
 	SetTextColor 0 0 0
@@ -451,7 +459,7 @@ Hide
 	DisableDropSound
 
 # Orb of Chance
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Chance"
 	SetTextColor 255 255 255
@@ -471,7 +479,7 @@ Show
 	DisableDropSound
 
 # Chromatic Orb
-Hide
+Show
 	Class "Currency"
 	BaseType "Chromatic Orb"
 	SetTextColor 255 255 255
@@ -938,7 +946,7 @@ Show
 
 # Shaped T10->T15
 Show
-	DropLevel >= 77
+	MapTier = 15
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
@@ -949,7 +957,7 @@ Show
 
 # Shaped T9->T14
 Show
-	DropLevel >= 76
+	MapTier = 14
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
@@ -959,7 +967,7 @@ Show
 
 # Shaped T8->T13
 Show
-	DropLevel >= 75
+	MapTier = 13
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
@@ -969,7 +977,7 @@ Show
 
 # Shaped T7->12
 Show
-	DropLevel >= 74
+	MapTier = 12
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
@@ -979,7 +987,7 @@ Show
 
 # Shaped T6->T11
 Show
-	DropLevel >= 73
+	MapTier = 11
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
@@ -989,7 +997,7 @@ Show
 
 # Shaped T5->T10
 Show
-	DropLevel >= 72
+	MapTier = 10
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
@@ -999,7 +1007,7 @@ Show
 
 # Shaped T4->T9
 Show
-	DropLevel >= 71
+	MapTier = 9
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
@@ -1009,7 +1017,7 @@ Show
 
 # Shaped T3->T8
 Show
-	DropLevel >= 70
+	MapTier = 8
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
@@ -1019,7 +1027,7 @@ Show
 
 # Shaped T2->T7
 Show
-	DropLevel = 69
+	MapTier = 7
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
@@ -1028,7 +1036,7 @@ Show
 
 # Shaped T1->T6
 Show
-	DropLevel < 69
+	MapTier = 6
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
@@ -1070,7 +1078,7 @@ Show
 
 # T15
 Show
-	DropLevel >= 82
+	MapTier = 15
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
@@ -1080,7 +1088,7 @@ Show
 
 # T14
 Show
-	DropLevel >= 81
+	MapTier = 14
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
@@ -1089,7 +1097,7 @@ Show
 
 # T13
 Show
-	DropLevel >= 80
+	MapTier = 13
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
@@ -1098,7 +1106,7 @@ Show
 
 # T12
 Show
-	DropLevel >= 79
+	MapTier = 12
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
@@ -1107,50 +1115,50 @@ Show
 
 # T11
 Show
-	DropLevel >= 78
+	MapTier = 11
 	Class "Maps"
 	SetBorderColor 255 0 0
 	SetFontSize 45
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 0 Red Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Red Diamond
 
 # Section: [3005]: Maps - Yellow
 
 # T10
 Show
-	DropLevel >= 77
+	MapTier = 10
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 0 Yellow Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Yellow Diamond
 
 # T9
 Show
-	DropLevel >= 76
+	MapTier = 9
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
 
 
 # T8
-Hide
-	DropLevel >= 75
+Show
+	MapTier = 8
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
 
 
 # T7
-Hide
-	DropLevel >= 74
+Show
+	MapTier = 7
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
 
 # T6
-Hide
-	DropLevel >= 73
+Show
+	MapTier = 6
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
@@ -1158,41 +1166,42 @@ Hide
 # Section: [3006]: Maps - White
 
 # T5
-Hide
-	DropLevel >= 72
+Show
+	MapTier = 5
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T4
-Hide
-	DropLevel >= 71
+Show
+	MapTier = 4
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T3
-Hide
-	DropLevel >= 70
+Show
+	MapTier = 3
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T2
-Hide
-	DropLevel = 69
+Show
+	MapTier = 2
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # T1
-Hide
-	DropLevel < 69
+Show
+	MapTier = 1
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
 
 # Section: [3007]: Map Fragments
+
 
 Show
 	Class "Map Fragments"
@@ -1220,6 +1229,7 @@ Show
 	SetBackgroundColor 180 0 0
 	SetBorderColor 0 0 0
 	SetFontSize 45
+	MinimapIcon 0 Red Diamond
 
 # Prophecy League Fragments
 Show
@@ -1247,6 +1257,14 @@ Show
 	SetBorderColor 210 0 0
 	SetFontSize 45
 
+# Scarabs
+Show
+	Class "Map Fragments"
+	BaseType "Scarab"
+	SetTextColor 255 255 255
+	SetBackgroundColor 34 120 76
+	SetFontSize 45
+	
 # Safety line for Map Fragments class
 Show
 	Class "Map Fragments"
@@ -1351,7 +1369,7 @@ Show
 # Good Drop Only Gems
 Show
 	Class "Gem"
-	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity"
+	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity" "Portal"
 	SetFontSize 45
 
 # Hide other gems
@@ -1385,7 +1403,7 @@ Hide
 # T1 cards
 Show
 	Class "Divination"
-	BaseType "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Master" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
+	BaseType "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Master" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
