@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 5.3
+# Version 6.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -135,16 +135,30 @@ Show
 	SetBorderColor 0 73 0
 	SetFontSize 45
 	
-# Lower Level Magic Abyss Jewels
-Hide
-	Class "Abyss Jewel"
-	Rarity < Rare
-	SetBorderColor 0 73 0
-	SetFontSize 45
+# SSF Lower Level Magic Abyss Jewels
+#Show
+#	Class "Abyss Jewel"
+#	BaseType "Searching Eye Jewel" "Murderous Eye Jewel" "Hypnotic Eye Jewel"
+#	Rarity < Rare
+#	ItemLevel >= 74
+#	SetBorderColor 0 73 0
+#	SetFontSize 45
 
 # Incursion Blue Mods
 Show
 	HasExplicitMod "Tacati's" "Citaqualotl's" "Matatl's" "Topotante's" "Xopec's" "Guatelitzi's" "of Puhuarte" "of Tacati" "of Matatl" "of Puhuarte" "of Guatelitzi" "of Citaqualotl"
+	SetBorderColor 240 52 47
+	SetFontSize 45
+	
+# Bestiary Aspects
+Show
+	HasExplicitMod "of Fenumus"
+	SetBorderColor 240 52 47
+	SetFontSize 45
+
+# Multimod
+Show
+	HasExplicitMod "of Crafting"
 	SetBorderColor 240 52 47
 	SetFontSize 45
 
@@ -215,6 +229,19 @@ Show
 
 # Section: [1006]: Rares
 
+# Bulky Synth crap
+Hide
+	FracturedItem True
+	Width = 2
+	Height = 4
+	SetFontSize 26
+
+# Synth crap
+Show
+	FracturedItem True
+	SetFontSize 45
+
+
 # Good Elder Rares
 Show
 	Class "Rings" "Amulets" "Belts" "Helmets" "Gloves"
@@ -224,7 +251,7 @@ Show
 	SetBorderColor 0 220 220 255
 
 # Bulky Elder Rares
-Hide
+Show
 	Rarity = Rare 
 	ElderItem True
 	SetFontSize 26
@@ -257,7 +284,7 @@ Show
 	SetBorderColor 135 0 220 255
 
 # Bulky Shaper Rares
-Hide
+Show
 	Rarity = Rare
 	ShaperItem True
 	SetFontSize 26
@@ -287,9 +314,30 @@ Hide
 	SetBorderColor 130 25 255
 	SetFontSize 45
 
-# Rare Rings and Amulets
+# Rare Good Amulet Bases
+#Show
+#	Class "Amulets"
+#	BaseType "Onyx Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Marble Amulet"
+#	Rarity = Rare
+#	SetFontSize 45	
+
+# Rare Amulets
 Hide
-	Class "Rings" "Amulets"
+	Class "Amulets"
+	Rarity = Rare
+	SetFontSize 45
+
+# SSF 83 Rings
+#Show
+#	BaseType "Two-Stone Ring" "Unset Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Prismatic Ring" "Moonstone Ring"
+#	ItemLevel >= 83
+#	Class "Rings"
+#	Rarity = Rare
+#	SetFontSize 45
+	
+# Rare Rings
+Hide
+	Class "Rings"
 	Rarity = Rare
 	SetFontSize 45
 
@@ -302,6 +350,17 @@ Show
 	SetBackgroundColor 75 75 0	
 	SetBorderColor 0 73 0
 	SetFontSize 45
+	
+# SSF 74+ Rare Abyss Jewels
+#Show
+#	Class "Abyss Jewel"
+#	BaseType "Searching Eye Jewel" "Murderous Eye Jewel" "Hypnotic Eye Jewel"
+#	Rarity = Rare
+#	ItemLevel >= 74
+#	SetTextColor 255 255 0
+#	SetBackgroundColor 75 75 0	
+#	SetBorderColor 0 73 0
+#	SetFontSize 45
 
 # Rare Jewels
 Hide
@@ -312,26 +371,92 @@ Hide
 	SetBorderColor 255 255 0
 	SetFontSize 45
 
-# 84+ ES bases to identify
-Hide
-	BaseType "Hubris Circlet" "Vaal Regalia" "Sorcerer Boots" "Sorcerer Gloves" "Titanium Spirit Shield"
-	Rarity = Rare
-	ItemLevel >= 84
-	SetFontSize 45
-	
-# 75+ good bases to identify
-Show
-	BaseType "Gripped Gloves" "Two-Toned Boots"
-	Rarity = Rare
-	ItemLevel >= 75
-	SetFontSize 45
 
-# Potentially Enchanted Rares
-Hide
+# SSF EDITS	
+
+
+#Show
+#	BaseType "Leather Belt"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+#Show
+#	BaseType "Crystal Belt"
+#	Rarity = Rare 
+#	SetFontSize 45
+	
+#Show
+#	BaseType "Fossilised Spirit Shield" "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Spirit Shield" "Thorium Spirit Shield" "Supreme Spiked Shield"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+#Show
+#	BaseType "Titanium Spirit Shield" "Harmonic Spirit Shield" "Vaal Regalia" "Sorcerer Boots"
+#	ItemLevel >= 86
+#	Rarity = Rare
+#	SetFontSize 45
+	
+#Show
+#	BaseType "Sorcerer Boots"
+#	ItemLevel >= 84
+#	Rarity < Unique
+#	SetFontSize 45
+	
+#Show
+#	BaseType "Fingerless Silk Gloves" "Sorcerer Gloves"
+#	ItemLevel >= 84
+#	Rarity = Rare
+#	SetFontSize 45
+	
+#Show
+#	BaseType "Opal Sceptre"
+#	ItemLevel >= 84
+#	Rarity < Unique
+#	SetFontSize 45
+
+#Show
+#	BaseType "Imperial Skean" "Ambusher" "Slaughter Knife" "Royal Skean"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+#Show
+#	BaseType "Blood Raiment" "Sadist Garb"
+#	Rarity = Rare 
+#	SetFontSize 45	
+
+#Show
+#	BaseType "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet" "Pig-Faced Bascinet" "Ezomyte Burgonet" "Praetor Crown" "Prophet Crown" "Magistrate Crown"
+#	Rarity = Rare 
+#	SetFontSize 45	
+
+#Show
+#	BaseType "Prophet Crown" "Magistrate Crown" "Praetor Crown"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+#Show
+#	BaseType "Titan Greaves" "Dragonscale Boots" "Vaal Greaves" "Hydrascale Boots" "Slink Boots" "Two-Toned Boots"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+#Show
+#	BaseType "Titan Gauntlets" "Dragonscale Gauntlets" "Vaal Gauntlets" "Hydrascale Gauntlets" "Spiked Gloves" "Slink Gloves" "Crusader Gloves" "Legion Gloves"
+#	Rarity = Rare 
+#	SetFontSize 45
+
+	
+
+# 75+ good bases to identify
+#Show
+#	BaseType "Gripped Gloves" "Two-Toned Boots"
+#	Rarity = Rare
+#	ItemLevel >= 75
+#	SetFontSize 45
+
+# Enchanted Rare Helmets
+Show
 	Class "Helmets"
-	Identified True
-	Corrupted False
-	ItemLevel >= 61
+	AnyEnchantment True
 	Rarity = Rare
 	SetBorderColor 0 150 200
 	SetFontSize 45
@@ -623,7 +748,7 @@ Show
 	SetBackgroundColor 144 101 70
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	DisableDropSound
+	MinimapIcon 2 Yellow Circle
 
 # Silver Coin
 Show
@@ -651,6 +776,7 @@ Show
 	SetBackgroundColor 254 213 0
  	SetBorderColor 0 0 0
 	SetFontSize 45
+	MinimapIcon 2 Yellow Circle 
 
 # Orb of Fusing
 Show
@@ -849,7 +975,7 @@ Show
 	SetFontSize 45
 
 # Leveling essences
-Hide
+Show
 	BaseType "Wailing Essence of" "Weeping Essence of" "Muttering Essence of" "Whispering Essence of"
 	SetTextColor 0 0 0
 	SetBackgroundColor 30 144 255
@@ -868,13 +994,13 @@ Show
 	SetFontSize 45
 
 # Cheap splinters (Show or Hide depending on league prices)
-Hide
-	Class "Currency"
-	BaseType "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol"
-	SetTextColor 255 235 235
-	SetBackgroundColor 65 20 80
-	SetBorderColor 130 25 255
-	SetFontSize 45
+#Hide
+#	Class "Currency"
+#	BaseType "Splinter of Tul" "Splinter of Esh" "Splinter of Uul-Netol"
+#	SetTextColor 255 235 235
+#	SetBackgroundColor 65 20 80
+#	SetBorderColor 130 25 255
+#	SetFontSize 45
 	
 # Splinters to show. Should be adjusted manually based on market price of Breachstones.	
 Show
@@ -950,6 +1076,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
@@ -961,6 +1088,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
@@ -971,6 +1099,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
@@ -981,6 +1110,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
@@ -991,6 +1121,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Red Diamond
@@ -1001,6 +1132,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
@@ -1011,6 +1143,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
@@ -1021,6 +1154,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Yellow Diamond
@@ -1031,6 +1165,7 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	MinimapIcon 0 Yellow Diamond
 
@@ -1040,16 +1175,18 @@ Show
 	Class "Maps"
 	ShapedMap True
 	SetBorderColor 254 213 0
+	SetBackgroundColor 0 0 60
 	SetFontSize 45	
 	MinimapIcon 0 Yellow Diamond
 
 # Specific non-shaped maps to farm
 Show
 	Class "Maps"
-	BaseType "Burial Chambers Map" "Haunted Mansion Map" "Beach Map"
+	BaseType "Toxic Sewer Map"
 	ElderMap False
 	ShapedMap False
 	SetBorderColor 192 128 254
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_4maps.mp3"
 	MinimapIcon 0 Brown Diamond
@@ -1061,6 +1198,7 @@ Show
 	Class "Maps"
 	ElderMap True
 	SetBorderColor 192 128 254
+	SetBackgroundColor 0 0 60
 	SetFontSize 45
 	CustomAlertSound "Carcass_8highmaps.mp3"
 	MinimapIcon 0 Brown Diamond
@@ -1139,6 +1277,8 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Yellow Diamond
 
 
 # T8
@@ -1147,6 +1287,8 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Yellow Diamond
 
 
 # T7
@@ -1155,6 +1297,8 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Yellow Diamond
 
 # T6
 Show
@@ -1162,6 +1306,8 @@ Show
 	Class "Maps"
 	SetBorderColor 254 213 0
 	SetFontSize 45
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 0 Yellow Diamond
 
 # Section: [3006]: Maps - White
 
@@ -1171,6 +1317,8 @@ Show
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T4
 Show
@@ -1178,6 +1326,8 @@ Show
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T3
 Show
@@ -1185,6 +1335,8 @@ Show
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T2
 Show
@@ -1192,6 +1344,8 @@ Show
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T1
 Show
@@ -1199,6 +1353,8 @@ Show
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # Section: [3007]: Map Fragments
 
@@ -1369,7 +1525,7 @@ Show
 # Good Drop Only Gems
 Show
 	Class "Gem"
-	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity" "Portal"
+	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity" "Vaal Cold Snap" "Vaal Grace" "Added Chaos Damage"
 	SetFontSize 45
 
 # Hide other gems
@@ -1384,6 +1540,11 @@ Show
 	Class "Flask"
 	BaseType "Hallowed Life Flask" "Divine Life Flask" "Eternal Life Flask"
 	SetFontSize 45
+
+# SSF Utility Flasks
+#Show
+#	Class "Utility Flask" "Critical Utility Flask"
+#	SetFontSize 45
 
 # 20 quality utility flasks
 Show
@@ -1403,7 +1564,7 @@ Hide
 # T1 cards
 Show
 	Class "Divination"
-	BaseType "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Master" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
+	BaseType "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
@@ -1415,7 +1576,7 @@ Show
 # Trash cards
 Hide
 	Class "Divination"
-	BaseType "Her Mask" "Lysah's Respite" "The Opulent" "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
+	BaseType "Lysah's Respite" "The Opulent" "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
 	SetFontSize 45
 
 # All remaining cards
