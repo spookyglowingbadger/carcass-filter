@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 6.0
+# Version 7.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -984,6 +984,16 @@ Show
 
 # Section: [2003]: Currency - Special
 
+# Incubators
+Show
+	Class "Incubator"
+	SetTextColor 217 185 255
+	SetBackgroundColor 130 25 255
+	SetBorderColor 217 185 255
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle
+
 # Blessing
 Show
 	Class "Currency"
@@ -1006,6 +1016,17 @@ Show
 Show
 	Class "Currency"
 	BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Tul" "Splinter of Uul-Netol"
+	SetTextColor 255 235 235
+	SetBackgroundColor 65 20 80
+	SetBorderColor 130 25 255
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+	SetFontSize 45
+
+# Legion Splinters	
+Show
+	Class "Currency"
+	BaseType "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Eternal Empire Splinter" "Timeless Templar Splinter" "Timeless Vaal Splinter"
 	SetTextColor 255 235 235
 	SetBackgroundColor 65 20 80
 	SetBorderColor 130 25 255
@@ -1421,6 +1442,15 @@ Show
 	SetBackgroundColor 34 120 76
 	SetFontSize 45
 	
+# Legion Map Fragments
+Show
+	Class "Map Fragments"
+	BaseType "Emblem"
+	SetTextColor 0 0 0
+	SetBackgroundColor 180 0 0
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	
 # Safety line for Map Fragments class
 Show
 	Class "Map Fragments"
@@ -1519,7 +1549,7 @@ Show
 # Quality Gems
 Show
 	Class "Gem"
-	Quality >= 15
+	Quality >= 10
 	SetFontSize 45
 
 # Good Drop Only Gems
