@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 7.0
+# Version 7.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -363,7 +363,7 @@ Show
 #	SetFontSize 45
 
 # Rare Jewels
-Hide
+Show
 	Class "Jewel"
 	Rarity = Rare
 	SetTextColor 255 255 0
@@ -526,7 +526,7 @@ Show
 	DisableDropSound
 
 # Augments
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetTextColor 255 255 255
@@ -554,7 +554,7 @@ Show
 	DisableDropSound
 
 # Armourer's
-Show
+Hide
 	Class "Currency"
 	BaseType "Armourer's"
 	SetTextColor 255 255 255
@@ -564,7 +564,7 @@ Show
 	DisableDropSound
 
 # Blacksmith's
-Show
+Hide
 	Class "Currency"
 	BaseType "Blacksmith's"
 	SetTextColor 255 255 255
@@ -1203,7 +1203,7 @@ Show
 # Specific non-shaped maps to farm
 Show
 	Class "Maps"
-	BaseType "Toxic Sewer Map"
+	BaseType "Toxic Sewer Map" "Beach Map" "Burial Chambers Map" "Haunted Mansion Map"
 	ElderMap False
 	ShapedMap False
 	SetBorderColor 192 128 254
@@ -1342,40 +1342,40 @@ Show
 	MinimapIcon 1 White Diamond
 
 # T4
-Show
+Hide
 	MapTier = 4
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-	CustomAlertSound "Carcass_4maps.mp3"
-	MinimapIcon 1 White Diamond
+#	CustomAlertSound "Carcass_4maps.mp3"
+#	MinimapIcon 1 White Diamond
 
 # T3
-Show
+Hide
 	MapTier = 3
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-	CustomAlertSound "Carcass_4maps.mp3"
-	MinimapIcon 1 White Diamond
+#	CustomAlertSound "Carcass_4maps.mp3"
+#	MinimapIcon 1 White Diamond
 
 # T2
-Show
+Hide
 	MapTier = 2
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-	CustomAlertSound "Carcass_4maps.mp3"
-	MinimapIcon 1 White Diamond
+#	CustomAlertSound "Carcass_4maps.mp3"
+#	MinimapIcon 1 White Diamond
 
 # T1
-Show
+Hide
 	MapTier = 1
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-	CustomAlertSound "Carcass_4maps.mp3"
-	MinimapIcon 1 White Diamond
+#	CustomAlertSound "Carcass_4maps.mp3"
+#	MinimapIcon 1 White Diamond
 
 # Section: [3007]: Map Fragments
 
@@ -1389,10 +1389,10 @@ Show
 	SetFontSize 45
 	MinimapIcon 0 Red Diamond
 
-# Shaper Fragments and Breachstone
+# Shaper Fragments
 Show
 	Class "Map Fragments"
-	BaseType "Fragment of the Phoenix" "Fragment of the Minotaur" "Fragment of the Chimera" "Fragment of the Hydra" "Breachstone"
+	BaseType "Fragment of the Phoenix" "Fragment of the Minotaur" "Fragment of the Chimera" "Fragment of the Hydra"
 	SetTextColor 0 0 0
 	SetBackgroundColor 255 255 255
 	SetBorderColor 0 0 0
@@ -1433,6 +1433,8 @@ Show
 	SetBackgroundColor 189 186 109
 	SetBorderColor 210 0 0
 	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle
 
 # Scarabs
 Show
@@ -1450,6 +1452,18 @@ Show
 	SetBackgroundColor 180 0 0
 	SetBorderColor 0 0 0
 	SetFontSize 45
+
+# Breachstones
+Show
+	Class "Map Fragments"
+	BaseType "Breachstone"
+	SetTextColor 0 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	CustomAlertSound "Carcass_12divine.mp3" 300
+	MinimapIcon 0 White Circle
+	PlayEffect White
 	
 # Safety line for Map Fragments class
 Show
@@ -1485,14 +1499,6 @@ Show
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
-# Breachstones
-Show
-	Class "Misc Map Items"
-	BaseType "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
-	SetTextColor 0 0 0
-	SetBackgroundColor 255 255 255
-	SetBorderColor 0 0 0
-	SetFontSize 45
 
 # Safety line for Misc Map Items class
 Show
@@ -1555,7 +1561,7 @@ Show
 # Good Drop Only Gems
 Show
 	Class "Gem"
-	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity" "Vaal Cold Snap" "Vaal Grace" "Added Chaos Damage"
+	BaseType "Enlighten" "Empower" "Enhance" "Vaal Breach" "Item Quantity" "Vaal Cold Snap" "Vaal Grace"
 	SetFontSize 45
 
 # Hide other gems
