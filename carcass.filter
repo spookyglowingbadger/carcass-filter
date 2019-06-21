@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 7.1
+# Version 7.2
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -516,7 +516,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetTextColor 255 255 255
@@ -584,7 +584,7 @@ Show
 	DisableDropSound
 
 # Orb of Chance
-Show
+Hide
 	Class "Currency"
 	BaseType "Orb of Chance"
 	SetTextColor 255 255 255
@@ -1596,6 +1596,17 @@ Hide
 
 # Section: [7001]: Divination Cards
 
+# The Doctor
+Show
+	Class "Divination"
+	BaseType "The Doctor"
+	SetFontSize 45
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
+	SetBackgroundColor 255 255 255 255
+	CustomAlertSound "Carcass_Doctor.mp3"
+	MinimapIcon 0 White Square
+	PlayEffect White
 
 # T1 cards
 Show
@@ -1612,7 +1623,7 @@ Show
 # Trash cards
 Hide
 	Class "Divination"
-	BaseType "Lysah's Respite" "The Opulent" "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
+	BaseType "Her Mask" "Lysah's Respite" "The Opulent" "The Calling" "The Witch" "Destined to Crumble" "The Web" "The Flora's Gift" "The Betrayal" "The Gambler" "A Mother's Parting Gift" "Anarchy's Price" "Birth of the Three" "Carrion Crow" "Cartographer's Delight" "Death" "Dying Anguish" "Hermit" "King's Blade" "Lantador's Lost Love" "Light and Truth" "Metalsmith's Gift" "Might is Right" "Other Cheek" "Prosperity" "Rain of Chaos" "Rain Tempter" "Struck by Lightning" "The Blazing Fire" "The Coming Storm" "The Conduit" "The Eye of the Dragon" "The Feast" "The Incantation" "The Inoculated" "The Lich" "The Lover" "The Lunaris Priestess" "The Metalsmith's Gift" "The Oath" "The Rabid Rhoa" "The Ruthless Ceinture" "The Scarred Meadow" "The Scholar" "The Sigil" "The Siren" "The Surgeon" "The Tower" "The Twins" "The Warden" "The Wolverine" "Thunderous Skies" "Volatile Power" "The Wolf's Shadow"
 	SetFontSize 45
 
 # All remaining cards
