@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 7.2
+# Version 8.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -79,7 +79,7 @@ Show
 
 # Valuable Atlas Bases
 Show
-	BaseType "Steel Ring" "Opal Ring"
+	BaseType "Steel Ring" "Opal Ring" "Vermillion Ring" "Cerulean Ring" "Convoking Wand"
 	SetFontSize 45
 
 
@@ -290,6 +290,32 @@ Show
 	SetFontSize 26
 	SetBorderColor 135 0 220 255 
 
+# Vagan's veiled weapons
+Show
+	Class "Two Hand" "Axes" "Swords" "Daggers" "Sceptre" "Mace" "Claws" "Staves"
+	Identified True
+	HasExplicitMod "Vagan's"
+	Rarity = Rare 
+	SetFontSize 45
+	SetBorderColor 255 255 255
+	SetBackgroundColor 130 130 130
+	CustomAlertSound "Carcass_12divine.mp3"
+	MinimapIcon 0 White Circle
+	PlayEffect White
+	
+# Elreon's Veiled Rings/Amus
+Show
+	Class "Rings" "Amulets"
+	Identified True
+	HasExplicitMod "Elreon's"
+	Rarity = Rare 
+	SetFontSize 45
+	SetBorderColor 255 255 255
+	SetBackgroundColor 130 130 130
+	CustomAlertSound "Carcass_12divine.mp3"
+	MinimapIcon 0 White Circle
+	PlayEffect White
+
 # Veiled rares
 Show
 	Identified True
@@ -315,11 +341,11 @@ Hide
 	SetFontSize 45
 
 # Rare Good Amulet Bases
-#Show
-#	Class "Amulets"
-#	BaseType "Onyx Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Marble Amulet"
-#	Rarity = Rare
-#	SetFontSize 45	
+Show
+	Class "Amulets"
+	BaseType "Onyx Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Marble Amulet"
+	Rarity = Rare
+	SetFontSize 45	
 
 # Rare Amulets
 Hide
@@ -336,7 +362,7 @@ Hide
 #	SetFontSize 45
 	
 # Rare Rings
-Hide
+Show
 	Class "Rings"
 	Rarity = Rare
 	SetFontSize 45
@@ -516,7 +542,7 @@ Hide
 	DisableDropSound
 	
 # Transmutes
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Transmutation"
 	SetTextColor 255 255 255
@@ -526,7 +552,7 @@ Hide
 	DisableDropSound
 
 # Augments
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Augmentation"
 	SetTextColor 255 255 255
@@ -554,7 +580,7 @@ Show
 	DisableDropSound
 
 # Armourer's
-Hide
+Show
 	Class "Currency"
 	BaseType "Armourer's"
 	SetTextColor 255 255 255
@@ -564,7 +590,7 @@ Hide
 	DisableDropSound
 
 # Blacksmith's
-Hide
+Show
 	Class "Currency"
 	BaseType "Blacksmith's"
 	SetTextColor 255 255 255
@@ -584,7 +610,7 @@ Show
 	DisableDropSound
 
 # Orb of Chance
-Hide
+Show
 	Class "Currency"
 	BaseType "Orb of Chance"
 	SetTextColor 255 255 255
@@ -813,7 +839,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
 	SetFontSize 45
-	CustomAlertSound "Carcass_12divine.mp3" 300
+	CustomAlertSound "Carcass_12divine.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 
@@ -962,6 +988,17 @@ Show
 	SetBackgroundColor 249 150 25
 	SetBorderColor 0 150 200
 	SetFontSize 45
+	
+# Blight Oils
+Show
+	Class "Currency"
+	BaseType "Clear Oil" "Sepia Oil" "Amber Oil" "Verdant Oil" "Teal Oil" "Azure Oil" "Violet Oil" "Crimson Oil" "Black Oil" "Opalescent Oil" "Silver Oil" "Golden Oil"
+	SetTextColor 0 0 0
+	SetBackgroundColor 249 150 25
+	SetBorderColor 0 150 200
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle
 
 	
 # Section: [2002]: Currency - Essences
@@ -1203,7 +1240,7 @@ Show
 # Specific non-shaped maps to farm
 Show
 	Class "Maps"
-	BaseType "Toxic Sewer Map" "Beach Map" "Burial Chambers Map" "Haunted Mansion Map"
+	BaseType "Toxic Sewer Map" "Beach Map" "Burial Chambers Map" "Haunted Mansion Map" "Glacier Map"
 	ElderMap False
 	ShapedMap False
 	SetBorderColor 192 128 254
@@ -1342,40 +1379,40 @@ Show
 	MinimapIcon 1 White Diamond
 
 # T4
-Hide
+Show
 	MapTier = 4
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 1 White Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T3
-Hide
+Show
 	MapTier = 3
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 1 White Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T2
-Hide
+Show
 	MapTier = 2
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 1 White Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # T1
-Hide
+Show
 	MapTier = 1
 	Class "Maps"
 	SetFontSize 45
 	DisableDropSound
-#	CustomAlertSound "Carcass_4maps.mp3"
-#	MinimapIcon 1 White Diamond
+	CustomAlertSound "Carcass_4maps.mp3"
+	MinimapIcon 1 White Diamond
 
 # Section: [3007]: Map Fragments
 
@@ -1461,7 +1498,7 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 0 0 0
 	SetFontSize 45
-	CustomAlertSound "Carcass_12divine.mp3" 300
+	CustomAlertSound "Carcass_12divine.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
 	
@@ -1637,7 +1674,7 @@ Show
 
 # Junk
 Hide
-	Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets"
+	Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets" "Rune Dagger" "Warstaff"
 	Rarity < Unique
 	SetFontSize 26
 	DisableDropSound
