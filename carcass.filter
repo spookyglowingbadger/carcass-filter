@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 8.1
+# Version 9.0
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -157,12 +157,6 @@ Show
 	SetBorderColor 240 52 47
 	SetFontSize 45
 
-# Multimod
-Show
-	HasExplicitMod "of Crafting"
-	SetBorderColor 240 52 47
-	SetFontSize 45
-
 # Section: [1005]: Special Exceptions
 
 # Don't miss the fishing rods!
@@ -179,6 +173,13 @@ Show
 Show
 	Class "Quest Items"
 	BaseType "Shaper's Orb"
+	SetBorderColor 74 230 58
+	SetFontSize 45
+	PlayEffect Green
+
+# Watchstones
+Show
+	BaseType "Watchstone"
 	SetBorderColor 74 230 58
 	SetFontSize 45
 	PlayEffect Green
@@ -227,6 +228,16 @@ Show
 	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 	
+# Metamorph Sample
+Show
+	Class "Metamorph Sample"
+	SetTextColor 74 230 58 255
+	SetBorderColor 74 230 58
+	SetFontSize 45
+	PlayEffect Green
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Green Circle
+	
 
 # Section: [1006]: Rares
 
@@ -242,54 +253,10 @@ Show
 	FracturedItem True
 	SetFontSize 45
 
-
-# Good Elder Rares
+# Influenced Items (Add more rules to hide garbage later)
 Show
-	Class "Rings" "Amulets" "Belts" "Helmets" "Gloves"
-	Rarity = Rare 
-	ElderItem True
+	HasInfluence Shaper Elder Crusader Redeemer Hunter Warlord
 	SetFontSize 45
-	SetBorderColor 0 220 220 255
-
-# Bulky Elder Rares
-Show
-	Rarity = Rare 
-	ElderItem True
-	SetFontSize 26
-	SetBorderColor 0 220 220 255
-	
-# Good Shaper Rares
-Show
-	Class "Rings" "Amulets" "Belts" "Helmets" "Gloves"
-	Rarity = Rare
-	ShaperItem True
-	SetFontSize 45
-	SetBorderColor 135 0 220 255
-
-# Stat stick sceptre
-Show
-	Class "Sceptre"
-	Rarity = Rare
-	ItemLevel >= 75
-	ShaperItem True
-	SetFontSize 45
-	SetBorderColor 135 0 220 255	
-
-# Shaper Additional Arrow Quivers
-Show
-	Class "Quivers"
-	Rarity = Rare
-	ItemLevel >= 80
-	ShaperItem True
-	SetFontSize 45
-	SetBorderColor 135 0 220 255
-
-# Bulky Shaper Rares
-Show
-	Rarity = Rare
-	ShaperItem True
-	SetFontSize 26
-	SetBorderColor 135 0 220 255 
 
 # Vagan's veiled weapons
 Show
@@ -581,7 +548,7 @@ Show
 	DisableDropSound
 
 # Armourer's
-Show
+Hide
 	Class "Currency"
 	BaseType "Armourer's"
 	SetTextColor 255 255 255
@@ -591,7 +558,7 @@ Show
 	DisableDropSound
 
 # Blacksmith's
-Show
+Hide
 	Class "Currency"
 	BaseType "Blacksmith's"
 	SetTextColor 255 255 255
@@ -732,10 +699,10 @@ Show
 	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
-# Apprentice Cartographer's Sextant
+# Simple Sextant
 Show
 	Class "Currency"
-	BaseType "Apprentice Cartographer's Sextant"
+	BaseType "Simple Sextant"
 	SetTextColor 255 255 255
 	SetBackgroundColor 124 81 50
 	SetBorderColor 200 200 200
@@ -743,10 +710,10 @@ Show
 	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
 
-# Journeyman Cartographer's Sextant
+# Prime Sextant
 Show
 	Class "Currency"
-	BaseType "Journeyman Cartographer's Sextant"
+	BaseType "Prime Sextant"
 	SetTextColor 255 255 255
 	SetBackgroundColor 124 81 50
 	SetBorderColor 254 213 0
@@ -755,10 +722,10 @@ Show
 	MinimapIcon 0 Yellow Circle
 	PlayEffect Yellow
 
-# Master Cartographer's Sextant
+# Awakened Sextant
 Show
 	Class "Currency"
-	BaseType "Master Cartographer's Sextant"
+	BaseType "Awakened Sextant"
 	SetTextColor 255 255 255
 	SetBackgroundColor 124 81 50
 	SetBorderColor 255 0 0
@@ -847,7 +814,7 @@ Show
 # T1 Currency
 Show
 	Class "Currency"
-	BaseType "Eternal Orb" "Exalted Orb" "Albino Rhoa Feather"
+	BaseType "Eternal Orb" "Exalted Orb" "Albino Rhoa Feather" "Crusader's Exalted Orb" "Redeemer's Exalted Orb" "Hunter's Exalted Orb" "Warlord's Exalted Orb" "Awakener's Orb"
 	SetTextColor 255 0 0
 	SetBackgroundColor 255 255 255
 	SetBorderColor 255 0 0
@@ -1024,9 +991,19 @@ Show
 	SetFontSize 45
 	CustomAlertSound "Carcass_2currency.mp3"
 	MinimapIcon 0 Yellow Circle
+
+# Catalysts
+Show
+	Class "Currency"
+	BaseType "Catalyst"
+#	BaseType "Turbulent Catalyst" "Imbued Catalyst" "Abrasive Catalyst" "Tempering Catalyst" "Fertile Catalyst" "Prismatic Catalyst" "Intrinsic Catalyst" 
+	SetTextColor 0 0 0
+	SetBackgroundColor 249 150 25
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle	
 	
 
-	
 # Section: [2002]: Currency - Essences
 
 # Good Essences
@@ -1155,9 +1132,9 @@ Show
 
 # T16
 Show
+	MapTier = 16
 	Class "Maps"
 	BlightedMap True
-	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
 	SetTextColor 0 0 0
 	SetBackgroundColor 181 230 29
 	SetBorderColor 192 128 254
@@ -1487,8 +1464,8 @@ Show
 
 # T16
 Show
+	MapTier = 16
 	Class "Maps"
-	BaseType "Forge of the Phoenix Map" "Maze of the Minotaur Map" "Lair of the Hydra Map" "Pit of the Chimera Map" "Vaal Temple Map"
 	SetBorderColor 192 128 254
 	SetFontSize 45
 	CustomAlertSound "Carcass_8highmaps.mp3"
@@ -1658,6 +1635,27 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	MinimapIcon 0 Red Diamond
+	
+# Elder Fragments
+Show
+	Class "Map Fragments"
+	BaseType "Fragment of Enslavement" "Fragment of Eradication" "Fragment of Constriction" "Fragment of Purification"
+	SetTextColor 0 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	MinimapIcon 0 Red Diamond
+
+# Uber Elder Fragments
+Show
+	Class "Map Fragments"
+	BaseType "Fragment of Shape" "Fragment of Knowledge" "Fragment of Terror" "Fragment of Emptiness"
+	SetTextColor 0 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	MinimapIcon 0 Red Diamond	
+
 
 Show
 	Class "Map Fragments"
@@ -1786,6 +1784,17 @@ Show
 
 # Section: [5001]: Gems
 
+# Awakened Gems
+Show
+	Class "Gem"
+	BaseType "Awakened"
+	SetBorderColor 30 150 180
+	SetBackgroundColor 255 255 255
+	SetFontSize 45
+	CustomAlertSound "Carcass_6veryvaluable.mp3"
+	MinimapIcon 0 White Circle
+	PlayEffect White
+
 # Level 20+ gems
 Show
 	Class "Gem"
@@ -1830,6 +1839,12 @@ Hide
 
 # Section: [6001]: Flasks
 
+# SSF TEMP FLASK CHALLENGE
+
+#Show
+#	BaseType "Aquamarine Flask" "Bismuth Flask"
+#	SetFontSize 45
+
 # 20 quality good life flasks
 Show
 	Quality = 20
@@ -1859,7 +1874,7 @@ Hide
 # The Doctor
 Show
 	Class "Divination"
-	BaseType "The Doctor"
+	BaseType "The Doctor" "The Demon" "The Fiend"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
@@ -1871,7 +1886,7 @@ Show
 # T1 cards
 Show
 	Class "Divination"
-	BaseType "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
+	BaseType "Nook's Crown" "Alluring Bounty" "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
@@ -1897,7 +1912,7 @@ Show
 
 # Junk
 Hide
-	Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets" "Rune Dagger" "Warstaff"
+	Class "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws" "Body Armour" "Gloves" "Boots" "Helmets" "Quivers" "Daggers" "Shields" "Belts" "Rings" "Amulets" "Rune Daggers" "Warstaves"
 	Rarity < Unique
 	SetFontSize 26
 	DisableDropSound
