@@ -1,5 +1,5 @@
 # Carcass.filter
-# Version 9.0
+# Version 9.1
 # Get the latest version at https://github.com/spookyglowingbadger/carcass-filter
 # 
 # This filter is heavily inspired by NeverSink and some sections are borrowed from it, but it is stricter and more minimalistic than even NeverSink's Uber-Strict
@@ -122,11 +122,18 @@ Hide
 
 # Lab enchant helmets
 Hide
-	BaseType "Hubris Circlet" "Eternal Burgonet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Lion Pelt"
+	BaseType "Hubris Circlet" "Eternal Burgonet" "Deicide Mask" "Praetor Crown" "Nightmare Bascinet" "Lion Pelt" "Bone Helmet"
 	Rarity < Rare
 	ItemLevel >= 84
 	SetBorderColor 255 255 255
 	SetFontSize 45
+
+# Cluster Jewels
+Show
+	BaseType "Large Cluster Jewel" "Medium Cluster Jewel" "Small Cluster Jewel"
+	Class "Jewel"
+	SetFontSize 45
+
 
 # 82+ Magic Abyss Jewels (best life mod)
 Show
@@ -309,11 +316,11 @@ Hide
 	SetFontSize 45
 
 # Rare Good Amulet Bases
-Hide
-	Class "Amulets"
-	BaseType "Onyx Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Marble Amulet"
-	Rarity = Rare
-	SetFontSize 45	
+#Show
+#	Class "Amulets"
+#	BaseType "Onyx Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Jade Amulet" "Amber Amulet" "Lapis Amulet" "Marble Amulet"
+#	Rarity = Rare
+#	SetFontSize 45	
 
 # Rare Amulets
 Hide
@@ -328,7 +335,14 @@ Hide
 #	Class "Rings"
 #	Rarity = Rare
 #	SetFontSize 45
-	
+
+# SSF Good Ring Bases
+#Show
+#	BaseType "Two-Stone Ring" "Unset Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Prismatic Ring" "Moonstone Ring"
+#	Class "Rings"
+#	Rarity = Rare
+#	SetFontSize 45
+
 # Rare Rings
 Hide
 	Class "Rings"
@@ -357,8 +371,17 @@ Show
 #	SetFontSize 45
 
 # Rare Jewels
-Hide
+Show
 	Class "Jewel"
+	Rarity = Rare
+	SetTextColor 255 255 0
+	SetBackgroundColor 75 75 0
+	SetBorderColor 255 255 0
+	SetFontSize 45
+
+# Rare Abyss Jewels
+Show
+	Class "Abyss Jewel"
 	Rarity = Rare
 	SetTextColor 255 255 0
 	SetBackgroundColor 75 75 0
@@ -368,9 +391,45 @@ Hide
 
 # SSF EDITS	
 
-
+# Delirium League SSF Belts
 #Show
-#	BaseType "Leather Belt"
+#	BaseType "Leather Belt" "Crystal Belt"
+#	Rarity = Rare 
+#	SetFontSize 45
+	
+# Delirium League SSF Body Armours
+#Show
+#	BaseType "Blood Raiment" "Sadist Garb" "Varnished Coat"
+#	Rarity = Rare 
+#	SetFontSize 45
+	
+# Delirium League SSF Gloves
+#Show
+#	BaseType "Fingerless Silk Gloves" "Sorcerer Gloves" "Murder Mitts" "Assassin's Mitts"
+#	Rarity = Rare
+#	SetFontSize 45
+	
+# Delirium League SSF Boots
+#Show
+#	BaseType "Two-Toned Boots" "Murder Boots" "Sorcerer Boots" "Assassin's Boots" "Dragonscale Boots" "Crusader Boots"
+#	Rarity = Rare
+#	SetFontSize 45
+	
+# Delirium League SSF Helmets
+#Show
+#	BaseType "Hubris Circlet" "Deicide Mask"
+#	Rarity = Rare
+#	SetFontSize 45
+	
+# Delirium League SSF Wands
+#Show
+#	BaseType "Profane Wand" "Prophecy Wand" "Tornado Wand" "Opal Wand" "Imbued Wand"
+#	Rarity = Rare
+#	SetFontSize 45
+
+# Delirium League SSF Shields
+#Show
+#	BaseType "Fossilised Spirit Shield"
 #	Rarity = Rare 
 #	SetFontSize 45
 
@@ -413,10 +472,6 @@ Hide
 #	Rarity = Rare 
 #	SetFontSize 45
 
-#Show
-#	BaseType "Blood Raiment" "Sadist Garb"
-#	Rarity = Rare 
-#	SetFontSize 45	
 
 #Show
 #	BaseType "Eternal Burgonet" "Nightmare Bascinet" "Royal Burgonet" "Pig-Faced Bascinet" "Ezomyte Burgonet" "Praetor Crown" "Prophet Crown" "Magistrate Crown"
@@ -474,7 +529,7 @@ Show
 	SetBorderColor 254 128 128
 	SetFontSize 45
 	DisableDropSound
-
+	
 # Portal Scrolls
 Hide
 	Class "Currency"
@@ -482,7 +537,7 @@ Hide
 	SetBorderColor 0 100 150
 	SetFontSize 45
 	DisableDropSound
-
+	
 # Scroll of Wisdom Stacks
 Show
 	Class "Currency"
@@ -491,7 +546,7 @@ Show
 	SetBorderColor 254 128 128
 	SetFontSize 45
 	DisableDropSound
-
+	
 # Scrolls of Wisdom
 Hide
 	Class "Currency"
@@ -499,7 +554,6 @@ Hide
 	SetBorderColor 254 128 128
 	SetFontSize 45
 	DisableDropSound
-
 
 # Transmutation Shard
 Hide
@@ -550,7 +604,7 @@ Show
 # Armourer's
 Hide
 	Class "Currency"
-	BaseType "Armourer's"
+	BaseType "Armourer's Scrap"
 	SetTextColor 255 255 255
 	SetBackgroundColor 87 87 87
 	SetBorderColor 0 0 0
@@ -560,7 +614,7 @@ Hide
 # Blacksmith's
 Hide
 	Class "Currency"
-	BaseType "Blacksmith's"
+	BaseType "Blacksmith's Whetstone"
 	SetTextColor 255 255 255
 	SetBackgroundColor 127 127 127
 	SetBorderColor 0 0 0
@@ -675,7 +729,7 @@ Show
 	SetBorderColor 0 0 0
 	SetFontSize 45
 	CustomAlertSound "Carcass_2currency.mp3"
-	MinimapIcon 0 Yellow Circle 
+	MinimapIcon 0 Yellow Circle
 
 # Gemcutter's Prism
 Show
@@ -770,7 +824,7 @@ Show
 	SetBackgroundColor 254 213 0
  	SetBorderColor 0 0 0
 	SetFontSize 45
-	MinimapIcon 2 Yellow Circle 
+	MinimapIcon 2 Yellow Circle
 
 # Orb of Fusing
 Show
@@ -822,7 +876,6 @@ Show
 	CustomAlertSound "Carcass_6veryvaluable.mp3"
 	MinimapIcon 0 White Circle
 	PlayEffect White
-	
 
 # MIRROR OF KALANDRA
 Show
@@ -904,7 +957,7 @@ Show
 	SetTextColor 155 210 135 255
 	SetBorderColor 0 255 36 255
 	SetBackgroundColor 0 0 0 255
-	SetFontSize 45	
+	SetFontSize 45
 	
 # Incursion vials
 Show
@@ -998,11 +1051,47 @@ Show
 	BaseType "Catalyst"
 #	BaseType "Turbulent Catalyst" "Imbued Catalyst" "Abrasive Catalyst" "Tempering Catalyst" "Fertile Catalyst" "Prismatic Catalyst" "Intrinsic Catalyst" 
 	SetTextColor 0 0 0
-	SetBackgroundColor 249 150 25
+	SetBorderColor 127 127 127
+	SetBackgroundColor 193 242 0
 	SetFontSize 45
 	CustomAlertSound "Carcass_2currency.mp3"
-	MinimapIcon 0 Yellow Circle	
+	MinimapIcon 0 Green Circle
+
+# Delirium Orbs
+
+Show
+	Class "Currency"
+	BaseType "Fine Delirium Orb" "Singular Delirium Orb" "Thaumaturge's Delirium Orb" "Blacksmith's Delirium Orb" "Armoursmith's Delirium Orb" "Cartographer's Delirium Orb" "Jeweller's Delirium Orb" "Abyssal Delirium Orb" "Decadent Delirium Orb" "Foreboding Delirium Orb" "Obscured Delirium Orb" "Whispering Delirium Orb" "Fragmented Delirium Orb" "Skittering Delirium Orb" "Fossilised Delirium Orb" "Portentous Delirium Orb" "Diviner's Delirium Orb" "Delirium Orb" "Primal Delirium Orb" "Imperial Delirium Orb" "Timeless Delirium Orb" "Blighted Delirium Orb" "Amorphous Delirium Orb"
+	SetTextColor 0 0 0
+	SetBackgroundColor 249 150 25
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle 
+
+# Harvest League Currencies
+Show
+	Class "Currency"
+	BaseType "Infused Engineer's Orb" "Time-light Scroll" "Fragmentation Scroll" "Deregulation Scroll" "Electroshock Scroll" "Haemocombustion Scroll" "Specularity Scroll" "Facetor's Lens" "Indigo Oil"
+	SetTextColor 0 0 0
+	SetBackgroundColor 213 147 249
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle 
 	
+
+# Harvest Seeds
+Show
+	Class "Harvest Seed"
+	SetTextColor 0 0 0
+	SetBackgroundColor 213 147 249
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle
+
+
 
 # Section: [2002]: Currency - Essences
 
@@ -1056,6 +1145,17 @@ Show
 Show
 	Class "Currency"
 	BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Xoph" "Splinter of Tul" "Splinter of Uul-Netol"
+	SetTextColor 255 235 235
+	SetBackgroundColor 65 20 80
+	SetBorderColor 130 25 255
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+	SetFontSize 45
+	
+# Delirium Splinters
+Show
+	Class "Currency"
+	BaseType "Simulacrum Splinter"
 	SetTextColor 255 235 235
 	SetBackgroundColor 65 20 80
 	SetBorderColor 130 25 255
@@ -1120,6 +1220,16 @@ Show
 	SetBackgroundColor 180 0 0
 	SetBorderColor 0 0 0
 	SetFontSize 45
+	
+# Harvest Lab offerings
+Show
+	BaseType "Dedication to the Goddess" "Tribute to the Goddess" "Gift to the Goddess"
+	SetTextColor 0 0 0
+	SetBackgroundColor 213 147 249
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	CustomAlertSound "Carcass_2currency.mp3"
+	MinimapIcon 0 Yellow Circle
 
 # Labyrinth - only items
 Show
@@ -1438,16 +1548,16 @@ Show
 	MinimapIcon 0 Yellow Diamond
 
 # Specific non-shaped maps to farm
-Show
-	Class "Maps"
-	BaseType "Burial Chambers Map"
-	ElderMap False
-	ShapedMap False
-	SetBorderColor 192 128 254
-	SetBackgroundColor 0 0 60
-	SetFontSize 45
-	CustomAlertSound "Carcass_4maps.mp3"
-	MinimapIcon 0 Brown Diamond
+#Show
+#	Class "Maps"
+#	BaseType "Burial Chambers Map"
+#	ElderMap False
+#	ShapedMap False
+#	SetBorderColor 192 128 254
+#	SetBackgroundColor 0 0 60
+#	SetFontSize 45
+#	CustomAlertSound "Carcass_4maps.mp3"
+#	MinimapIcon 0 Brown Diamond
 
 # Section: [3005]: Maps - Red
 
@@ -1654,6 +1764,16 @@ Show
 	SetBackgroundColor 255 255 255
 	SetBorderColor 0 0 0
 	SetFontSize 45
+	MinimapIcon 0 Red Diamond
+
+# Simulacrum
+Show
+	Class "Map Fragments"
+	BaseType "Simulacrum"
+	SetTextColor 0 0 0
+	SetBackgroundColor 255 255 255
+	SetBorderColor 0 0 0
+	SetFontSize 45
 	MinimapIcon 0 Red Diamond	
 
 
@@ -1842,7 +1962,7 @@ Hide
 # SSF TEMP FLASK CHALLENGE
 
 #Show
-#	BaseType "Aquamarine Flask" "Bismuth Flask"
+#	BaseType "Basalt Flask" "Quartz Flask"
 #	SetFontSize 45
 
 # 20 quality good life flasks
@@ -1886,7 +2006,7 @@ Show
 # T1 cards
 Show
 	Class "Divination"
-	BaseType "Nook's Crown" "Alluring Bounty" "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
+	BaseType "The Queen" "A Note in the Wind" "Pride of the First Ones" "The White Knight" "Seven Years Bad Luck"  "The Cheater" "The Progeny of Lunaris" "Succor of the Sinless" "The Strategist" "Nook's Crown" "Alluring Bounty" "The Nurse" "The Mayor" "The Doctor" "The Fiend" "Abandoned Wealth" "The Saint's Treasure" "The Wind" "The Wolven King's Bite" "Pride Before the Fall" "The King's Heart" "Beauty Through Death" "House of Mirrors" "The Immortal" "Immortal Resolve" "The Samurai's Eye" "Hunter's Reward" "The World Eater" "The Dragon's Heart" "The Iron Bard"
 	SetFontSize 45
 	SetTextColor 0 0 255 255
 	SetBorderColor 0 0 255 255
